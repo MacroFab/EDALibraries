@@ -1,20 +1,19 @@
-
 if (board) board(B) {
 
-	//File names for output.
-	string fileName_XYRS = filesetext(B.name, ".XYRS");
-	string fileName_PASTE = filesetext(B.name, ".PASTE");
+    //File names for output.
+    string fileName_XYRS = filesetext(B.name, ".XYRS");
+    string fileName_PASTE = filesetext(B.name, ".PASTE");
 
-	//Vars for finding max size of board.
-	int Board_maxX = INT_MIN;
+    //Vars for finding max size of board.
+    int Board_maxX = INT_MIN;
     int Board_minX = INT_MAX;
     int Board_maxY = INT_MIN;
     int Board_minY = INT_MAX;
-	
-	B.wires(W) 
-	{
+    
+    B.wires(W) 
+    {
         if (W.layer == 20) 
-		{
+        {
         if (W.x1 < Board_minX) Board_minX = W.x1;
         if (W.x2 < Board_minX) Board_minX = W.x2;
         if (W.x1 > Board_maxX) Board_maxX = W.x1;
@@ -25,225 +24,232 @@ if (board) board(B) {
         if (W.y2 > Board_maxY) Board_maxY = W.y2;
         }
     }
-	
-	//Build XYRS Data
-	output(fileName_XYRS) 
-	{
-		//Build File Header
-		printf("#MacroFab, INC. XYRS data for %s.\n#\n",B.name);
-		printf("#Placement Data:\n");
-		printf("#Designator\tX-Loc\tY-Loc\tRotation\tSide\tType\tX-Size\tY-Size\tValue\tFootprint\n");
-		//Part level
-		B.elements(E) if (E.populate) 
-		{
-			int type = 0;
-			
-			int x_cen = 0;
-			int y_cen = 0;
-			
-			int side = 0;
-					
-			int xmax = INT_MIN;
-			int xmin = INT_MAX;
-			int ymax = INT_MIN;
-			int ymin = INT_MAX;
-			
-			int footprint_xmax = INT_MIN;
-			int footprint_xmin = INT_MAX;
-			int footprint_ymax = INT_MIN;
-			int footprint_ymin = INT_MAX;
-			
-			int rot_x = 1;
-			int rot_y = 1;
-			
-			int smd_cnt = 0;
-			int pth_cnt = 0;
-			
+    
+    //Build XYRS Data
+    output(fileName_XYRS) 
+    {
+        //Build File Header
+        printf("#MacroFab, INC. XYRS data for %s.\n#\n",B.name);
+        printf("#Placement Data:\n");
+        printf("#Designator\tX-Loc\tY-Loc\tRotation\tSide\tType\tX-Size\tY-Size\tValue\tFootprint\n");
+        //Part level
+        B.elements(E) if (E.populate) 
+        {
+            int type = 0;
+            
+            int x_cen = 0;
+            int y_cen = 0;
+            
+            int side = 0;
+                    
+            int xmax = INT_MIN;
+            int xmin = INT_MAX;
+            int ymax = INT_MIN;
+            int ymin = INT_MAX;
+            
+            int footprint_xmax = INT_MIN;
+            int footprint_xmin = INT_MAX;
+            int footprint_ymax = INT_MIN;
+            int footprint_ymin = INT_MAX;
+            
+            int rot_x = 1;
+            int rot_y = 1;
+            
+            int smd_cnt = 0;
+            int pth_cnt = 0;
+
 			real p_angle = E.angle;
-			
-			E.package.contacts(C) 
-			{			
-				//Find max and min X-Y
-				
-				if (C.x > xmax) xmax = C.x;
-				if (C.y > ymax) ymax = C.y;
-				if (C.x < xmin) xmin = C.x;
-				if (C.y < ymin) ymin = C.y;
-					
-				if (C.smd) 
-				{
-					smd_cnt++;
-				}
-				else
-				{
-					pth_cnt++;
-				}
-				
-				if(E.mirror == 0)
-				{
-					side = 1;
-				}
-				else
-				{
-					side = 2;
-				}
-			}
-			
-			//SMD or PTH part?
-			if(smd_cnt >= pth_cnt)
+            
+            E.package.contacts(C) 
+            {           
+                //Find max and min X-Y
+                
+                if (C.x > xmax) xmax = C.x;
+                if (C.y > ymax) ymax = C.y;
+                if (C.x < xmin) xmin = C.x;
+                if (C.y < ymin) ymin = C.y;
+                    
+                if (C.smd) 
+                {
+                    smd_cnt++;
+                }
+                else
+                {
+                    pth_cnt++;
+                }
+                
+                if(E.mirror == 0)
+                {
+                    side = 1;
+                }
+                else
+                {
+                    side = 2;
+                }
+            }
+            
+            //SMD or PTH part?
+            if(smd_cnt >= pth_cnt)
+            {
+                type = 1;
+            }
+            else
+            {
+                type = 2; 
+            }
+            
+            //Find center of package
+            x_cen = ((xmin + xmax)/2);
+            y_cen = ((ymin + ymax)/2);
+                
+            E.package.contacts(C) 
+            {
+                //Find package size for SMT
+                if (C.smd) 
+                {               
+                    if(C.smd.angle == 0 || C.smd.angle == 180)
+                    {
+                        if ((C.x + (C.smd.dx / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.smd.dx / 2));
+                        if ((C.y + (C.smd.dy / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.smd.dy / 2));
+                        if ((C.x - (C.smd.dx / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.smd.dx / 2));
+                        if ((C.y - (C.smd.dy / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.smd.dy / 2));
+                    }
+                    else if(C.smd.angle ==  90 || C.smd.angle == 270)
+                    {
+                        if ((C.x + (C.smd.dy / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.smd.dy / 2));
+                        if ((C.y + (C.smd.dx / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.smd.dx / 2));
+                        if ((C.x - (C.smd.dy / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.smd.dy / 2));
+                        if ((C.y - (C.smd.dx / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.smd.dx / 2));
+                    }
+                    //Weird angle parts
+                    else
+                    {
+                        rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) - (C.y-y_cen)*sin(-(p_angle * PI)/180));
+                        rot_y = y_cen + (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
+                        
+                        if((C.smd.angle - p_angle) == 0 || (C.smd.angle - p_angle) == 180)
+                        {
+                            if ((rot_x + (C.smd.dx / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.smd.dx / 2));
+                            if ((rot_y + (C.smd.dy / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.smd.dy / 2));
+                            if ((rot_x - (C.smd.dx / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.smd.dx / 2));
+                            if ((rot_y - (C.smd.dy / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.smd.dy / 2));
+                        }
+                        else if((C.smd.angle - p_angle) ==  90 || (C.smd.angle - p_angle) == 270)
+                        {
+                            if ((rot_x + (C.smd.dy / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.smd.dy / 2));
+                            if ((rot_y + (C.smd.dx / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.smd.dx / 2));
+                            if ((rot_x - (C.smd.dy / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.smd.dy / 2));
+                            if ((rot_y - (C.smd.dx / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.smd.dx / 2));
+                        }
+                        //Should Never get here
+                        else
+                        {
+                            printf("\nERROR:\tC.smd.angle = %5.2f\tp_angle = %5.2f\n", C.smd.angle, p_angle);
+                        }
+                    }   
+                }   
+                //Find package size for PTH
+                else
+                {               
+                    if(C.pad.angle == 0 || C.pad.angle == 180)
+                    {
+                        if ((C.x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.pad.drill / 2));
+                        if ((C.y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.pad.drill / 2));
+                        if ((C.x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.pad.drill / 2));
+                        if ((C.y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.pad.drill / 2));
+                    }
+                    else if(C.pad.angle ==  90 || C.pad.angle == 270)
+                    {
+                        if ((C.x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.pad.drill / 2));
+                        if ((C.y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.pad.drill / 2));
+                        if ((C.x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.pad.drill / 2));
+                        if ((C.y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.pad.drill / 2));
+                    }
+                    //Weird angle parts
+                    else
+                    {
+                        rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) - (C.y-y_cen)*sin(-(p_angle * PI)/180));
+                        rot_y = y_cen + (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
+                        
+                        if((C.pad.angle - p_angle) == 0 || (C.pad.angle - p_angle) == 180)
+                        {
+                            if ((rot_x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.pad.drill / 2));
+                            if ((rot_y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.pad.drill / 2));
+                            if ((rot_x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.pad.drill / 2));
+                            if ((rot_y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.pad.drill / 2));
+                        }
+                        else if((C.pad.angle - p_angle) ==  90 || (C.pad.angle - p_angle) == 270)
+                        {
+                            if ((rot_x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.pad.drill / 2));
+                            if ((rot_y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.pad.drill / 2));
+                            if ((rot_x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.pad.drill / 2));
+                            if ((rot_y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.pad.drill / 2));
+                        }
+                        //Should Never get here
+                        else
+                        {
+                            printf("\nERROR:\tC.pad.angle = %5.2f\tp_angle = %5.2f\n", C.pad.angle, p_angle);
+                        }
+                    }   
+                }
+            }
+			if((p_angle == 90) || (p_angle == 270))
 			{
-				type = 1;
+				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),E.angle, side, type, u2mil(footprint_ymax - footprint_ymin), u2mil(footprint_xmax - footprint_xmin), E.value, E.package.name);
 			}
 			else
 			{
-				type = 2; 
+				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),E.angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name);			
 			}
-			
-			//Find center of package
-			x_cen = ((xmin + xmax)/2);
-			y_cen = ((ymin + ymax)/2);
-				
-			E.package.contacts(C) 
-			{
-				//Find package size for SMT
-				if (C.smd) 
-				{				
-					if(C.smd.angle == 0 || C.smd.angle == 180)
-					{
-						if ((C.x + (C.smd.dx / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.smd.dx / 2));
-						if ((C.y + (C.smd.dy / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.smd.dy / 2));
-						if ((C.x - (C.smd.dx / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.smd.dx / 2));
-						if ((C.y - (C.smd.dy / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.smd.dy / 2));
-					}
-					else if(C.smd.angle ==  90 || C.smd.angle == 270)
-					{
-						if ((C.x + (C.smd.dy / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.smd.dy / 2));
-						if ((C.y + (C.smd.dx / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.smd.dx / 2));
-						if ((C.x - (C.smd.dy / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.smd.dy / 2));
-						if ((C.y - (C.smd.dx / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.smd.dx / 2));
-					}
-					//Weird angle parts
-					else
-					{
-						rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) - (C.y-y_cen)*sin(-(p_angle * PI)/180));
-						rot_y = y_cen + (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
-						
-						if((C.smd.angle - p_angle) == 0 || (C.smd.angle - p_angle) == 180)
-						{
-							if ((rot_x + (C.smd.dx / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.smd.dx / 2));
-							if ((rot_y + (C.smd.dy / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.smd.dy / 2));
-							if ((rot_x - (C.smd.dx / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.smd.dx / 2));
-							if ((rot_y - (C.smd.dy / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.smd.dy / 2));
-						}
-						else if((C.smd.angle - p_angle) ==  90 || (C.smd.angle - p_angle) == 270)
-						{
-							if ((rot_x + (C.smd.dy / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.smd.dy / 2));
-							if ((rot_y + (C.smd.dx / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.smd.dx / 2));
-							if ((rot_x - (C.smd.dy / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.smd.dy / 2));
-							if ((rot_y - (C.smd.dx / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.smd.dx / 2));
-						}
-						//Should Never get here
-						else
-						{
-							printf("\nERROR:\tC.smd.angle = %5.2f\tp_angle = %5.2f\n", C.smd.angle, p_angle);
-						}
-					}	
-				}	
-				//Find package size for PTH
-				else
-				{				
-					if(C.pad.angle == 0 || C.pad.angle == 180)
-					{
-						if ((C.x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.pad.drill / 2));
-						if ((C.y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.pad.drill / 2));
-						if ((C.x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.pad.drill / 2));
-						if ((C.y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.pad.drill / 2));
-					}
-					else if(C.pad.angle ==  90 || C.pad.angle == 270)
-					{
-						if ((C.x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.pad.drill / 2));
-						if ((C.y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.pad.drill / 2));
-						if ((C.x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.pad.drill / 2));
-						if ((C.y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.pad.drill / 2));
-					}
-					//Weird angle parts
-					else
-					{
-						rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) - (C.y-y_cen)*sin(-(p_angle * PI)/180));
-						rot_y = y_cen + (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
-						
-						if((C.pad.angle - p_angle) == 0 || (C.pad.angle - p_angle) == 180)
-						{
-							if ((rot_x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.pad.drill / 2));
-							if ((rot_y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.pad.drill / 2));
-							if ((rot_x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.pad.drill / 2));
-							if ((rot_y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.pad.drill / 2));
-						}
-						else if((C.pad.angle - p_angle) ==  90 || (C.pad.angle - p_angle) == 270)
-						{
-							if ((rot_x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.pad.drill / 2));
-							if ((rot_y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.pad.drill / 2));
-							if ((rot_x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.pad.drill / 2));
-							if ((rot_y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.pad.drill / 2));
-						}
-						//Should Never get here
-						else
-						{
-							printf("\nERROR:\tC.pad.angle = %5.2f\tp_angle = %5.2f\n", C.pad.angle, p_angle);
-						}
-					}	
-				}
-			}
-			printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),E.angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name);
-		}
-	}
-	
-	//Build Paste Top Files
-	output(fileName_PASTE)
-	{
-		//Build File Header
-		printf("#MacroFab, INC. PASTE data for %s.\n#\n",B.name);
-		printf("#PASTE Data:\n");
-		printf("#Designator\tX-Loc\tY-Loc\tSide\tType\tX-Size\tY-Size\n");
-		
-		B.elements(E) if (E.populate)
-		{
-			E.package.contacts(C) 
-			{
-				int type = 0;
-				int side = 0;
-				
-				int x_cen = C.x;
-				int y_cen = C.y;
-			
-				int x_size = 0;
-				int y_size = 0;
-				
-				if (C.smd) 
-				{
-					type = 1;
-					x_size = C.smd.dx;
-					y_size = C.smd.dy;
-				}
-				else
-				{
-					type = 2;
-					x_size = C.pad.drill;
-					y_size = C.pad.drill;
-				}
-				
-				if(E.mirror == 0)
-				{
-					side = 1;
-				}
-				else
-				{
-					side = 2;
-				}
-											
-				printf("%s\t%5.2f\t%5.2f\t%d\t%d\t%5.2f\t%5.2f\n", E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY), side, type, u2mil(x_size), u2mil(y_size));
-			}
-		}
-	}	
+        }
+    }
+    
+    //Build Paste Top Files
+    output(fileName_PASTE)
+    {
+        //Build File Header
+        printf("#MacroFab, INC. PASTE data for %s.\n#\n",B.name);
+        printf("#PASTE Data:\n");
+        printf("#Designator\tX-Loc\tY-Loc\tSide\tType\tX-Size\tY-Size\n");
+        
+        B.elements(E) if (E.populate)
+        {
+            E.package.contacts(C) 
+            {
+                int type = 0;
+                int side = 0;
+                
+                int x_cen = C.x;
+                int y_cen = C.y;
+            
+                int x_size = 0;
+                int y_size = 0;
+                
+                if (C.smd) 
+                {
+                    type = 1;
+                    x_size = C.smd.dx;
+                    y_size = C.smd.dy;
+                }
+                else
+                {
+                    type = 2;
+                    x_size = C.pad.drill;
+                    y_size = C.pad.drill;
+                }
+                
+                if(E.mirror == 0)
+                {
+                    side = 1;
+                }
+                else
+                {
+                    side = 2;
+                }
+                                            
+                printf("%s\t%5.2f\t%5.2f\t%d\t%d\t%5.2f\t%5.2f\n", E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY), side, type, u2mil(x_size), u2mil(y_size));
+            }
+        }
+    }   
 
 }

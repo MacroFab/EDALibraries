@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -52,7 +52,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -168,6 +168,87 @@
 <text x="6.47375" y="8.225" size="0.6096" layer="51" font="vector" ratio="16">Card Push In</text>
 <wire x1="0.4" y1="-7.625" x2="3.72375" y2="-7.625" width="0.127" layer="21"/>
 </package>
+<package name="MICROUSB-RIGHT">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for Micro USB Type B connector. Based on FCI 10118193-0001LF.&lt;br&gt;</description>
+<smd name="3" x="0" y="1.27" dx="0.4" dy="1.35" layer="1" rot="R180"/>
+<smd name="4" x="0.65" y="1.27" dx="0.4" dy="1.35" layer="1" rot="R180"/>
+<smd name="2" x="-0.65" y="1.27" dx="0.4" dy="1.35" layer="1" rot="R180"/>
+<smd name="1" x="-1.3" y="1.27" dx="0.4" dy="1.35" layer="1" rot="R180"/>
+<smd name="5" x="1.3" y="1.27" dx="0.4" dy="1.35" layer="1" rot="R180"/>
+<smd name="S3" x="-3.2" y="1.27" dx="1.4" dy="1.6" layer="1" rot="R90"/>
+<smd name="S4" x="3.2" y="1.27" dx="1.4" dy="1.6" layer="1" rot="R90"/>
+<pad name="S2" x="3.3" y="-1.405" drill="1.1" rot="R180"/>
+<pad name="S1" x="-3.3" y="-1.405" drill="1.1" rot="R180"/>
+<text x="-5.08" y="2.7" size="0.8128" layer="25" font="vector">&gt;NAME</text>
+<wire x1="-5.08" y1="-2.855" x2="5.08" y2="-2.855" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-2.855" x2="-5.08" y2="1.3" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="1.3" x2="-4.08" y2="2.3" width="0.127" layer="21"/>
+<wire x1="-4.08" y1="2.3" x2="4.08" y2="2.3" width="0.127" layer="21"/>
+<wire x1="4.08" y1="2.3" x2="5.08" y2="1.3" width="0.127" layer="21"/>
+<wire x1="5.08" y1="1.3" x2="5.08" y2="-2.855" width="0.127" layer="21"/>
+<smd name="S5" x="-1.2" y="-1.405" dx="1.9" dy="1.9" layer="1"/>
+<smd name="S6" x="1.2" y="-1.405" dx="1.9" dy="1.9" layer="1"/>
+</package>
+<package name="DCPWRJACK">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for DC Power Jack connector. Based on 4uconnector 18741.&lt;br&gt;</description>
+<pad name="SLEEVE1" x="0" y="0" drill="2.2" shape="square" rot="R270"/>
+<pad name="SLEEVE2" x="3.75" y="-4.8" drill="2.2" shape="square" rot="R270"/>
+<pad name="PIN" x="6.25" y="0" drill="3.2" shape="square" rot="R270"/>
+<wire x1="-7.25" y1="4.5" x2="-7.25" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="-7.25" y1="-4.5" x2="-3.75" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="-3.75" y1="-4.5" x2="1.75" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="-7.25" y1="4.5" x2="-3.75" y2="4.5" width="0.127" layer="21"/>
+<wire x1="-3.75" y1="4.5" x2="6.25" y2="4.5" width="0.127" layer="21"/>
+<wire x1="6.25" y1="4.5" x2="6.25" y2="2.885" width="0.127" layer="21"/>
+<wire x1="5.905" y1="-4.5" x2="6.25" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="6.25" y1="-4.5" x2="6.25" y2="-2.885" width="0.127" layer="21"/>
+<wire x1="-3.75" y1="4.5" x2="-3.75" y2="-4.5" width="0.127" layer="21"/>
+<text x="6.25" y="6" size="0.8128" layer="21" font="vector" ratio="16" rot="R180">&gt;NAME</text>
+</package>
+<package name="MINIUSB-RIGHT">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for Mini USB Type B connector. Based on 4UCON 20236.&lt;br&gt;</description>
+<smd name="1" x="-1.6" y="0" dx="0.5" dy="2.25" layer="1"/>
+<smd name="2" x="-0.8" y="0" dx="0.5" dy="2.25" layer="1"/>
+<smd name="3" x="0" y="0" dx="0.5" dy="2.25" layer="1"/>
+<smd name="4" x="0.8" y="0" dx="0.5" dy="2.25" layer="1"/>
+<smd name="5" x="1.6" y="0" dx="0.5" dy="2.25" layer="1"/>
+<smd name="S1" x="-4.45" y="-0.125" dx="2" dy="2.5" layer="1"/>
+<smd name="S3" x="-4.45" y="-5.5" dx="2" dy="2.5" layer="1"/>
+<smd name="S4" x="4.45" y="-5.5" dx="2" dy="2.5" layer="1"/>
+<smd name="S2" x="4.45" y="-0.125" dx="2" dy="2.5" layer="1"/>
+<hole x="-2.2" y="-2.675" drill="0.9"/>
+<hole x="2.2" y="-2.675" drill="0.9"/>
+<wire x1="-3.8" y1="-1.75" x2="-3.8" y2="-4" width="0.127" layer="21"/>
+<wire x1="-3.8" y1="-7" x2="-3.8" y2="-8.575" width="0.127" layer="21"/>
+<wire x1="-3.8" y1="-8.575" x2="3.8" y2="-8.575" width="0.127" layer="21"/>
+<wire x1="-2.25" y1="0.625" x2="-3.05" y2="0.625" width="0.127" layer="21"/>
+<wire x1="2.25" y1="0.625" x2="3.05" y2="0.625" width="0.127" layer="21"/>
+<wire x1="3.8" y1="-7" x2="3.8" y2="-8.575" width="0.127" layer="21"/>
+<wire x1="3.8" y1="-1.75" x2="3.8" y2="-4" width="0.127" layer="21"/>
+<text x="-3.8" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+</package>
+<package name="TRS_3.5MM">
+<hole x="3.5" y="0" drill="1.6"/>
+<hole x="10.5" y="0" drill="1.6"/>
+<pad name="4" x="1.5" y="2.4" drill="1.2"/>
+<pad name="5" x="4.3" y="2.4" drill="1.2"/>
+<pad name="1" x="2.5" y="-2.4" drill="1.2"/>
+<pad name="3" x="14.7" y="0.75" drill="1.6"/>
+<pad name="2" x="11.7" y="-2.4" drill="1.6"/>
+<wire x1="0" y1="3" x2="0" y2="-3" width="0.127" layer="21"/>
+<wire x1="0" y1="-3" x2="1.5" y2="-3" width="0.127" layer="21"/>
+<wire x1="3.6" y1="-3" x2="10.2" y2="-3" width="0.127" layer="21"/>
+<wire x1="13.2" y1="-3" x2="14.7" y2="-3" width="0.127" layer="21"/>
+<wire x1="14.7" y1="-3" x2="14.7" y2="-0.9" width="0.127" layer="21"/>
+<wire x1="14.7" y1="2.4" x2="14.7" y2="3" width="0.127" layer="21"/>
+<wire x1="14.7" y1="3" x2="5.4" y2="3" width="0.127" layer="21"/>
+<wire x1="3.3" y1="3" x2="2.7" y2="3" width="0.127" layer="21"/>
+<wire x1="0.6" y1="3" x2="0" y2="3" width="0.127" layer="21"/>
+<wire x1="0" y1="2.5" x2="-2.5" y2="2.5" width="0.127" layer="51"/>
+<wire x1="-2.5" y1="2.5" x2="-2.5" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="-2.5" y1="-2.5" x2="0" y2="-2.5" width="0.127" layer="51"/>
+<text x="14.7" y="4.2" size="0.8128" layer="25" font="vector" ratio="16" rot="R180">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="SD_CARD">
@@ -182,11 +263,87 @@
 <pin name="SCLK" x="-10.16" y="2.54" visible="pin" length="short"/>
 <pin name="D0" x="-10.16" y="0" visible="pin" length="short"/>
 <pin name="IRQ" x="-10.16" y="-2.54" visible="pin" length="short"/>
-<pin name="3.3V" x="-10.16" y="-10.16" visible="pin" length="short"/>
-<pin name="GND" x="-10.16" y="-12.7" visible="pin" length="short"/>
+<pin name="3.3V" x="-10.16" y="-10.16" visible="pin" length="short" direction="pwr"/>
+<pin name="GND" x="-10.16" y="-12.7" visible="pin" length="short" direction="pwr"/>
 <text x="-7.62" y="15.24" size="0.8128" layer="95" font="vector">&gt;NAME</text>
 <text x="-2.54" y="15.24" size="0.8128" layer="96" font="vector">&gt;VALUE</text>
 <pin name="CRD_DTCT" x="-10.16" y="-7.62" visible="pin" length="short"/>
+</symbol>
+<symbol name="USB_5PIN">
+<description>&lt;b&gt;Description:&lt;/b&gt; Symbol for 5-Pin USB connectors.&lt;br&gt;</description>
+<pin name="5V" x="7.62" y="5.08" visible="pin" length="short" direction="pwr" rot="R180"/>
+<pin name="D-" x="7.62" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="D+" x="7.62" y="0" visible="pin" length="short" rot="R180"/>
+<pin name="GND" x="7.62" y="-5.08" visible="pin" length="short" direction="pwr" rot="R180"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="97" rot="R90">USB</text>
+<wire x1="5.08" y1="7.62" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-10.16" x2="-5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-10.16" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<text x="-5.08" y="10.16" size="0.8128" layer="95" font="vector">&gt;NAME</text>
+<text x="0" y="10.16" size="0.8128" layer="96" font="vector">&gt;VALUE</text>
+<pin name="ID" x="7.62" y="-2.54" visible="pin" length="short" rot="R180"/>
+<pin name="SLD" x="7.62" y="-7.62" visible="pin" length="short" direction="pwr" rot="R180"/>
+</symbol>
+<symbol name="DCPWRJACK">
+<description>&lt;b&gt;Description:&lt;/b&gt; Symbol for DC power connector.&lt;br&gt;</description>
+<pin name="PIN" x="7.62" y="2.54" visible="off" length="short" direction="pwr" rot="R180"/>
+<pin name="SLEEVE" x="7.62" y="-2.54" visible="off" length="short" direction="pwr" rot="R180"/>
+<pin name="SLEEVE_SHUNT" x="7.62" y="0" visible="off" length="short" direction="pwr" rot="R180"/>
+<wire x1="5.08" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="0.635" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="-2.54" x2="0.635" y2="-2.54" width="0.254" layer="94" curve="-180"/>
+<wire x1="5.08" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="3.302" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="3.302" y1="-1.27" x2="1.778" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.27" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<text x="-1.905" y="4.445" size="0.8128" layer="95" font="vector">&gt;NAME</text>
+<text x="2.54" y="4.445" size="0.8128" layer="95" font="vector">&gt;VALUE</text>
+<wire x1="2.54" y1="3.175" x2="2.54" y2="1.905" width="0.254" layer="94"/>
+<wire x1="2.54" y1="1.905" x2="-1.27" y2="1.905" width="0.254" layer="94"/>
+<wire x1="2.54" y1="3.175" x2="-1.27" y2="3.175" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.905" x2="-1.27" y2="3.175" width="0.254" layer="94" curve="-180"/>
+</symbol>
+<symbol name="TRS_JACK">
+<description>&lt;b&gt;Description:&lt;/b&gt; Symbol for TRS (Stereo) Jack connector.&lt;br&gt;</description>
+<pin name="1" x="5.08" y="10.16" visible="off" length="short" rot="R180"/>
+<text x="-4.445" y="12.065" size="0.8128" layer="95" font="vector">&gt;NAME</text>
+<text x="0" y="12.065" size="0.8128" layer="95" font="vector">&gt;VALUE</text>
+<wire x1="2.54" y1="10.16" x2="-4.445" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="10.16" x2="-4.445" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-3.81" y2="0" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="0" x2="-3.81" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="7.62" x2="-4.445" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="0.635" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0.635" y1="7.62" x2="-1.27" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="7.62" x2="-1.905" y2="6.35" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="6.35" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="0.635" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0.635" y1="5.08" x2="0.635" y2="7.62" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="0.635" y="7.62"/>
+<vertex x="0" y="6.35"/>
+<vertex x="1.27" y="6.35"/>
+</polygon>
+<wire x1="2.54" y1="0" x2="0.635" y2="0" width="0.254" layer="94"/>
+<wire x1="0.635" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-1.905" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="1.27" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="0.635" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0.635" y1="2.54" x2="0.635" y2="0" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="0.635" y="0"/>
+<vertex x="1.27" y="1.27"/>
+<vertex x="0" y="1.27"/>
+</polygon>
+<pin name="2" x="5.08" y="7.62" visible="off" length="short" rot="R180"/>
+<pin name="3" x="5.08" y="5.08" visible="off" length="short" rot="R180"/>
+<pin name="4" x="5.08" y="2.54" visible="off" length="short" rot="R180"/>
+<pin name="5" x="5.08" y="0" visible="off" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -208,6 +365,81 @@
 <connect gate="G$1" pin="IRQ" pad="PIN8"/>
 <connect gate="G$1" pin="RW" pad="PIN1"/>
 <connect gate="G$1" pin="SCLK" pad="PIN5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="USB_CON_5P" prefix="J" uservalue="yes">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Connectors&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; 5 Pin USB Connectors. SLD is the shield connection. Usually tied to ground through a small ferrite bead.&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="USB_5PIN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="MICROUSB-RIGHT" package="MICROUSB-RIGHT">
+<connects>
+<connect gate="G$1" pin="5V" pad="1"/>
+<connect gate="G$1" pin="D+" pad="3"/>
+<connect gate="G$1" pin="D-" pad="2"/>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="ID" pad="4"/>
+<connect gate="G$1" pin="SLD" pad="S1 S2 S3 S4 S5 S6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="MINIUSB-RIGHT" package="MINIUSB-RIGHT">
+<connects>
+<connect gate="G$1" pin="5V" pad="1"/>
+<connect gate="G$1" pin="D+" pad="3"/>
+<connect gate="G$1" pin="D-" pad="2"/>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="ID" pad="4"/>
+<connect gate="G$1" pin="SLD" pad="S1 S2 S3 S4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DCPWRJACK" prefix="J" uservalue="yes">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Connectors&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; DC Barrel Power Jack Connector.&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="DCPWRJACK" x="0" y="0"/>
+</gates>
+<devices>
+<device name="DCPWRJACK" package="DCPWRJACK">
+<connects>
+<connect gate="G$1" pin="PIN" pad="PIN"/>
+<connect gate="G$1" pin="SLEEVE" pad="SLEEVE1"/>
+<connect gate="G$1" pin="SLEEVE_SHUNT" pad="SLEEVE2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TRS_JACK" uservalue="yes">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Connectors&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; TRS Jack Connector.&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="TRS_JACK" x="0" y="-5.08"/>
+</gates>
+<devices>
+<device name="TRS_3.5MM" package="TRS_3.5MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
 </connects>
 <technologies>
 <technology name=""/>
