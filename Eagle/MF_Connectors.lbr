@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.5.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.79875" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="yes"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="yes"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="yes"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="yes"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="yes"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="yes"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="yes"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="yes"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="yes"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<packages>
+<package name="MICROSDSLOT-RIGHT">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for Micro SD Card Slot connector. Based on 4uconnector 15882.&lt;br&gt;</description>
+<smd name="PIN1" x="-1.93875" y="3.15125" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="PIN2" x="-0.83875" y="2.95125" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="PIN3" x="0.26125" y="3.15125" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="PIN4" x="1.36125" y="3.35125" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="PIN5" x="2.46125" y="3.15125" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="PIN6" x="3.56125" y="3.35125" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="PIN7" x="4.66125" y="3.15125" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="PIN8" x="5.76125" y="3.15125" dx="0.8" dy="1.5" layer="1" rot="R180"/>
+<smd name="G0" x="-6.58875" y="7.00125" dx="1.4" dy="1.9" layer="1"/>
+<smd name="G1" x="6.56125" y="6.00125" dx="1.4" dy="1.9" layer="1"/>
+<smd name="PIN9" x="4.96125" y="-7.14875" dx="1.8" dy="1.4" layer="1"/>
+<smd name="PIN10" x="-0.73875" y="-7.14875" dx="1.8" dy="1.4" layer="1"/>
+<wire x1="-7.025" y1="5.77625" x2="-7.025" y2="-7.625" width="0.127" layer="21"/>
+<wire x1="-7.025" y1="-7.625" x2="-1.91375" y2="-7.625" width="0.127" layer="21"/>
+<wire x1="6.19875" y1="-7.625" x2="7.025" y2="-7.625" width="0.127" layer="21"/>
+<wire x1="7.025" y1="-7.625" x2="7.025" y2="4.67625" width="0.127" layer="21"/>
+<wire x1="7.025" y1="7.28875" x2="7.025" y2="7.625" width="0.127" layer="21"/>
+<wire x1="7.025" y1="7.625" x2="-5.65" y2="7.625" width="0.127" layer="21"/>
+<text x="7.50125" y="-7.625" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<polygon width="0.127" layer="21">
+<vertex x="1.79875" y="7.42625"/>
+<vertex x="2.07375" y="7.42625"/>
+<vertex x="2.07375" y="6.87625"/>
+<vertex x="2.34875" y="6.87625"/>
+<vertex x="1.93625" y="6.46375"/>
+<vertex x="1.52375" y="6.87625"/>
+<vertex x="1.79875" y="6.87625"/>
+</polygon>
+<polygon width="0.127" layer="39">
+<vertex x="-7.41375" y="7.97625"/>
+<vertex x="-7.41375" y="-7.97375"/>
+<vertex x="7.41375" y="-7.97375"/>
+<vertex x="7.41375" y="7.97625"/>
+</polygon>
+<wire x1="-2.32625" y1="7.625" x2="-2.32625" y2="8.225" width="0.127" layer="51"/>
+<wire x1="6.19875" y1="7.625" x2="6.19875" y2="8.225" width="0.127" layer="51"/>
+<wire x1="-2.32625" y1="8.225" x2="6.19875" y2="8.225" width="0.127" layer="51"/>
+<wire x1="-2.32625" y1="8.225" x2="-2.32625" y2="9.225" width="0.127" layer="51"/>
+<wire x1="-2.32625" y1="9.225" x2="6.19875" y2="9.225" width="0.127" layer="51"/>
+<wire x1="6.19875" y1="9.225" x2="6.19875" y2="8.25125" width="0.127" layer="51"/>
+<wire x1="-2.32625" y1="9.225" x2="-2.32625" y2="12.6075" width="0.127" layer="51"/>
+<wire x1="-2.32625" y1="12.6075" x2="-2.00875" y2="12.925" width="0.127" layer="51" curve="-90"/>
+<wire x1="-2.00875" y1="12.925" x2="5.88125" y2="12.925" width="0.127" layer="51"/>
+<wire x1="5.88125" y1="12.925" x2="6.19875" y2="12.6075" width="0.127" layer="51" curve="-90"/>
+<wire x1="6.19875" y1="12.6075" x2="6.19875" y2="9.225" width="0.127" layer="51"/>
+<text x="6.47375" y="12.925" size="0.6096" layer="51" font="vector" ratio="16">Card Push Out</text>
+<text x="6.47375" y="9.225" size="0.6096" layer="51" font="vector" ratio="16">Card Lock Position</text>
+<text x="6.47375" y="8.225" size="0.6096" layer="51" font="vector" ratio="16">Card Push In</text>
+<wire x1="0.4" y1="-7.625" x2="3.72375" y2="-7.625" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+</symbols>
+<devicesets>
+</devicesets>
+</library>
+</drawing>
+</eagle>
