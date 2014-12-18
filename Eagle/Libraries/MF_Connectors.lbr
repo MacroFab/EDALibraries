@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -228,6 +228,7 @@
 <text x="-3.8" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
 </package>
 <package name="TRS_3.5MM">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for TRS Jack 3.5mm. Based on 4UCON 13366.&lt;br&gt;</description>
 <hole x="3.5" y="0" drill="1.6"/>
 <hole x="10.5" y="0" drill="1.6"/>
 <pad name="4" x="1.5" y="2.4" drill="1.2"/>
@@ -248,6 +249,652 @@
 <wire x1="-2.5" y1="2.5" x2="-2.5" y2="-2.5" width="0.127" layer="51"/>
 <wire x1="-2.5" y1="-2.5" x2="0" y2="-2.5" width="0.127" layer="51"/>
 <text x="14.7" y="4.2" size="0.8128" layer="25" font="vector" ratio="16" rot="R180">&gt;NAME</text>
+</package>
+<package name="PTH_2.54MM_01X01">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 1 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="0" y="0" drill="1"/>
+<wire x1="-1.25" y1="1.25" x2="1.25" y2="1.25" width="0.127" layer="21"/>
+<wire x1="1.25" y1="1.25" x2="1.25" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="1.25" y1="-1.25" x2="-1.25" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-1.25" y1="-1.25" x2="-1.25" y2="1.25" width="0.127" layer="21"/>
+<text x="-1.25" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+</package>
+<package name="PTH_2.54MM_01X02">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 2 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-1.27" y="0" drill="1"/>
+<wire x1="-2.52" y1="1.25" x2="2.52" y2="1.25" width="0.127" layer="21"/>
+<wire x1="2.52" y1="1.25" x2="2.52" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="2.52" y1="-1.25" x2="-2.52" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-2.52" y1="-1.25" x2="-2.52" y2="1.25" width="0.127" layer="21"/>
+<text x="-2.52" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="1.27" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X03">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 3 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X04">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 4 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-3.81" y="0" drill="1"/>
+<wire x1="-5.06" y1="1.25" x2="5.06" y2="1.25" width="0.127" layer="21"/>
+<wire x1="5.06" y1="1.25" x2="5.06" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="5.06" y1="-1.25" x2="-5.06" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-5.06" y1="-1.25" x2="-5.06" y2="1.25" width="0.127" layer="21"/>
+<text x="-5.06" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-1.27" y="0" drill="1"/>
+<pad name="P$3" x="1.27" y="0" drill="1"/>
+<pad name="P$4" x="3.81" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X05">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 5 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X06">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 6 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-6.35" y="0" drill="1"/>
+<wire x1="-7.6" y1="1.25" x2="7.6" y2="1.25" width="0.127" layer="21"/>
+<wire x1="7.6" y1="1.25" x2="7.6" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="7.6" y1="-1.25" x2="-7.6" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-7.6" y1="-1.25" x2="-7.6" y2="1.25" width="0.127" layer="21"/>
+<text x="-7.6" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-3.81" y="0" drill="1"/>
+<pad name="P$3" x="-1.27" y="0" drill="1"/>
+<pad name="P$4" x="1.27" y="0" drill="1"/>
+<pad name="P$5" x="3.81" y="0" drill="1"/>
+<pad name="P$6" x="6.35" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X07">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 7 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X08">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 8 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-8.89" y="0" drill="1"/>
+<wire x1="-10.14" y1="1.25" x2="10.14" y2="1.25" width="0.127" layer="21"/>
+<wire x1="10.14" y1="1.25" x2="10.14" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="10.14" y1="-1.25" x2="-10.14" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-10.14" y1="-1.25" x2="-10.14" y2="1.25" width="0.127" layer="21"/>
+<text x="-10.14" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-6.35" y="0" drill="1"/>
+<pad name="P$3" x="-3.81" y="0" drill="1"/>
+<pad name="P$4" x="-1.27" y="0" drill="1"/>
+<pad name="P$5" x="1.27" y="0" drill="1"/>
+<pad name="P$6" x="3.81" y="0" drill="1"/>
+<pad name="P$7" x="6.35" y="0" drill="1"/>
+<pad name="P$8" x="8.89" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X09">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 9 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X10">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 10 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-11.43" y="0" drill="1"/>
+<wire x1="-12.68" y1="1.25" x2="12.68" y2="1.25" width="0.127" layer="21"/>
+<wire x1="12.68" y1="1.25" x2="12.68" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="12.68" y1="-1.25" x2="-12.68" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-12.68" y1="-1.25" x2="-12.68" y2="1.25" width="0.127" layer="21"/>
+<text x="-12.68" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-8.89" y="0" drill="1"/>
+<pad name="P$3" x="-6.35" y="0" drill="1"/>
+<pad name="P$4" x="-3.81" y="0" drill="1"/>
+<pad name="P$5" x="-1.27" y="0" drill="1"/>
+<pad name="P$6" x="1.27" y="0" drill="1"/>
+<pad name="P$7" x="3.81" y="0" drill="1"/>
+<pad name="P$8" x="6.35" y="0" drill="1"/>
+<pad name="P$9" x="8.89" y="0" drill="1"/>
+<pad name="P$10" x="11.43" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X11">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 11 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X12">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 12 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-13.97" y="0" drill="1"/>
+<wire x1="-15.22" y1="1.25" x2="15.22" y2="1.25" width="0.127" layer="21"/>
+<wire x1="15.22" y1="1.25" x2="15.22" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="15.22" y1="-1.25" x2="-15.22" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-15.22" y1="-1.25" x2="-15.22" y2="1.25" width="0.127" layer="21"/>
+<text x="-15.22" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-11.43" y="0" drill="1"/>
+<pad name="P$3" x="-8.89" y="0" drill="1"/>
+<pad name="P$4" x="-6.35" y="0" drill="1"/>
+<pad name="P$5" x="-3.81" y="0" drill="1"/>
+<pad name="P$6" x="-1.27" y="0" drill="1"/>
+<pad name="P$7" x="1.27" y="0" drill="1"/>
+<pad name="P$8" x="3.81" y="0" drill="1"/>
+<pad name="P$9" x="6.35" y="0" drill="1"/>
+<pad name="P$10" x="8.89" y="0" drill="1"/>
+<pad name="P$11" x="11.43" y="0" drill="1"/>
+<pad name="P$12" x="13.97" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X13">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 13 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X14">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 14 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-16.51" y="0" drill="1"/>
+<wire x1="-17.76" y1="1.25" x2="17.76" y2="1.25" width="0.127" layer="21"/>
+<wire x1="17.76" y1="1.25" x2="17.76" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="17.76" y1="-1.25" x2="-17.76" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-17.76" y1="-1.25" x2="-17.76" y2="1.25" width="0.127" layer="21"/>
+<text x="-17.76" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-13.97" y="0" drill="1"/>
+<pad name="P$3" x="-11.43" y="0" drill="1"/>
+<pad name="P$4" x="-8.89" y="0" drill="1"/>
+<pad name="P$5" x="-6.35" y="0" drill="1"/>
+<pad name="P$6" x="-3.81" y="0" drill="1"/>
+<pad name="P$7" x="-1.27" y="0" drill="1"/>
+<pad name="P$8" x="1.27" y="0" drill="1"/>
+<pad name="P$9" x="3.81" y="0" drill="1"/>
+<pad name="P$10" x="6.35" y="0" drill="1"/>
+<pad name="P$11" x="8.89" y="0" drill="1"/>
+<pad name="P$12" x="11.43" y="0" drill="1"/>
+<pad name="P$13" x="13.97" y="0" drill="1"/>
+<pad name="P$14" x="16.51" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X15">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 15 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X16">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 16 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-19.05" y="0" drill="1"/>
+<wire x1="-20.3" y1="1.25" x2="20.3" y2="1.25" width="0.127" layer="21"/>
+<wire x1="20.3" y1="1.25" x2="20.3" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="20.3" y1="-1.25" x2="-20.3" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-20.3" y1="-1.25" x2="-20.3" y2="1.25" width="0.127" layer="21"/>
+<text x="-20.3" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-16.51" y="0" drill="1"/>
+<pad name="P$3" x="-13.97" y="0" drill="1"/>
+<pad name="P$4" x="-11.43" y="0" drill="1"/>
+<pad name="P$5" x="-8.89" y="0" drill="1"/>
+<pad name="P$6" x="-6.35" y="0" drill="1"/>
+<pad name="P$7" x="-3.81" y="0" drill="1"/>
+<pad name="P$8" x="-1.27" y="0" drill="1"/>
+<pad name="P$9" x="1.27" y="0" drill="1"/>
+<pad name="P$10" x="3.81" y="0" drill="1"/>
+<pad name="P$11" x="6.35" y="0" drill="1"/>
+<pad name="P$12" x="8.89" y="0" drill="1"/>
+<pad name="P$13" x="11.43" y="0" drill="1"/>
+<pad name="P$14" x="13.97" y="0" drill="1"/>
+<pad name="P$15" x="16.51" y="0" drill="1"/>
+<pad name="P$16" x="19.05" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X17">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 17 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X18">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 18 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-21.59" y="0" drill="1"/>
+<wire x1="-22.84" y1="1.25" x2="22.84" y2="1.25" width="0.127" layer="21"/>
+<wire x1="22.84" y1="1.25" x2="22.84" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="22.84" y1="-1.25" x2="-22.84" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-22.84" y1="-1.25" x2="-22.84" y2="1.25" width="0.127" layer="21"/>
+<text x="-22.84" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-19.05" y="0" drill="1"/>
+<pad name="P$3" x="-16.51" y="0" drill="1"/>
+<pad name="P$4" x="-13.97" y="0" drill="1"/>
+<pad name="P$5" x="-11.43" y="0" drill="1"/>
+<pad name="P$6" x="-8.89" y="0" drill="1"/>
+<pad name="P$7" x="-6.35" y="0" drill="1"/>
+<pad name="P$8" x="-3.81" y="0" drill="1"/>
+<pad name="P$9" x="-1.27" y="0" drill="1"/>
+<pad name="P$10" x="1.27" y="0" drill="1"/>
+<pad name="P$11" x="3.81" y="0" drill="1"/>
+<pad name="P$12" x="6.35" y="0" drill="1"/>
+<pad name="P$13" x="8.89" y="0" drill="1"/>
+<pad name="P$14" x="11.43" y="0" drill="1"/>
+<pad name="P$15" x="13.97" y="0" drill="1"/>
+<pad name="P$16" x="16.51" y="0" drill="1"/>
+<pad name="P$17" x="19.05" y="0" drill="1"/>
+<pad name="P$18" x="21.59" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X19">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 19 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X20">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 20 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-24.13" y="0" drill="1"/>
+<wire x1="-25.38" y1="1.25" x2="25.38" y2="1.25" width="0.127" layer="21"/>
+<wire x1="25.38" y1="1.25" x2="25.38" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="25.38" y1="-1.25" x2="-25.38" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-25.38" y1="-1.25" x2="-25.38" y2="1.25" width="0.127" layer="21"/>
+<text x="-25.38" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-21.59" y="0" drill="1"/>
+<pad name="P$3" x="-19.05" y="0" drill="1"/>
+<pad name="P$4" x="-16.51" y="0" drill="1"/>
+<pad name="P$5" x="-13.97" y="0" drill="1"/>
+<pad name="P$6" x="-11.43" y="0" drill="1"/>
+<pad name="P$7" x="-8.89" y="0" drill="1"/>
+<pad name="P$8" x="-6.35" y="0" drill="1"/>
+<pad name="P$9" x="-3.81" y="0" drill="1"/>
+<pad name="P$10" x="-1.27" y="0" drill="1"/>
+<pad name="P$11" x="1.27" y="0" drill="1"/>
+<pad name="P$12" x="3.81" y="0" drill="1"/>
+<pad name="P$13" x="6.35" y="0" drill="1"/>
+<pad name="P$14" x="8.89" y="0" drill="1"/>
+<pad name="P$15" x="11.43" y="0" drill="1"/>
+<pad name="P$16" x="13.97" y="0" drill="1"/>
+<pad name="P$17" x="16.51" y="0" drill="1"/>
+<pad name="P$18" x="19.05" y="0" drill="1"/>
+<pad name="P$19" x="21.59" y="0" drill="1"/>
+<pad name="P$20" x="24.13" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X21">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 21 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X22">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 22 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-26.67" y="0" drill="1"/>
+<wire x1="-27.92" y1="1.25" x2="27.92" y2="1.25" width="0.127" layer="21"/>
+<wire x1="27.92" y1="1.25" x2="27.92" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="27.92" y1="-1.25" x2="-27.92" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-27.92" y1="-1.25" x2="-27.92" y2="1.25" width="0.127" layer="21"/>
+<text x="-27.92" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-24.13" y="0" drill="1"/>
+<pad name="P$3" x="-21.59" y="0" drill="1"/>
+<pad name="P$4" x="-19.05" y="0" drill="1"/>
+<pad name="P$5" x="-16.51" y="0" drill="1"/>
+<pad name="P$6" x="-13.97" y="0" drill="1"/>
+<pad name="P$7" x="-11.43" y="0" drill="1"/>
+<pad name="P$8" x="-8.89" y="0" drill="1"/>
+<pad name="P$9" x="-6.35" y="0" drill="1"/>
+<pad name="P$10" x="-3.81" y="0" drill="1"/>
+<pad name="P$11" x="-1.27" y="0" drill="1"/>
+<pad name="P$12" x="1.27" y="0" drill="1"/>
+<pad name="P$13" x="3.81" y="0" drill="1"/>
+<pad name="P$14" x="6.35" y="0" drill="1"/>
+<pad name="P$15" x="8.89" y="0" drill="1"/>
+<pad name="P$16" x="11.43" y="0" drill="1"/>
+<pad name="P$17" x="13.97" y="0" drill="1"/>
+<pad name="P$18" x="16.51" y="0" drill="1"/>
+<pad name="P$19" x="19.05" y="0" drill="1"/>
+<pad name="P$20" x="21.59" y="0" drill="1"/>
+<pad name="P$21" x="24.13" y="0" drill="1"/>
+<pad name="P$22" x="26.67" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X23">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 23 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X24">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 24 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-29.21" y="0" drill="1"/>
+<wire x1="-30.46" y1="1.25" x2="30.46" y2="1.25" width="0.127" layer="21"/>
+<wire x1="30.46" y1="1.25" x2="30.46" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="30.46" y1="-1.25" x2="-30.46" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-30.46" y1="-1.25" x2="-30.46" y2="1.25" width="0.127" layer="21"/>
+<text x="-30.46" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-26.67" y="0" drill="1"/>
+<pad name="P$3" x="-24.13" y="0" drill="1"/>
+<pad name="P$4" x="-21.59" y="0" drill="1"/>
+<pad name="P$5" x="-19.05" y="0" drill="1"/>
+<pad name="P$6" x="-16.51" y="0" drill="1"/>
+<pad name="P$7" x="-13.97" y="0" drill="1"/>
+<pad name="P$8" x="-11.43" y="0" drill="1"/>
+<pad name="P$9" x="-8.89" y="0" drill="1"/>
+<pad name="P$10" x="-6.35" y="0" drill="1"/>
+<pad name="P$11" x="-3.81" y="0" drill="1"/>
+<pad name="P$12" x="-1.27" y="0" drill="1"/>
+<pad name="P$13" x="1.27" y="0" drill="1"/>
+<pad name="P$14" x="3.81" y="0" drill="1"/>
+<pad name="P$15" x="6.35" y="0" drill="1"/>
+<pad name="P$16" x="8.89" y="0" drill="1"/>
+<pad name="P$17" x="11.43" y="0" drill="1"/>
+<pad name="P$18" x="13.97" y="0" drill="1"/>
+<pad name="P$19" x="16.51" y="0" drill="1"/>
+<pad name="P$20" x="19.05" y="0" drill="1"/>
+<pad name="P$21" x="21.59" y="0" drill="1"/>
+<pad name="P$22" x="24.13" y="0" drill="1"/>
+<pad name="P$23" x="26.67" y="0" drill="1"/>
+<pad name="P$24" x="29.21" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X25">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 25 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X26">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 26 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-31.75" y="0" drill="1"/>
+<wire x1="-33" y1="1.25" x2="33" y2="1.25" width="0.127" layer="21"/>
+<wire x1="33" y1="1.25" x2="33" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="33" y1="-1.25" x2="-33" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-33" y1="-1.25" x2="-33" y2="1.25" width="0.127" layer="21"/>
+<text x="-33" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-29.21" y="0" drill="1"/>
+<pad name="P$3" x="-26.67" y="0" drill="1"/>
+<pad name="P$4" x="-24.13" y="0" drill="1"/>
+<pad name="P$5" x="-21.59" y="0" drill="1"/>
+<pad name="P$6" x="-19.05" y="0" drill="1"/>
+<pad name="P$7" x="-16.51" y="0" drill="1"/>
+<pad name="P$8" x="-13.97" y="0" drill="1"/>
+<pad name="P$9" x="-11.43" y="0" drill="1"/>
+<pad name="P$10" x="-8.89" y="0" drill="1"/>
+<pad name="P$11" x="-6.35" y="0" drill="1"/>
+<pad name="P$12" x="-3.81" y="0" drill="1"/>
+<pad name="P$13" x="-1.27" y="0" drill="1"/>
+<pad name="P$14" x="1.27" y="0" drill="1"/>
+<pad name="P$15" x="3.81" y="0" drill="1"/>
+<pad name="P$16" x="6.35" y="0" drill="1"/>
+<pad name="P$17" x="8.89" y="0" drill="1"/>
+<pad name="P$18" x="11.43" y="0" drill="1"/>
+<pad name="P$19" x="13.97" y="0" drill="1"/>
+<pad name="P$20" x="16.51" y="0" drill="1"/>
+<pad name="P$21" x="19.05" y="0" drill="1"/>
+<pad name="P$22" x="21.59" y="0" drill="1"/>
+<pad name="P$23" x="24.13" y="0" drill="1"/>
+<pad name="P$24" x="26.67" y="0" drill="1"/>
+<pad name="P$25" x="29.21" y="0" drill="1"/>
+<pad name="P$26" x="31.75" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X27">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 27 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X28">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 28 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-34.29" y="0" drill="1"/>
+<wire x1="-35.54" y1="1.25" x2="35.54" y2="1.25" width="0.127" layer="21"/>
+<wire x1="35.54" y1="1.25" x2="35.54" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="35.54" y1="-1.25" x2="-35.54" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-35.54" y1="-1.25" x2="-35.54" y2="1.25" width="0.127" layer="21"/>
+<text x="-35.54" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-31.75" y="0" drill="1"/>
+<pad name="P$3" x="-29.21" y="0" drill="1"/>
+<pad name="P$4" x="-26.67" y="0" drill="1"/>
+<pad name="P$5" x="-24.13" y="0" drill="1"/>
+<pad name="P$6" x="-21.59" y="0" drill="1"/>
+<pad name="P$7" x="-19.05" y="0" drill="1"/>
+<pad name="P$8" x="-16.51" y="0" drill="1"/>
+<pad name="P$9" x="-13.97" y="0" drill="1"/>
+<pad name="P$10" x="-11.43" y="0" drill="1"/>
+<pad name="P$11" x="-8.89" y="0" drill="1"/>
+<pad name="P$12" x="-6.35" y="0" drill="1"/>
+<pad name="P$13" x="-3.81" y="0" drill="1"/>
+<pad name="P$14" x="-1.27" y="0" drill="1"/>
+<pad name="P$15" x="1.27" y="0" drill="1"/>
+<pad name="P$16" x="3.81" y="0" drill="1"/>
+<pad name="P$17" x="6.35" y="0" drill="1"/>
+<pad name="P$18" x="8.89" y="0" drill="1"/>
+<pad name="P$19" x="11.43" y="0" drill="1"/>
+<pad name="P$20" x="13.97" y="0" drill="1"/>
+<pad name="P$21" x="16.51" y="0" drill="1"/>
+<pad name="P$22" x="19.05" y="0" drill="1"/>
+<pad name="P$23" x="21.59" y="0" drill="1"/>
+<pad name="P$24" x="24.13" y="0" drill="1"/>
+<pad name="P$25" x="26.67" y="0" drill="1"/>
+<pad name="P$26" x="29.21" y="0" drill="1"/>
+<pad name="P$27" x="31.75" y="0" drill="1"/>
+<pad name="P$28" x="34.29" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X29">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 29 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X30">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 30 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-36.83" y="0" drill="1"/>
+<wire x1="-38.08" y1="1.25" x2="38.08" y2="1.25" width="0.127" layer="21"/>
+<wire x1="38.08" y1="1.25" x2="38.08" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="38.08" y1="-1.25" x2="-38.08" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-38.08" y1="-1.25" x2="-38.08" y2="1.25" width="0.127" layer="21"/>
+<text x="-38.08" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-34.29" y="0" drill="1"/>
+<pad name="P$3" x="-31.75" y="0" drill="1"/>
+<pad name="P$4" x="-29.21" y="0" drill="1"/>
+<pad name="P$5" x="-26.67" y="0" drill="1"/>
+<pad name="P$6" x="-24.13" y="0" drill="1"/>
+<pad name="P$7" x="-21.59" y="0" drill="1"/>
+<pad name="P$8" x="-19.05" y="0" drill="1"/>
+<pad name="P$9" x="-16.51" y="0" drill="1"/>
+<pad name="P$10" x="-13.97" y="0" drill="1"/>
+<pad name="P$11" x="-11.43" y="0" drill="1"/>
+<pad name="P$12" x="-8.89" y="0" drill="1"/>
+<pad name="P$13" x="-6.35" y="0" drill="1"/>
+<pad name="P$14" x="-3.81" y="0" drill="1"/>
+<pad name="P$15" x="-1.27" y="0" drill="1"/>
+<pad name="P$16" x="1.27" y="0" drill="1"/>
+<pad name="P$17" x="3.81" y="0" drill="1"/>
+<pad name="P$18" x="6.35" y="0" drill="1"/>
+<pad name="P$19" x="8.89" y="0" drill="1"/>
+<pad name="P$20" x="11.43" y="0" drill="1"/>
+<pad name="P$21" x="13.97" y="0" drill="1"/>
+<pad name="P$22" x="16.51" y="0" drill="1"/>
+<pad name="P$23" x="19.05" y="0" drill="1"/>
+<pad name="P$24" x="21.59" y="0" drill="1"/>
+<pad name="P$25" x="24.13" y="0" drill="1"/>
+<pad name="P$26" x="26.67" y="0" drill="1"/>
+<pad name="P$27" x="29.21" y="0" drill="1"/>
+<pad name="P$28" x="31.75" y="0" drill="1"/>
+<pad name="P$29" x="34.29" y="0" drill="1"/>
+<pad name="P$30" x="36.83" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X31">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 31 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X32">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 32 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-39.37" y="0" drill="1"/>
+<wire x1="-40.62" y1="1.25" x2="40.62" y2="1.25" width="0.127" layer="21"/>
+<wire x1="40.62" y1="1.25" x2="40.62" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="40.62" y1="-1.25" x2="-40.62" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-40.62" y1="-1.25" x2="-40.62" y2="1.25" width="0.127" layer="21"/>
+<text x="-40.62" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-36.83" y="0" drill="1"/>
+<pad name="P$3" x="-34.29" y="0" drill="1"/>
+<pad name="P$4" x="-31.75" y="0" drill="1"/>
+<pad name="P$5" x="-29.21" y="0" drill="1"/>
+<pad name="P$6" x="-26.67" y="0" drill="1"/>
+<pad name="P$7" x="-24.13" y="0" drill="1"/>
+<pad name="P$8" x="-21.59" y="0" drill="1"/>
+<pad name="P$9" x="-19.05" y="0" drill="1"/>
+<pad name="P$10" x="-16.51" y="0" drill="1"/>
+<pad name="P$11" x="-13.97" y="0" drill="1"/>
+<pad name="P$12" x="-11.43" y="0" drill="1"/>
+<pad name="P$13" x="-8.89" y="0" drill="1"/>
+<pad name="P$14" x="-6.35" y="0" drill="1"/>
+<pad name="P$15" x="-3.81" y="0" drill="1"/>
+<pad name="P$16" x="-1.27" y="0" drill="1"/>
+<pad name="P$17" x="1.27" y="0" drill="1"/>
+<pad name="P$18" x="3.81" y="0" drill="1"/>
+<pad name="P$19" x="6.35" y="0" drill="1"/>
+<pad name="P$20" x="8.89" y="0" drill="1"/>
+<pad name="P$21" x="11.43" y="0" drill="1"/>
+<pad name="P$22" x="13.97" y="0" drill="1"/>
+<pad name="P$23" x="16.51" y="0" drill="1"/>
+<pad name="P$24" x="19.05" y="0" drill="1"/>
+<pad name="P$25" x="21.59" y="0" drill="1"/>
+<pad name="P$26" x="24.13" y="0" drill="1"/>
+<pad name="P$27" x="26.67" y="0" drill="1"/>
+<pad name="P$28" x="29.21" y="0" drill="1"/>
+<pad name="P$29" x="31.75" y="0" drill="1"/>
+<pad name="P$30" x="34.29" y="0" drill="1"/>
+<pad name="P$31" x="36.83" y="0" drill="1"/>
+<pad name="P$32" x="39.37" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X33">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 33 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X34">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 34 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-41.91" y="0" drill="1"/>
+<wire x1="-43.16" y1="1.25" x2="43.16" y2="1.25" width="0.127" layer="21"/>
+<wire x1="43.16" y1="1.25" x2="43.16" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="43.16" y1="-1.25" x2="-43.16" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-43.16" y1="-1.25" x2="-43.16" y2="1.25" width="0.127" layer="21"/>
+<text x="-43.16" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-39.37" y="0" drill="1"/>
+<pad name="P$3" x="-36.83" y="0" drill="1"/>
+<pad name="P$4" x="-34.29" y="0" drill="1"/>
+<pad name="P$5" x="-31.75" y="0" drill="1"/>
+<pad name="P$6" x="-29.21" y="0" drill="1"/>
+<pad name="P$7" x="-26.67" y="0" drill="1"/>
+<pad name="P$8" x="-24.13" y="0" drill="1"/>
+<pad name="P$9" x="-21.59" y="0" drill="1"/>
+<pad name="P$10" x="-19.05" y="0" drill="1"/>
+<pad name="P$11" x="-16.51" y="0" drill="1"/>
+<pad name="P$12" x="-13.97" y="0" drill="1"/>
+<pad name="P$13" x="-11.43" y="0" drill="1"/>
+<pad name="P$14" x="-8.89" y="0" drill="1"/>
+<pad name="P$15" x="-6.35" y="0" drill="1"/>
+<pad name="P$16" x="-3.81" y="0" drill="1"/>
+<pad name="P$17" x="-1.27" y="0" drill="1"/>
+<pad name="P$18" x="1.27" y="0" drill="1"/>
+<pad name="P$19" x="3.81" y="0" drill="1"/>
+<pad name="P$20" x="6.35" y="0" drill="1"/>
+<pad name="P$21" x="8.89" y="0" drill="1"/>
+<pad name="P$22" x="11.43" y="0" drill="1"/>
+<pad name="P$23" x="13.97" y="0" drill="1"/>
+<pad name="P$24" x="16.51" y="0" drill="1"/>
+<pad name="P$25" x="19.05" y="0" drill="1"/>
+<pad name="P$26" x="21.59" y="0" drill="1"/>
+<pad name="P$27" x="24.13" y="0" drill="1"/>
+<pad name="P$28" x="26.67" y="0" drill="1"/>
+<pad name="P$29" x="29.21" y="0" drill="1"/>
+<pad name="P$30" x="31.75" y="0" drill="1"/>
+<pad name="P$31" x="34.29" y="0" drill="1"/>
+<pad name="P$32" x="36.83" y="0" drill="1"/>
+<pad name="P$33" x="39.37" y="0" drill="1"/>
+<pad name="P$34" x="41.91" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X35">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 35 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X36">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 36 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-44.45" y="0" drill="1"/>
+<wire x1="-45.7" y1="1.25" x2="45.7" y2="1.25" width="0.127" layer="21"/>
+<wire x1="45.7" y1="1.25" x2="45.7" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="45.7" y1="-1.25" x2="-45.7" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-45.7" y1="-1.25" x2="-45.7" y2="1.25" width="0.127" layer="21"/>
+<text x="-45.7" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-41.91" y="0" drill="1"/>
+<pad name="P$3" x="-39.37" y="0" drill="1"/>
+<pad name="P$4" x="-36.83" y="0" drill="1"/>
+<pad name="P$5" x="-34.29" y="0" drill="1"/>
+<pad name="P$6" x="-31.75" y="0" drill="1"/>
+<pad name="P$7" x="-29.21" y="0" drill="1"/>
+<pad name="P$8" x="-26.67" y="0" drill="1"/>
+<pad name="P$9" x="-24.13" y="0" drill="1"/>
+<pad name="P$10" x="-21.59" y="0" drill="1"/>
+<pad name="P$11" x="-19.05" y="0" drill="1"/>
+<pad name="P$12" x="-16.51" y="0" drill="1"/>
+<pad name="P$13" x="-13.97" y="0" drill="1"/>
+<pad name="P$14" x="-11.43" y="0" drill="1"/>
+<pad name="P$15" x="-8.89" y="0" drill="1"/>
+<pad name="P$16" x="-6.35" y="0" drill="1"/>
+<pad name="P$17" x="-3.81" y="0" drill="1"/>
+<pad name="P$18" x="-1.27" y="0" drill="1"/>
+<pad name="P$19" x="1.27" y="0" drill="1"/>
+<pad name="P$20" x="3.81" y="0" drill="1"/>
+<pad name="P$21" x="6.35" y="0" drill="1"/>
+<pad name="P$22" x="8.89" y="0" drill="1"/>
+<pad name="P$23" x="11.43" y="0" drill="1"/>
+<pad name="P$24" x="13.97" y="0" drill="1"/>
+<pad name="P$25" x="16.51" y="0" drill="1"/>
+<pad name="P$26" x="19.05" y="0" drill="1"/>
+<pad name="P$27" x="21.59" y="0" drill="1"/>
+<pad name="P$28" x="24.13" y="0" drill="1"/>
+<pad name="P$29" x="26.67" y="0" drill="1"/>
+<pad name="P$30" x="29.21" y="0" drill="1"/>
+<pad name="P$31" x="31.75" y="0" drill="1"/>
+<pad name="P$32" x="34.29" y="0" drill="1"/>
+<pad name="P$33" x="36.83" y="0" drill="1"/>
+<pad name="P$34" x="39.37" y="0" drill="1"/>
+<pad name="P$35" x="41.91" y="0" drill="1"/>
+<pad name="P$36" x="44.45" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X37">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 37 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X38">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 38 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-46.99" y="0" drill="1"/>
+<wire x1="-48.24" y1="1.25" x2="48.24" y2="1.25" width="0.127" layer="21"/>
+<wire x1="48.24" y1="1.25" x2="48.24" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="48.24" y1="-1.25" x2="-48.24" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-48.24" y1="-1.25" x2="-48.24" y2="1.25" width="0.127" layer="21"/>
+<text x="-48.24" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-44.45" y="0" drill="1"/>
+<pad name="P$3" x="-41.91" y="0" drill="1"/>
+<pad name="P$4" x="-39.37" y="0" drill="1"/>
+<pad name="P$5" x="-36.83" y="0" drill="1"/>
+<pad name="P$6" x="-34.29" y="0" drill="1"/>
+<pad name="P$7" x="-31.75" y="0" drill="1"/>
+<pad name="P$8" x="-29.21" y="0" drill="1"/>
+<pad name="P$9" x="-26.67" y="0" drill="1"/>
+<pad name="P$10" x="-24.13" y="0" drill="1"/>
+<pad name="P$11" x="-21.59" y="0" drill="1"/>
+<pad name="P$12" x="-19.05" y="0" drill="1"/>
+<pad name="P$13" x="-16.51" y="0" drill="1"/>
+<pad name="P$14" x="-13.97" y="0" drill="1"/>
+<pad name="P$15" x="-11.43" y="0" drill="1"/>
+<pad name="P$16" x="-8.89" y="0" drill="1"/>
+<pad name="P$17" x="-6.35" y="0" drill="1"/>
+<pad name="P$18" x="-3.81" y="0" drill="1"/>
+<pad name="P$19" x="-1.27" y="0" drill="1"/>
+<pad name="P$20" x="1.27" y="0" drill="1"/>
+<pad name="P$21" x="3.81" y="0" drill="1"/>
+<pad name="P$22" x="6.35" y="0" drill="1"/>
+<pad name="P$23" x="8.89" y="0" drill="1"/>
+<pad name="P$24" x="11.43" y="0" drill="1"/>
+<pad name="P$25" x="13.97" y="0" drill="1"/>
+<pad name="P$26" x="16.51" y="0" drill="1"/>
+<pad name="P$27" x="19.05" y="0" drill="1"/>
+<pad name="P$28" x="21.59" y="0" drill="1"/>
+<pad name="P$29" x="24.13" y="0" drill="1"/>
+<pad name="P$30" x="26.67" y="0" drill="1"/>
+<pad name="P$31" x="29.21" y="0" drill="1"/>
+<pad name="P$32" x="31.75" y="0" drill="1"/>
+<pad name="P$33" x="34.29" y="0" drill="1"/>
+<pad name="P$34" x="36.83" y="0" drill="1"/>
+<pad name="P$35" x="39.37" y="0" drill="1"/>
+<pad name="P$36" x="41.91" y="0" drill="1"/>
+<pad name="P$37" x="44.45" y="0" drill="1"/>
+<pad name="P$38" x="46.99" y="0" drill="1"/>
+</package>
+<package name="PTH_2.54MM_01X39">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 39 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+</package>
+<package name="PTH_2.54MM_01X40">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 40 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-49.53" y="0" drill="1"/>
+<wire x1="-50.78" y1="1.25" x2="50.78" y2="1.25" width="0.127" layer="21"/>
+<wire x1="50.78" y1="1.25" x2="50.78" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="50.78" y1="-1.25" x2="-50.78" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-50.78" y1="-1.25" x2="-50.78" y2="1.25" width="0.127" layer="21"/>
+<text x="-50.78" y="1.5" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="-46.99" y="0" drill="1"/>
+<pad name="P$3" x="-44.45" y="0" drill="1"/>
+<pad name="P$4" x="-41.91" y="0" drill="1"/>
+<pad name="P$5" x="-39.37" y="0" drill="1"/>
+<pad name="P$6" x="-36.83" y="0" drill="1"/>
+<pad name="P$7" x="-34.29" y="0" drill="1"/>
+<pad name="P$8" x="-31.75" y="0" drill="1"/>
+<pad name="P$9" x="-29.21" y="0" drill="1"/>
+<pad name="P$10" x="-26.67" y="0" drill="1"/>
+<pad name="P$11" x="-24.13" y="0" drill="1"/>
+<pad name="P$12" x="-21.59" y="0" drill="1"/>
+<pad name="P$13" x="-19.05" y="0" drill="1"/>
+<pad name="P$14" x="-16.51" y="0" drill="1"/>
+<pad name="P$15" x="-13.97" y="0" drill="1"/>
+<pad name="P$16" x="-11.43" y="0" drill="1"/>
+<pad name="P$17" x="-8.89" y="0" drill="1"/>
+<pad name="P$18" x="-6.35" y="0" drill="1"/>
+<pad name="P$19" x="-3.81" y="0" drill="1"/>
+<pad name="P$20" x="-1.27" y="0" drill="1"/>
+<pad name="P$21" x="1.27" y="0" drill="1"/>
+<pad name="P$22" x="3.81" y="0" drill="1"/>
+<pad name="P$23" x="6.35" y="0" drill="1"/>
+<pad name="P$24" x="8.89" y="0" drill="1"/>
+<pad name="P$25" x="11.43" y="0" drill="1"/>
+<pad name="P$26" x="13.97" y="0" drill="1"/>
+<pad name="P$27" x="16.51" y="0" drill="1"/>
+<pad name="P$28" x="19.05" y="0" drill="1"/>
+<pad name="P$29" x="21.59" y="0" drill="1"/>
+<pad name="P$30" x="24.13" y="0" drill="1"/>
+<pad name="P$31" x="26.67" y="0" drill="1"/>
+<pad name="P$32" x="29.21" y="0" drill="1"/>
+<pad name="P$33" x="31.75" y="0" drill="1"/>
+<pad name="P$34" x="34.29" y="0" drill="1"/>
+<pad name="P$35" x="36.83" y="0" drill="1"/>
+<pad name="P$36" x="39.37" y="0" drill="1"/>
+<pad name="P$37" x="41.91" y="0" drill="1"/>
+<pad name="P$38" x="44.45" y="0" drill="1"/>
+<pad name="P$39" x="46.99" y="0" drill="1"/>
+<pad name="P$40" x="49.53" y="0" drill="1"/>
 </package>
 </packages>
 <symbols>
