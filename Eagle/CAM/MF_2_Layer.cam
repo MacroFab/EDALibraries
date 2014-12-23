@@ -1,5 +1,5 @@
 [CAM Processor Job]
-Description[en]="\n<b>MacroFab, INC. 2-layer PCB Gerber</b><br>\n<b>Generates 11 RS274-x format gerber files:</b><p>\n\nTop Layer: pcbname.GTL<br>\nSilk Top:  pcbname.GTO<br>\nSolderMask Top: pcbname.GTS<br>\nSMD paste Top: pcbname.GTP<p>\n\nBottom Layer: pcbname.GBL<br>\nSilk Bottom: pcbname.GBO<br>\nSolderMask Bottom: pcbname.GBS<br>\nSMD paste Bottom: pcbname.GBP<p>\n\nSolt Drills/Hole: pcbname.GML (Milling Layer 46)<br>\nBoard Outline: pcbname.BOR (Dimensions Layer 20)<br>\nNC Drill file:pcbname.TXT<p>\n\n"
+Description[en]="\n\n<b>MacroFab, INC. 2-layer PCB Gerber</b><br>\n<b>Generates 11 RS274-x format gerber files:</b><p>\n\nTop Layer: pcbname.GTL<br>\nSilk Top:  pcbname.GTO<br>\nSolderMask Top: pcbname.GTS<br>\nSMD paste Top: pcbname.GTP<p>\n\nBottom Layer: pcbname.GBL<br>\nSilk Bottom: pcbname.GBO<br>\nSolderMask Bottom: pcbname.GBS<br>\nSMD paste Bottom: pcbname.GBP<p>\n\nSolt Drills/Hole: pcbname.GML (Milling Layer 46)<br>\nBoard Outline: pcbname.BOR (Dimensions Layer 20)<br>\nNC Drill file:pcbname.TXT<p>\n\n"
 Section=Sec_1
 Section=Sec_2
 Section=Sec_3
@@ -37,7 +37,7 @@ Device="EXCELLON"
 Wheel=""
 Rack=""
 Scale=1
-Output="camfiles/%N.TXT"
+Output="camfiles/%N.XLN"
 Flags="0 0 0 1 0 1 1"
 Emulate="0"
 Offset="0.0mil 0.0mil"
