@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -52,7 +52,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -70,11 +70,80 @@
 </layers>
 <library>
 <packages>
+<package name="16026-16X2">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard footprint for EastRising ERM1602-6 series display.&lt;br/&gt;</description>
+<pad name="P$1" x="8" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$2" x="10.54" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$3" x="13.08" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$4" x="15.62" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$5" x="18.16" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$6" x="20.7" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$7" x="23.24" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$8" x="25.78" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$9" x="28.32" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$10" x="30.86" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$11" x="33.4" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$12" x="35.94" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$13" x="38.48" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$14" x="41.02" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$15" x="43.56" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="P$16" x="46.1" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<wire x1="0" y1="0" x2="80" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="-36" width="0.127" layer="21"/>
+<wire x1="0" y1="-36" x2="80" y2="-36" width="0.127" layer="21"/>
+<wire x1="80" y1="-36" x2="80" y2="0" width="0.127" layer="21"/>
+<pad name="MNT1" x="2.5" y="-2.5" drill="3" diameter="6"/>
+<pad name="MNT2" x="77.5" y="-2.4" drill="3" diameter="6" rot="R90"/>
+<pad name="MNT3" x="2.5" y="-33.5" drill="3" diameter="6"/>
+<pad name="MNT4" x="77.5" y="-33.5" drill="3" diameter="6" rot="R90"/>
+<wire x1="4.5" y1="-6.5" x2="4.5" y2="-30.5" width="0.127" layer="51"/>
+<wire x1="4.5" y1="-30.5" x2="75.5" y2="-30.5" width="0.127" layer="51"/>
+<wire x1="75.5" y1="-30.5" x2="75.5" y2="-24.75" width="0.127" layer="51"/>
+<wire x1="75.5" y1="-24.75" x2="75.5" y2="-12.25" width="0.127" layer="51"/>
+<wire x1="75.5" y1="-12.25" x2="75.5" y2="-6.5" width="0.127" layer="51"/>
+<wire x1="75.5" y1="-6.5" x2="4.5" y2="-6.5" width="0.127" layer="51"/>
+<wire x1="12.275" y1="-13.075" x2="12.275" y2="-23.925" width="0.127" layer="51"/>
+<wire x1="12.275" y1="-23.925" x2="67.725" y2="-23.925" width="0.127" layer="51"/>
+<wire x1="67.725" y1="-23.925" x2="67.725" y2="-13.075" width="0.127" layer="51"/>
+<wire x1="67.725" y1="-13.075" x2="12.275" y2="-13.075" width="0.127" layer="51"/>
+<text x="0" y="1.5" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<wire x1="7.75" y1="-11.5" x2="7.75" y2="-25.75" width="0.127" layer="51"/>
+<wire x1="7.75" y1="-25.75" x2="72.25" y2="-25.75" width="0.127" layer="51"/>
+<wire x1="72.25" y1="-25.75" x2="72.25" y2="-11.5" width="0.127" layer="51"/>
+<wire x1="72.25" y1="-11.5" x2="7.75" y2="-11.5" width="0.127" layer="51"/>
+<text x="40.4" y="-18.5" size="3.81" layer="51" font="vector" distance="20" align="center">MACROFAB_DISPLAY
+ERM1602-6_SERIES</text>
+<text x="67.5" y="-6" size="0.8128" layer="51" font="vector" ratio="16" rot="R180" align="top-left">BEZEL</text>
+<text x="67.5" y="-11.135" size="0.8128" layer="51" font="vector" ratio="16" rot="R180" align="top-left">VISIBLE AREA</text>
+<text x="67.5" y="-12.7" size="0.8128" layer="51" font="vector" ratio="16" rot="R180" align="top-left">CHARACTER AREA</text>
+<wire x1="75.5" y1="-12.25" x2="79.15" y2="-16.5" width="0.127" layer="51"/>
+<wire x1="79.15" y1="-16.5" x2="79.15" y2="-20.5" width="0.127" layer="51"/>
+<wire x1="79.15" y1="-20.5" x2="75.5" y2="-24.75" width="0.127" layer="51"/>
+</package>
 </packages>
 <symbols>
 </symbols>
 <devicesets>
+<deviceset name="HD44780">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Displays&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; Device for HD44780 Complaint Displays. Manufacture part number (MFG#) can be added via Attributes.&lt;br/&gt;</description>
+<gates>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
