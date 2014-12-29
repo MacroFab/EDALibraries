@@ -5568,7 +5568,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="TRS_JACK" uservalue="yes">
+<deviceset name="TRS_JACK" prefix="J" uservalue="yes">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Connectors&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; TRS Jack Connector.&lt;br/&gt;</description>
 <gates>
