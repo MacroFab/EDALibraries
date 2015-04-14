@@ -239,14 +239,14 @@ if (board) board(B) {
                         rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) - (C.y-y_cen)*sin(-(p_angle * PI)/180));
                         rot_y = y_cen + (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
                         
-                        if((C.smd.angle - p_angle) == 0 || (C.smd.angle - p_angle) == 180)
+                        if((abs(C.smd.angle - p_angle)) == 0 || (abs(C.smd.angle - p_angle)) == 180)
                         {
                             if ((rot_x + (C.smd.dx / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.smd.dx / 2));
                             if ((rot_y + (C.smd.dy / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.smd.dy / 2));
                             if ((rot_x - (C.smd.dx / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.smd.dx / 2));
                             if ((rot_y - (C.smd.dy / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.smd.dy / 2));
                         }
-                        else if((C.smd.angle - p_angle) ==  90 || (C.smd.angle - p_angle) == 270)
+                        else if((abs(C.smd.angle - p_angle)) ==  90 || (abs(C.smd.angle - p_angle)) == 270)
                         {
                             if ((rot_x + (C.smd.dy / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.smd.dy / 2));
                             if ((rot_y + (C.smd.dx / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.smd.dx / 2));
@@ -283,14 +283,14 @@ if (board) board(B) {
                         rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) - (C.y-y_cen)*sin(-(p_angle * PI)/180));
                         rot_y = y_cen + (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
                         
-                        if((C.pad.angle - p_angle) == 0 || (C.pad.angle - p_angle) == 180)
+                        if((abs(C.pad.angle - p_angle)) == 0 || (abs(C.pad.angle - p_angle)) == 180)
                         {
                             if ((rot_x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.pad.drill / 2));
                             if ((rot_y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.pad.drill / 2));
                             if ((rot_x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.pad.drill / 2));
                             if ((rot_y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.pad.drill / 2));
                         }
-                        else if((C.pad.angle - p_angle) ==  90 || (C.pad.angle - p_angle) == 270)
+                        else if((abs(C.pad.angle - p_angle)) ==  90 || (abs(C.pad.angle - p_angle)) == 270)
                         {
                             if ((rot_x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.pad.drill / 2));
                             if ((rot_y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.pad.drill / 2));
