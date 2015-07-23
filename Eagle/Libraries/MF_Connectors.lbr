@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -2493,11 +2493,11 @@
 <wire x1="3.79" y1="-2.52" x2="-3.79" y2="-2.52" width="0.127" layer="21"/>
 <wire x1="-3.79" y1="-2.52" x2="-3.79" y2="2.52" width="0.127" layer="21"/>
 <text x="-5.31" y="-2.52" size="0.8128" layer="25" font="vector" ratio="16" rot="R90">&gt;NAME</text>
-<pad name="P$2" x="0" y="-1.27" drill="1"/>
-<pad name="P$3" x="2.54" y="-1.27" drill="1"/>
-<text x="2.54" y="-2.54" size="0.8128" layer="21" font="vector" ratio="16" rot="R90" align="center-right">&gt;LABEL02</text>
+<pad name="P$2" x="-2.54" y="1.27" drill="1"/>
+<pad name="P$3" x="0" y="-1.27" drill="1"/>
+<text x="0" y="-2.54" size="0.8128" layer="21" font="vector" ratio="16" rot="R90" align="center-right">&gt;LABEL02</text>
 <text x="-2.54" y="-2.54" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-left">&gt;LABEL00</text>
-<text x="0" y="-2.54" size="0.8128" layer="21" font="vector" ratio="16" rot="R90" align="center-right">&gt;LABEL01</text>
+<text x="-2.54" y="2.794" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-right">&gt;LABEL01</text>
 <polygon width="0.127" layer="21">
 <vertex x="-4.445" y="-3.175"/>
 <vertex x="-3.81" y="-3.175"/>
@@ -2505,12 +2505,19 @@
 <vertex x="-3.81" y="-1.905"/>
 <vertex x="-4.445" y="-2.54"/>
 </polygon>
-<pad name="P$4" x="2.54" y="1.27" drill="1"/>
-<pad name="P$5" x="0" y="1.27" drill="1"/>
-<pad name="P$6" x="-2.54" y="1.27" drill="1"/>
-<text x="2.54" y="2.794" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-right">&gt;LABEL03</text>
-<text x="0" y="2.794" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-right">&gt;LABEL04</text>
-<text x="-2.54" y="2.794" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-right">&gt;LABEL05</text>
+<pad name="P$4" x="0" y="1.27" drill="1"/>
+<pad name="P$5" x="2.54" y="-1.27" drill="1"/>
+<pad name="P$6" x="2.54" y="1.27" drill="1"/>
+<text x="0" y="2.794" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-right">&gt;LABEL03</text>
+<text x="2.54" y="-2.54" size="0.8128" layer="21" font="vector" ratio="16" rot="R90" align="center-right">&gt;LABEL04</text>
+<text x="2.54" y="2.794" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-right">&gt;LABEL05</text>
+</package>
+<package name="POGO_PIN_70-9150">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for SMD mount Pogo Pin connectors. Based on AVX 70-9150 series Pogo Pins.&lt;br&gt;</description>
+<smd name="P$1" x="0" y="0" dx="2.4" dy="2.4" layer="1" roundness="100"/>
+<circle x="0" y="0" radius="1.27" width="0.08" layer="21"/>
+<text x="1.905" y="0.635" size="0.8128" layer="25" font="vector" ratio="16" align="center-left">&gt;NAME</text>
+<text x="1.905" y="-0.635" size="0.8128" layer="21" font="vector" ratio="16" align="center-left">&gt;LABEL00</text>
 </package>
 </packages>
 <symbols>
@@ -5506,8 +5513,8 @@
 </symbol>
 <symbol name="PTH_02X03">
 <description>&lt;b&gt;Description:&lt;/b&gt; Symbol for Header 6 Position 2 Row.&lt;br&gt;</description>
-<pin name="PIN1" x="-2.54" y="-2.54" visible="off" length="short"/>
-<text x="7.62" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL01</text>
+<pin name="PIN1" x="33.02" y="0" visible="off" length="short" rot="R180"/>
+<text x="22.86" y="0" size="1.016" layer="97" font="vector" rot="R180" align="center-left">&gt;LABEL01</text>
 <wire x1="0" y1="-6.35" x2="30.48" y2="-6.35" width="0.127" layer="94"/>
 <pin name="PIN0" x="-2.54" y="0" visible="off" length="short"/>
 <text x="7.62" y="0" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL00</text>
@@ -5516,20 +5523,20 @@
 <wire x1="30.48" y1="1.27" x2="0" y2="1.27" width="0.127" layer="94"/>
 <text x="0" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
 <text x="0" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
-<pin name="PIN2" x="-2.54" y="-5.08" visible="off" length="short"/>
-<text x="7.62" y="-5.08" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL02</text>
+<pin name="PIN2" x="-2.54" y="-2.54" visible="off" length="short"/>
+<text x="7.62" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL02</text>
 <text x="0.508" y="0" size="1.016" layer="97" font="vector" align="center-left">PIN00</text>
-<text x="0.508" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">PIN01</text>
-<text x="0.508" y="-5.08" size="1.016" layer="97" font="vector" align="center-left">PIN02</text>
-<pin name="PIN3" x="33.02" y="-5.08" visible="off" length="short" rot="R180"/>
-<text x="22.86" y="-5.08" size="1.016" layer="97" font="vector" rot="R180" align="center-left">&gt;LABEL03</text>
-<text x="30.48" y="-5.08" size="1.016" layer="97" font="vector" align="center-right">PIN03</text>
-<pin name="PIN4" x="33.02" y="-2.54" visible="off" length="short" rot="R180"/>
-<pin name="PIN5" x="33.02" y="0" visible="off" length="short" rot="R180"/>
-<text x="30.48" y="0" size="1.016" layer="97" font="vector" align="center-right">PIN05</text>
-<text x="22.86" y="-2.54" size="1.016" layer="97" font="vector" rot="R180" align="center-left">&gt;LABEL04</text>
-<text x="22.86" y="0" size="1.016" layer="97" font="vector" rot="R180" align="center-left">&gt;LABEL05</text>
-<text x="30.48" y="-2.54" size="1.016" layer="97" font="vector" align="center-right">PIN04</text>
+<text x="30.48" y="0" size="1.016" layer="97" font="vector" rot="R180" align="center-left">PIN01</text>
+<text x="0.508" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">PIN02</text>
+<pin name="PIN3" x="33.02" y="-2.54" visible="off" length="short" rot="R180"/>
+<text x="22.86" y="-2.54" size="1.016" layer="97" font="vector" rot="R180" align="center-left">&gt;LABEL03</text>
+<text x="30.48" y="-2.54" size="1.016" layer="97" font="vector" align="center-right">PIN03</text>
+<pin name="PIN4" x="-2.54" y="-5.08" visible="off" length="short"/>
+<pin name="PIN5" x="33.02" y="-5.08" visible="off" length="short" rot="R180"/>
+<text x="30.48" y="-5.08" size="1.016" layer="97" font="vector" align="center-right">PIN05</text>
+<text x="7.62" y="-5.08" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL04</text>
+<text x="22.86" y="-5.08" size="1.016" layer="97" font="vector" rot="R180" align="center-left">&gt;LABEL05</text>
+<text x="0.508" y="-5.08" size="1.016" layer="97" font="vector" rot="R180" align="center-right">PIN04</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -7975,6 +7982,25 @@
 <attribute name="LABEL03" value="" constant="no"/>
 <attribute name="LABEL04" value="" constant="no"/>
 <attribute name="LABEL05" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="POGO_PIN_01X01" prefix="PP" uservalue="yes">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Connectors&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; Pogo Pin Connector&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="PTH_01X01" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="POGO_PIN_70-9150">
+<connects>
+<connect gate="G$1" pin="PIN0" pad="P$1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="LABEL00" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
