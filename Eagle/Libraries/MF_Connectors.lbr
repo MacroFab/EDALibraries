@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2484,6 +2484,33 @@
 <vertex x="-50.8" y="-0.635"/>
 <vertex x="-51.435" y="-1.27"/>
 </polygon>
+</package>
+<package name="PTH_2.54MM_02X03">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 2 Row 6 Position. &lt;br&gt;</description>
+<pad name="P$1" x="-2.54" y="-1.27" drill="1"/>
+<wire x1="-3.79" y1="2.52" x2="3.79" y2="2.52" width="0.127" layer="21"/>
+<wire x1="3.79" y1="2.52" x2="3.79" y2="-2.52" width="0.127" layer="21"/>
+<wire x1="3.79" y1="-2.52" x2="-3.79" y2="-2.52" width="0.127" layer="21"/>
+<wire x1="-3.79" y1="-2.52" x2="-3.79" y2="2.52" width="0.127" layer="21"/>
+<text x="-5.31" y="-2.52" size="0.8128" layer="25" font="vector" ratio="16" rot="R90">&gt;NAME</text>
+<pad name="P$2" x="0" y="-1.27" drill="1"/>
+<pad name="P$3" x="2.54" y="-1.27" drill="1"/>
+<text x="2.54" y="-2.54" size="0.8128" layer="21" font="vector" ratio="16" rot="R90" align="center-right">&gt;LABEL02</text>
+<text x="-2.54" y="-2.54" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-left">&gt;LABEL00</text>
+<text x="0" y="-2.54" size="0.8128" layer="21" font="vector" ratio="16" rot="R90" align="center-right">&gt;LABEL01</text>
+<polygon width="0.127" layer="21">
+<vertex x="-4.445" y="-3.175"/>
+<vertex x="-3.81" y="-3.175"/>
+<vertex x="-3.175" y="-2.54"/>
+<vertex x="-3.81" y="-1.905"/>
+<vertex x="-4.445" y="-2.54"/>
+</polygon>
+<pad name="P$4" x="2.54" y="1.27" drill="1"/>
+<pad name="P$5" x="0" y="1.27" drill="1"/>
+<pad name="P$6" x="-2.54" y="1.27" drill="1"/>
+<text x="2.54" y="2.794" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-right">&gt;LABEL03</text>
+<text x="0" y="2.794" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-right">&gt;LABEL04</text>
+<text x="-2.54" y="2.794" size="0.8128" layer="21" font="vector" ratio="16" rot="R270" align="center-right">&gt;LABEL05</text>
 </package>
 </packages>
 <symbols>
@@ -5477,6 +5504,33 @@
 <text x="0.508" y="-99.06" size="1.016" layer="97" font="vector" align="center-left">PIN39</text>
 <text x="7.62" y="-99.06" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL39</text>
 </symbol>
+<symbol name="PTH_02X03">
+<description>&lt;b&gt;Description:&lt;/b&gt; Symbol for Header 6 Position 2 Row.&lt;br&gt;</description>
+<pin name="PIN1" x="-2.54" y="-2.54" visible="off" length="short"/>
+<text x="7.62" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL01</text>
+<wire x1="0" y1="-6.35" x2="30.48" y2="-6.35" width="0.127" layer="94"/>
+<pin name="PIN0" x="-2.54" y="0" visible="off" length="short"/>
+<text x="7.62" y="0" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL00</text>
+<wire x1="0" y1="1.27" x2="0" y2="-6.35" width="0.127" layer="94"/>
+<wire x1="30.48" y1="-6.35" x2="30.48" y2="1.27" width="0.127" layer="94"/>
+<wire x1="30.48" y1="1.27" x2="0" y2="1.27" width="0.127" layer="94"/>
+<text x="0" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="0" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
+<pin name="PIN2" x="-2.54" y="-5.08" visible="off" length="short"/>
+<text x="7.62" y="-5.08" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL02</text>
+<text x="0.508" y="0" size="1.016" layer="97" font="vector" align="center-left">PIN00</text>
+<text x="0.508" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">PIN01</text>
+<text x="0.508" y="-5.08" size="1.016" layer="97" font="vector" align="center-left">PIN02</text>
+<pin name="PIN3" x="33.02" y="-5.08" visible="off" length="short" rot="R180"/>
+<text x="22.86" y="-5.08" size="1.016" layer="97" font="vector" rot="R180" align="center-left">&gt;LABEL03</text>
+<text x="30.48" y="-5.08" size="1.016" layer="97" font="vector" align="center-right">PIN03</text>
+<pin name="PIN4" x="33.02" y="-2.54" visible="off" length="short" rot="R180"/>
+<pin name="PIN5" x="33.02" y="0" visible="off" length="short" rot="R180"/>
+<text x="30.48" y="0" size="1.016" layer="97" font="vector" align="center-right">PIN05</text>
+<text x="22.86" y="-2.54" size="1.016" layer="97" font="vector" rot="R180" align="center-left">&gt;LABEL04</text>
+<text x="22.86" y="0" size="1.016" layer="97" font="vector" rot="R180" align="center-left">&gt;LABEL05</text>
+<text x="30.48" y="-2.54" size="1.016" layer="97" font="vector" align="center-right">PIN04</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="SD_CARD_SLOT" prefix="SD" uservalue="yes">
@@ -7892,6 +7946,35 @@
 <attribute name="LABEL36" value="" constant="no"/>
 <attribute name="LABEL37" value="" constant="no"/>
 <attribute name="LABEL38" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HEADER_02X03" prefix="J" uservalue="yes">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Connectors&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; Header Connector with 6 Positions and 02 Rows. Use the LABEL Attribute to label the pin on the schematic and PCB. You can remove the attributes on the PCB by using the SMASH function on the part and then deleting the text.&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="PTH_02X03" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_PTH_2.54MM" package="PTH_2.54MM_02X03">
+<connects>
+<connect gate="G$1" pin="PIN0" pad="P$1"/>
+<connect gate="G$1" pin="PIN1" pad="P$2"/>
+<connect gate="G$1" pin="PIN2" pad="P$3"/>
+<connect gate="G$1" pin="PIN3" pad="P$4"/>
+<connect gate="G$1" pin="PIN4" pad="P$5"/>
+<connect gate="G$1" pin="PIN5" pad="P$6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="LABEL00" value="" constant="no"/>
+<attribute name="LABEL01" value="" constant="no"/>
+<attribute name="LABEL02" value="" constant="no"/>
+<attribute name="LABEL03" value="" constant="no"/>
+<attribute name="LABEL04" value="" constant="no"/>
+<attribute name="LABEL05" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
