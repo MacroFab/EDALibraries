@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -116,7 +116,7 @@
 </layers>
 <library>
 <packages>
-<package name="GSM_FIDUCIAL">
+<package name="FIDUCIAL_100MIL">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for fiducial marking for PCB alignment inside PNP and other machines.&lt;br/&gt;</description>
 <smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" thermals="no" cream="no"/>
 <smd name="P$2" x="0" y="0" dx="1.27" dy="1.27" layer="16" roundness="100" thermals="no" cream="no"/>
@@ -148,19 +148,20 @@
 </package>
 <package name="MF_FRAME_DEFAULT">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for adding Meta Data to the PCB.&lt;br/&gt;</description>
-<text x="0" y="-1.27" size="0.8128" layer="21" font="vector">(c) 2014 MacroFab, Inc</text>
-<text x="0" y="-2.54" size="0.8128" layer="21" font="vector">MacroFab.net</text>
-<text x="0" y="-3.81" size="0.8128" layer="21" font="vector">&gt;DRAWING_NAME</text>
-<text x="0" y="-5.08" size="0.8128" layer="21" font="vector">&gt;REVNUM</text>
-<text x="0" y="-6.35" size="0.8128" layer="21" font="vector">&gt;DNAME</text>
+<text x="0" y="-1.27" size="0.8128" layer="21" font="vector" ratio="16">(c) 2015 MacroFab, Inc</text>
+<text x="0" y="-2.54" size="0.8128" layer="21" font="vector" ratio="16">MacroFab.net</text>
+<text x="0" y="-3.81" size="0.8128" layer="21" font="vector" ratio="16">&gt;DRAWING_NAME</text>
+<text x="0" y="-5.08" size="0.8128" layer="21" font="vector" ratio="16">&gt;REVNUM</text>
+<text x="0" y="-6.35" size="0.8128" layer="21" font="vector" ratio="16">&gt;DNAME</text>
+</package>
+<package name="FIDUCIAL_0.5MM">
+<smd name="FID" x="0" y="0" dx="0.5" dy="0.5" layer="1" roundness="100" cream="no"/>
 </package>
 </packages>
 <symbols>
-<symbol name="GSM_FIDUCIAL">
+<symbol name="FIDUCIAL">
 <description>&lt;b&gt;Description:&lt;/b&gt; Symbol for fiducial marking for PCB alignment inside PNP and other machines.&lt;br/&gt;</description>
-<text x="0" y="-1.524" size="1.016" layer="97" font="vector" rot="MR180">GSM_FIDUCIAL
-50mil Disc
-100mil Mask Stop</text>
+<text x="0" y="-1.524" size="1.016" layer="96" font="vector" rot="MR180">&gt;VALUE</text>
 <text x="0" y="0" size="1.016" layer="95" font="vector" rot="MR180">&gt;NAME</text>
 </symbol>
 <symbol name="MF_FRAME_DEFAULT">
@@ -600,14 +601,19 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="GSM_FIDUCIAL" prefix="FID">
+<deviceset name="FIDUCIAL" prefix="FID">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Aesthetics&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; Fiducial marking for PCB alignment inside PNP and other machines.&lt;br/&gt;</description>
 <gates>
-<gate name="G$1" symbol="GSM_FIDUCIAL" x="0" y="0"/>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="GSM_FIDUCIAL">
+<device name="_0.5MM" package="FIDUCIAL_0.5MM">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_100MIL" package="FIDUCIAL_100MIL">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -634,10 +640,4 @@
 </devicesets>
 </library>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>
