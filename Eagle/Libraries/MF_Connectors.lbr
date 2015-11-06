@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -6039,6 +6039,18 @@
 </gates>
 <devices>
 <device name="_PTH_2.54MM" package="PTH_2.54MM_01X10">
+<connects>
+<connect gate="G$1" pin="PIN0" pad="P$1"/>
+<connect gate="G$1" pin="PIN1" pad="P$2"/>
+<connect gate="G$1" pin="PIN2" pad="P$3"/>
+<connect gate="G$1" pin="PIN3" pad="P$4"/>
+<connect gate="G$1" pin="PIN4" pad="P$5"/>
+<connect gate="G$1" pin="PIN5" pad="P$6"/>
+<connect gate="G$1" pin="PIN6" pad="P$7"/>
+<connect gate="G$1" pin="PIN7" pad="P$8"/>
+<connect gate="G$1" pin="PIN8" pad="P$9"/>
+<connect gate="G$1" pin="PIN9" pad="P$10"/>
+</connects>
 <technologies>
 <technology name="">
 <attribute name="LABEL00" value="" constant="no"/>
