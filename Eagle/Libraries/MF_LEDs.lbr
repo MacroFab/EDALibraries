@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -255,8 +255,8 @@
 <wire x1="2.286" y1="4.826" x2="1.778" y2="4.826" width="0.254" layer="94"/>
 <wire x1="1.778" y1="4.826" x2="2.286" y2="4.318" width="0.254" layer="94"/>
 <wire x1="2.286" y1="4.318" x2="2.286" y2="4.826" width="0.254" layer="94"/>
-<text x="-5.08" y="2.54" size="1.016" layer="95" font="vector">&gt;NAME</text>
-<text x="-5.08" y="-2.54" size="1.016" layer="96" font="vector" align="top-left">&gt;VALUE</text>
+<text x="-5.08" y="-2.54" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="-5.08" y="-5.08" size="1.016" layer="96" font="vector">&gt;VALUE</text>
 <pin name="ANODE" x="-5.08" y="0" visible="off" length="middle" direction="pwr"/>
 <pin name="CATHODE" x="5.08" y="0" visible="off" length="middle" direction="pwr" rot="R180"/>
 </symbol>
