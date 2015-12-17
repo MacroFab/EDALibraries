@@ -1,7 +1,7 @@
-description[en] = <b>MacroFab, INC. EAGLE Design Rules</b>\n<p>\nThis DRC check is for 4-Layer boards to be manufactured through the MacroFab, INC. service. Use Layer 2 and 15 for inner layers. 
-layerSetup = (1*2*15*16)
+description[en] = <b>MacroFab, INC. EAGLE Design Rules</b>\n<p>This DRC check is for 2-Layer Standard Capability boards to be manufactured through the MacroFab, INC. service.
+layerSetup = (1*16)
 mtCopper = 0.035mm 0.0175mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.0175mm 0.035mm
-mtIsolate = 0.2mm 1.1mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm
+mtIsolate = 1.5mm 1.1mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm
 mdWireWire = 6mil
 mdWirePad = 6mil
 mdWireVia = 6mil
