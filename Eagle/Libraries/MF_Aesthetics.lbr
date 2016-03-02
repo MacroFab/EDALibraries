@@ -65,7 +65,7 @@
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -116,7 +116,7 @@
 </layers>
 <library>
 <packages>
-<package name="GSM_FIDUCIAL">
+<package name="FIDUCIAL_100MIL">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for fiducial marking for PCB alignment inside PNP and other machines.&lt;br/&gt;</description>
 <smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" thermals="no" cream="no"/>
 <smd name="P$2" x="0" y="0" dx="1.27" dy="1.27" layer="16" roundness="100" thermals="no" cream="no"/>
@@ -148,23 +148,24 @@
 </package>
 <package name="MF_FRAME_DEFAULT">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for adding Meta Data to the PCB.&lt;br/&gt;</description>
-<text x="0" y="-1.27" size="0.8128" layer="21" font="vector">(c) 2014 MacroFab, Inc</text>
-<text x="0" y="-2.54" size="0.8128" layer="21" font="vector">MacroFab.net</text>
-<text x="0" y="-3.81" size="0.8128" layer="21" font="vector">&gt;DRAWING_NAME</text>
-<text x="0" y="-5.08" size="0.8128" layer="21" font="vector">&gt;REVNUM</text>
-<text x="0" y="-6.35" size="0.8128" layer="21" font="vector">&gt;DNAME</text>
+<text x="0" y="-1.27" size="0.8128" layer="21" font="vector" ratio="16">(c) 2015 MacroFab, Inc</text>
+<text x="0" y="-2.54" size="0.8128" layer="21" font="vector" ratio="16">MacroFab.net</text>
+<text x="0" y="-3.81" size="0.8128" layer="21" font="vector" ratio="16">&gt;DRAWING_NAME</text>
+<text x="0" y="-5.08" size="0.8128" layer="21" font="vector" ratio="16">&gt;REVNUM</text>
+<text x="0" y="-6.35" size="0.8128" layer="21" font="vector" ratio="16">&gt;DNAME</text>
+</package>
+<package name="FIDUCIAL_0.5MM">
+<smd name="FID" x="0" y="0" dx="0.5" dy="0.5" layer="1" roundness="100" cream="no"/>
 </package>
 </packages>
 <symbols>
-<symbol name="GSM_FIDUCIAL">
+<symbol name="FIDUCIAL">
 <description>&lt;b&gt;Description:&lt;/b&gt; Symbol for fiducial marking for PCB alignment inside PNP and other machines.&lt;br/&gt;</description>
-<text x="0" y="-1.524" size="1.016" layer="97" font="vector" rot="MR180">GSM_FIDUCIAL
-50mil Disc
-100mil Mask Stop</text>
+<text x="0" y="-1.524" size="1.016" layer="96" font="vector" rot="MR180">&gt;VALUE</text>
 <text x="0" y="0" size="1.016" layer="95" font="vector" rot="MR180">&gt;NAME</text>
 </symbol>
 <symbol name="MF_FRAME_DEFAULT">
-<description>&lt;b&gt;Description:&lt;/b &gt;Symbol for adding Meta Data to the Schematic.&lt;br/&gt;</description>
+<description>&lt;b&gt;Description: &lt;/b &gt;Symbol for adding Meta Data to the Schematic.&lt;br/&gt;</description>
 <wire x1="0.072" y1="-25.352" x2="96.592" y2="-25.352" width="0.1016" layer="94"/>
 <wire x1="96.592" y1="-25.352" x2="127.072" y2="-25.352" width="0.1016" layer="94"/>
 <wire x1="127.072" y1="-20.272" x2="127.072" y2="-25.352" width="0.1016" layer="94"/>
@@ -598,16 +599,40 @@
 <rectangle x1="106.5276" y1="-2.286" x2="107.95" y2="-2.1844" layer="94"/>
 <rectangle x1="106.8324" y1="-2.1844" x2="107.6452" y2="-2.0828" layer="94"/>
 </symbol>
+<symbol name="POWER">
+<description>&lt;b&gt;Description: &lt;/b &gt;Symbol for power rails and indication.&lt;br/&gt;</description>
+<pin name="P$1" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.54" size="1.016" layer="96" font="vector" align="center">&gt;VALUE</text>
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.524" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="GND">
+<description>&lt;b&gt;Description: &lt;/b &gt;Symbol for ground rails and indication.&lt;br/&gt;</description>
+<pin name="P$1" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+<text x="0" y="-2.54" size="1.016" layer="96" font="vector" rot="R180" align="center">&gt;VALUE</text>
+<wire x1="-1.27" y1="0" x2="0" y2="0" width="0.4064" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.4064" layer="94"/>
+<wire x1="0.762" y1="-0.762" x2="-0.762" y2="-0.762" width="0.4064" layer="94"/>
+<wire x1="-0.508" y1="-1.524" x2="0.508" y2="-1.524" width="0.4064" layer="94"/>
+<wire x1="-0.127" y1="-2.286" x2="0.127" y2="-2.286" width="0.4064" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="2.54" width="0.4064" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="GSM_FIDUCIAL" prefix="FID">
+<deviceset name="FIDUCIAL" prefix="FID">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Aesthetics&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; Fiducial marking for PCB alignment inside PNP and other machines.&lt;br/&gt;</description>
 <gates>
-<gate name="G$1" symbol="GSM_FIDUCIAL" x="0" y="0"/>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="GSM_FIDUCIAL">
+<device name="_0.5MM" package="FIDUCIAL_0.5MM">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_100MIL" package="FIDUCIAL_100MIL">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -631,13 +656,35 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="POWER_RAIL" uservalue="yes">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Aesthetics&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt;Symbol for adding an indicator to a power rail.&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="POWER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GND_RAIL" uservalue="yes">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Aesthetics&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt;Symbol for adding an indicator to a ground rail.&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>
