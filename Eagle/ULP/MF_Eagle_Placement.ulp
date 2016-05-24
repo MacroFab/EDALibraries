@@ -16,12 +16,13 @@ if (board) board(B) {
     int temp_minY = INT_MAX;
 	
 	real w2 = 0;
+	real wkeep = 0;
 
     B.wires(W) 
     {
         if (W.layer == 20) 
         {
-			w2 = W.width/2;
+			//w2 = W.width/2;
 			if (W.x1-w2 < Board_minX) Board_minX = W.x1-w2;
 			if (W.x2-w2 < Board_minX) Board_minX = W.x2-w2;
 			if (W.x1+w2 > Board_maxX) Board_maxX = W.x1+w2;
@@ -62,7 +63,7 @@ if (board) board(B) {
 	{
 		if(C.layer == 20)
 		{
-			w2 = C.width / 2;
+			//w2 = C.width / 2;
 			temp_maxX = C.x + C.radius + w2;
 			temp_minX = C.x - C.radius - w2;
 			temp_maxY = C.y + C.radius + w2;
@@ -81,7 +82,7 @@ if (board) board(B) {
 		{
 			if (Y.layer == 20) 
 			{
-				w2 = Y.width/2;
+				//w2 = Y.width/2;
 				if (Y.x1-w2 < Board_minX) Board_minX = Y.x1-w2;
 				if (Y.x2-w2 < Board_minX) Board_minX = Y.x2-w2;
 				if (Y.x1+w2 > Board_maxX) Board_maxX = Y.x1+w2;
@@ -121,7 +122,7 @@ if (board) board(B) {
 		{
 			if(P.layer == 20)
 			{
-				w2 = P.width / 2;
+				//w2 = P.width / 2;
 				temp_maxX = P.x + P.radius + w2;
 				temp_minX = P.x - P.radius - w2;
 				temp_maxY = P.y + P.radius + w2;
@@ -315,11 +316,12 @@ if (board) board(B) {
             }
 			if((p_angle == 90) || (p_angle == 270))
 			{
-				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX) +10, u2mil(y_cen-Board_minY) +10,E.angle, side, type, u2mil(footprint_ymax - footprint_ymin), u2mil(footprint_xmax - footprint_xmin), E.value, E.package.name);
+				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),E.angle, side, type, u2mil(footprint_ymax - footprint_ymin), u2mil(footprint_xmax - footprint_xmin), E.value, E.package.name);
 			}
 			else
 			{
-				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX) +10, u2mil(y_cen-Board_minY) +10,E.angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name);			
+				//printf("%5.2f\t%5.2f\n",u2mil(Board_minX),u2mil(Board_minY));
+				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),E.angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name);			
 			}
         }
     }
