@@ -154,6 +154,7 @@ if (board) board(B) {
             int y_cen = 0;
             
             int side = 0;
+			int smdangle = 0;
                     
             int xmax = INT_MIN;
             int xmin = INT_MAX;
@@ -171,7 +172,7 @@ if (board) board(B) {
             int smd_cnt = 0;
             int pth_cnt = 0;
 
-			real p_angle = E.angle;
+			real p_angle = 0;
             
             E.package.contacts(C) 
             {           
@@ -194,10 +195,12 @@ if (board) board(B) {
                 if(E.mirror == 0)
                 {
                     side = 1;
+					p_angle = E.angle;
                 }
                 else
                 {
                     side = 2;
+					p_angle = 360 - E.angle;					
                 }
             }
             
@@ -219,7 +222,7 @@ if (board) board(B) {
             {
                 //Find package size for SMT
                 if (C.smd) 
-                {               
+                {     
                     if(C.smd.angle == 0 || C.smd.angle == 180)
                     {
                         if ((C.x + (C.smd.dx / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.smd.dx / 2));
@@ -277,6 +280,7 @@ if (board) board(B) {
                             if ((rot_x - (C.smd.dy / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.smd.dy / 2));
                             if ((rot_y - (C.smd.dx / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.smd.dx / 2));
 						}
+
                         //Should Never get here
                         else
                         {
@@ -316,62 +320,13 @@ if (board) board(B) {
             }
 			if((p_angle == 90) || (p_angle == 270))
 			{
-				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),E.angle, side, type, u2mil(footprint_ymax - footprint_ymin), u2mil(footprint_xmax - footprint_xmin), E.value, E.package.name);
+				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_ymax - footprint_ymin), u2mil(footprint_xmax - footprint_xmin), E.value, E.package.name);
 			}
 			else
 			{
 				//printf("%5.2f\t%5.2f\n",u2mil(Board_minX),u2mil(Board_minY));
-				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),E.angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name);			
+				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name);			
 			}
         }
     }
-    
-    //Build Paste Top Files
-    output(fileName_PASTE)
-    {
-        //Build File Header
-        printf("#MacroFab, INC. PASTE data for %s.\n#\n",B.name);
-        printf("#PASTE Data:\n");
-        printf("#Designator\tX-Loc\tY-Loc\tSide\tType\tX-Size\tY-Size\n");
-        
-        B.elements(E) if (E.populate)
-        {
-            E.package.contacts(C) 
-            {
-                int type = 0;
-                int side = 0;
-                
-                int x_cen = C.x;
-                int y_cen = C.y;
-            
-                int x_size = 0;
-                int y_size = 0;
-                
-                if (C.smd) 
-                {
-                    type = 1;
-                    x_size = C.smd.dx;
-                    y_size = C.smd.dy;
-                }
-                else
-                {
-                    type = 2;
-                    x_size = C.pad.drill;
-                    y_size = C.pad.drill;
-                }
-                
-                if(E.mirror == 0)
-                {
-                    side = 1;
-                }
-                else
-                {
-                    side = 2;
-                }
-                                            
-                printf("%s\t%5.2f\t%5.2f\t%d\t%d\t%5.2f\t%5.2f\n", E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY), side, type, u2mil(x_size), u2mil(y_size));
-            }
-        }
-    }   
-
 }
