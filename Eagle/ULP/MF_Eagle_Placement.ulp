@@ -325,4 +325,53 @@ if (board) board(B) {
 			}
         }
     }
+	
+	    
+    //Build Paste Top Files
+    output(fileName_PASTE)
+    {
+        //Build File Header
+        printf("#MacroFab, INC. PASTE data for %s.\n#\n",B.name);
+        printf("#PASTE Data:\n");
+        printf("#Designator\tX-Loc\tY-Loc\tSide\tType\tX-Size\tY-Size\n");
+        
+        B.elements(E) if (E.populate)
+        {
+            E.package.contacts(C) 
+            {
+                int type = 0;
+                int side = 0;
+                
+                int x_cen = C.x;
+                int y_cen = C.y;
+            
+                int x_size = 0;
+                int y_size = 0;
+                
+                if (C.smd) 
+                {
+                    type = 1;
+                    x_size = C.smd.dx;
+                    y_size = C.smd.dy;
+                }
+                else
+                {
+                    type = 2;
+                    x_size = C.pad.drill;
+                    y_size = C.pad.drill;
+                }
+                
+                if(E.mirror == 0)
+                {
+                    side = 1;
+                }
+                else
+                {
+                    side = 2;
+                }
+                                            
+                printf("%s\t%5.2f\t%5.2f\t%d\t%d\t%5.2f\t%5.2f\n", E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY), side, type, u2mil(x_size), u2mil(y_size));
+            }
+        }
+    }   
 }
