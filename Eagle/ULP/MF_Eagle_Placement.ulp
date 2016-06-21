@@ -23,14 +23,11 @@ if (board) board(B) {
         if (W.layer == 20) 
         {
 			//w2 = W.width/2;
-			if (W.x1-w2 < Board_minX) Board_minX = W.x1-w2;
-			if (W.x2-w2 < Board_minX) Board_minX = W.x2-w2;
-			if (W.x1+w2 > Board_maxX) Board_maxX = W.x1+w2;
-			if (W.x2+w2 > Board_maxX) Board_maxX = W.x2+w2;
-			if (W.y1-w2 < Board_minY) Board_minY = W.y1-w2;
-			if (W.y2-w2 < Board_minY) Board_minY = W.y2-w2;
-			if (W.y1+w2 > Board_maxY) Board_maxY = W.y1+w2;
-			if (W.y2+w2 > Board_maxY) Board_maxY = W.y2+w2;
+			
+			temp_minX = min(W.x1 - w2, W.x2 - w2);
+			temp_minY = min(W.y1 - w2, W.y2 - w2);
+			temp_maxX = max(W.x1 + w2, W.x2 + w2);
+			temp_maxY = max(W.y1 + w2, W.y2 + w2);
 			
 			if (W.arc)
 			{
@@ -38,24 +35,23 @@ if (board) board(B) {
 				{
 					temp_maxX = W.arc.xc + W.arc.radius + w2;
 				}
-				else if (((W.arc.angle1 <  90) && (W.arc.angle2 >  90)) || (W.arc.angle2 > 450))
+				if (((W.arc.angle1 <  90) && (W.arc.angle2 >  90)) || (W.arc.angle2 > 450))
 				{
 					temp_maxY = W.arc.yc + W.arc.radius + w2;
 				}
-				else if (((W.arc.angle1 < 180) && (W.arc.angle2 > 180)) || (W.arc.angle2 > 540))
+				if (((W.arc.angle1 < 180) && (W.arc.angle2 > 180)) || (W.arc.angle2 > 540))
 				{
 					temp_minX = W.arc.xc - W.arc.radius - w2;
 				}
-				else if (((W.arc.angle1 < 270) && (W.arc.angle2 > 270)) || (W.arc.angle2 > 630))
+				if (((W.arc.angle1 < 270) && (W.arc.angle2 > 270)) || (W.arc.angle2 > 630))
 				{
 					temp_minY = W.arc.yc - W.arc.radius - w2;
 				}
-				
-				Board_minX = min(Board_minX, temp_minX);
-				Board_maxX = max(Board_maxX, temp_maxX);
-				Board_minY = min(Board_minY, temp_minY);
-				Board_maxY = max(Board_maxY, temp_maxY);
-			}		
+			}
+			Board_minX = min(Board_minX, temp_minX);
+			Board_maxX = max(Board_maxX, temp_maxX);
+			Board_minY = min(Board_minY, temp_minY);
+			Board_maxY = max(Board_maxY, temp_maxY);
         }
     }
 	//Check for circle dimension layer
