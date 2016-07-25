@@ -14,6 +14,7 @@ if (board) board(B) {
     int temp_minX = INT_MAX;
     int temp_maxY = INT_MIN;
     int temp_minY = INT_MAX;
+
 	
 	real w2 = 0;
 	real wkeep = 0;
@@ -140,7 +141,8 @@ if (board) board(B) {
         printf("#MacroFab, INC. XYRS data for %s.\n",B.name);
 		printf("#Board Size is %f x %f.\n#\n",u2mil(Board_maxX - Board_minX),u2mil(Board_maxY - Board_minY));
         printf("#Placement Data:\n");
-        printf("#Designator\tX-Loc\tY-Loc\tRotation\tSide\tType\tX-Size\tY-Size\tValue\tFootprint\n");
+        printf("#Designator\tX-Loc\tY-Loc\tRotation\tSide\tType\tX-Size\tY-Size\tValue\tFootprint\tPopulate\tMPN\n");
+		//printf("#Designator\tX-Loc\tY-Loc\tRotation\tSide\tType\tX-Size\tY-Size\tValue\tFootprint\tPopulate\tMPN\tSMT Pins\tPTH Pins\n"); //Outputs number of SMT and PTH Pins
         //Part level
         B.elements(E) if (E.populate) 
         {
@@ -169,6 +171,9 @@ if (board) board(B) {
             int pth_cnt = 0;
 
 			real p_angle = 0;
+			
+			string MPN_Value = "";
+			string Populate_Value = "1";
             
             E.package.contacts(C) 
             {           
@@ -201,7 +206,7 @@ if (board) board(B) {
             }
             
             //SMD or PTH part?
-            if(smd_cnt >= pth_cnt)
+            if(pth_cnt == 0)
             {
                 type = 1;
             }
@@ -314,14 +319,31 @@ if (board) board(B) {
                     }   
                 }
             }
+			E.attributes(A)
+			{
+				if(A.name == "MPN")
+					MPN_Value = A.value;
+				if(A.name == "POPULATE")
+					Populate_Value = A.value;
+					
+			}		
+			//Recalculate x center and y center for a part based on the now known size of the part. 
+			
+			x_cen = ((footprint_xmax + footprint_xmin)/2);
+            y_cen = ((footprint_ymax + footprint_ymin)/2);
+			
 			if((p_angle == 90) || (p_angle == 270))
 			{
-				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_ymax - footprint_ymin), u2mil(footprint_xmax - footprint_xmin), E.value, E.package.name);
+				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_ymax - footprint_ymin), u2mil(footprint_xmax - footprint_xmin), E.value, E.package.name, Populate_Value, MPN_Value);
+				//Outputs number of SMT and PTH Pins
+				//printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\t%s\t%s\t%d\t%d\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_ymax - footprint_ymin), u2mil(footprint_xmax - footprint_xmin), E.value, E.package.name, Populate_Value, MPN_Value, smd_cnt, pth_cnt);
+
 			}
 			else
 			{
-				//printf("%5.2f\t%5.2f\n",u2mil(Board_minX),u2mil(Board_minY));
-				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name);			
+				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name, Populate_Value, MPN_Value);			
+				//Outputs number of SMT and PTH Pins
+				//printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\t%s\t%s\t%d\t%d\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name, Populate_Value, MPN_Value, smd_cnt, pth_cnt);			
 			}
         }
     }
