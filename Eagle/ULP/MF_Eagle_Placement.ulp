@@ -144,46 +144,52 @@ if (board) board(B) {
         printf("#Designator\tX-Loc\tY-Loc\tRotation\tSide\tType\tX-Size\tY-Size\tValue\tFootprint\tPopulate\tMPN\n");
 		//printf("#Designator\tX-Loc\tY-Loc\tRotation\tSide\tType\tX-Size\tY-Size\tValue\tFootprint\tPopulate\tMPN\tSMT Pins\tPTH Pins\n"); //Outputs number of SMT and PTH Pins
         //Part level
-        B.elements(E) if (E.populate) 
-        {
-            int type = 0;
-            
-            int x_cen = 0;
-            int y_cen = 0;
+		
+		B.elements(E) if (E.populate)
+		{
+			int type = 0;
             
             int side = 0;
-			int smdangle = 0;
-                    
-            int xmax = INT_MIN;
+			
+			int x_cen = 0;
+			int y_cen = 0;
+			
+			int xmax = INT_MIN;
             int xmin = INT_MAX;
             int ymax = INT_MIN;
-            int ymin = INT_MAX;
+			int ymin = INT_MAX;
             
             int footprint_xmax = INT_MIN;
             int footprint_xmin = INT_MAX;
             int footprint_ymax = INT_MIN;
             int footprint_ymin = INT_MAX;
-            
-            int rot_x = 1;
-            int rot_y = 1;
-            
+			
+			int x_offset = 0;
+			int y_offset = 0;
+			
+			int x_correction = 0;
+			int y_correction = 0;
+
             int smd_cnt = 0;
             int pth_cnt = 0;
 
 			real p_angle = 0;
 			
+			string footprint = "";
+
 			string MPN_Value = "";
 			string Populate_Value = "1";
-            
-            E.package.contacts(C) 
+			
+			footprint = E.package.name;
+			
+			//First find the all the meta data. 
+			E.package.contacts(C) 
             {           
-                //Find max and min X-Y
-                
-                if (C.x > xmax) xmax = C.x;
+				if (C.x > xmax) xmax = C.x;
                 if (C.y > ymax) ymax = C.y;
                 if (C.x < xmin) xmin = C.x;
-                if (C.y < ymin) ymin = C.y;
-                    
+				if (C.y < ymin) ymin = C.y;
+
                 if (C.smd) 
                 {
                     smd_cnt++;
@@ -192,18 +198,23 @@ if (board) board(B) {
                 {
                     pth_cnt++;
                 }
-                
-                if(E.mirror == 0)
-                {
-                    side = 1;
-					p_angle = E.angle;
-                }
-                else
-                {
-                    side = 2;
-					p_angle = 360 - E.angle;					
-                }
             }
+			
+			//Rotate if on backside and set side variable. 
+			if(E.mirror == 0)
+			{
+				side = 1;
+				p_angle = E.angle;
+			}
+			else
+			{
+				side = 2;
+				p_angle = 360 - E.angle;
+				if(p_angle == 360)
+				{
+					p_angle = 0;
+				}
+			}
             
             //SMD or PTH part?
             if(pth_cnt == 0)
@@ -214,142 +225,220 @@ if (board) board(B) {
             {
                 type = 2; 
             }
-            
-            //Find center of package
-            x_cen = ((xmin + xmax)/2);
-            y_cen = ((ymin + ymax)/2);
-                
-            E.package.contacts(C) 
-            {
-                //Find package size for SMT
-                if (C.smd) 
-                {     
-                    if(C.smd.angle == 0 || C.smd.angle == 180)
-                    {
-                        if ((C.x + (C.smd.dx / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.smd.dx / 2));
-                        if ((C.y + (C.smd.dy / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.smd.dy / 2));
-                        if ((C.x - (C.smd.dx / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.smd.dx / 2));
-                        if ((C.y - (C.smd.dy / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.smd.dy / 2));
-                    }
-                    else if(C.smd.angle ==  90 || C.smd.angle == 270)
-                    {
-                        if ((C.x + (C.smd.dy / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.smd.dy / 2));
-                        if ((C.y + (C.smd.dx / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.smd.dx / 2));
-                        if ((C.x - (C.smd.dy / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.smd.dy / 2));
-                        if ((C.y - (C.smd.dx / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.smd.dx / 2));
-                    }
-                    //Weird angle parts
-                    else
-                    {
-                        if((abs(C.smd.angle - p_angle)) == 0 || (abs(C.smd.angle - p_angle)) == 180)
-                        {
-							rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) - (C.y-y_cen)*sin(-(p_angle * PI)/180));
-							rot_y = y_cen + (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
-							
-                            if ((rot_x + (C.smd.dx / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.smd.dx / 2));
-                            if ((rot_y + (C.smd.dy / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.smd.dy / 2));
-                            if ((rot_x - (C.smd.dx / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.smd.dx / 2));
-                            if ((rot_y - (C.smd.dy / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.smd.dy / 2));
-                        }
-                        else if((abs(C.smd.angle - p_angle)) ==  90 || (abs(C.smd.angle - p_angle)) == 270)
-                        {
-							rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) - (C.y-y_cen)*sin(-(p_angle * PI)/180));
-							rot_y = y_cen + (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
-							
-                            if ((rot_x + (C.smd.dy / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.smd.dy / 2));
-                            if ((rot_y + (C.smd.dx / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.smd.dx / 2));
-                            if ((rot_x - (C.smd.dy / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.smd.dy / 2));
-                            if ((rot_y - (C.smd.dx / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.smd.dx / 2));
-                        }
-						else if((p_angle + (abs(p_angle - C.smd.angle)/2)) == 90 || (p_angle - (abs(p_angle - C.smd.angle)/2)) == 270 || (p_angle + (abs(p_angle - C.smd.angle)/2)) == 270 || (p_angle - (abs(p_angle - C.smd.angle)/2)) == 90)
-						{
-							rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) + (C.y-y_cen)*sin(-(p_angle * PI)/180));
-							rot_y = y_cen - (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
-							
-							if ((rot_x + (C.smd.dx / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.smd.dx / 2));
-                            if ((rot_y + (C.smd.dy / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.smd.dy / 2));
-                            if ((rot_x - (C.smd.dx / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.smd.dx / 2));
-                            if ((rot_y - (C.smd.dy / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.smd.dy / 2));
-						}
-						else if((abs(p_angle - (180 - C.smd.angle))) ==  90 || (abs(p_angle - (180 - C.smd.angle))) == 270)
-						{
-							rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) + (C.y-y_cen)*sin(-(p_angle * PI)/180));
-							rot_y = y_cen - (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
-							
-                            if ((rot_x + (C.smd.dy / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.smd.dy / 2));
-                            if ((rot_y + (C.smd.dx / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.smd.dx / 2));
-                            if ((rot_x - (C.smd.dy / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.smd.dy / 2));
-                            if ((rot_y - (C.smd.dx / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.smd.dx / 2));
-						}
-
-                        //Should Never get here
-                        else
-                        {
-                            printf("\nERROR: %s  %s C.smd.angle = %5.2f\tp_angle = %5.2f\n", C.name, C.smd.name, C.smd.angle, p_angle);
-                        }
-                    }   
-                }   
-                //Find package size for PTH
-                else
-                {               
-                    if(C.pad.angle == 0 || C.pad.angle == 180)
-                    {
-                        if ((C.x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.pad.drill / 2));
-                        if ((C.y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.pad.drill / 2));
-                        if ((C.x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.pad.drill / 2));
-                        if ((C.y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.pad.drill / 2));
-                    }
-                    else if(C.pad.angle ==  90 || C.pad.angle == 270)
-                    {
-                        if ((C.x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (C.x + (C.pad.drill / 2));
-                        if ((C.y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (C.y + (C.pad.drill / 2));
-                        if ((C.x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (C.x - (C.pad.drill / 2));
-                        if ((C.y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (C.y - (C.pad.drill / 2));
-                    }
-                    //Weird angle parts
-                    else
-                    {
-                        rot_x = int(x_cen + (C.x-x_cen)*cos((p_angle * PI)/180) - (C.y-y_cen)*sin(-(p_angle * PI)/180));
-                        rot_y = y_cen + (C.x-x_cen)*sin(-(p_angle * PI)/180) + (C.y-y_cen)*cos((p_angle * PI)/180);
-
-						if ((rot_x + (C.pad.drill / 2)) > footprint_xmax) footprint_xmax = (rot_x + (C.pad.drill / 2));
-						if ((rot_y + (C.pad.drill / 2)) > footprint_ymax) footprint_ymax = (rot_y + (C.pad.drill / 2));
-						if ((rot_x - (C.pad.drill / 2)) < footprint_xmin) footprint_xmin = (rot_x - (C.pad.drill / 2));
-						if ((rot_y - (C.pad.drill / 2)) < footprint_ymin) footprint_ymin = (rot_y - (C.pad.drill / 2));  
-                    }   
-                }
-            }
+			
+			//Find offset.
+			x_offset = E.x;
+			y_offset = E.y;
+			
+			x_cen = ((xmin + xmax)/2);
+			y_cen = ((ymin + ymax)/2);
+			
+			
+			//Get Attributes MPN and POPULATE if they exist
 			E.attributes(A)
 			{
 				if(A.name == "MPN")
+				{
 					MPN_Value = A.value;
+				}
 				if(A.name == "POPULATE")
-					Populate_Value = A.value;
+				{
+					if(A.value == "0" || A.value == "1")
+					{
+						Populate_Value = A.value;
+					}
+				}
 					
-			}		
-			//Recalculate x center and y center for a part based on the now known size of the part. 
+			}	
 			
-			x_cen = ((footprint_xmax + footprint_xmin)/2);
-            y_cen = ((footprint_ymax + footprint_ymin)/2);
-			
-			if((p_angle == 90) || (p_angle == 270))
+			//Look through the board's library for the footprint.
+			B.libraries(L)
 			{
-				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_ymax - footprint_ymin), u2mil(footprint_xmax - footprint_xmin), E.value, E.package.name, Populate_Value, MPN_Value);
-				//Outputs number of SMT and PTH Pins
-				//printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\t%s\t%s\t%d\t%d\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_ymax - footprint_ymin), u2mil(footprint_xmax - footprint_xmin), E.value, E.package.name, Populate_Value, MPN_Value, smd_cnt, pth_cnt);
+				L.packages(PAC)
+				{
+					//Match element footprint to libary footprint
+					if(footprint == PAC.name)
+					{
+						//Calculate the size of the footprint.
+						PAC.contacts(FC)
+						{	
+							//Find Boundry on SMD pads
+							if (FC.smd)
+							{
+								real diangonal_length = 0;
+								real diangonal_angle0 = 0;
+								real diangonal_angle1 = 0;
+								real diangonal_X0 = 0;
+								real diangonal_Y0 = 0;
+								real diangonal_X1 = 0;
+								real diangonal_Y1 = 0;
+								
+								if(FC.smd.angle == 0 || FC.smd.angle == 180)
+								{
+									if ((FC.x + (FC.smd.dx / 2)) > footprint_xmax) footprint_xmax = (FC.x + (FC.smd.dx / 2));
+									if ((FC.y + (FC.smd.dy / 2)) > footprint_ymax) footprint_ymax = (FC.y + (FC.smd.dy / 2));
+									if ((FC.x - (FC.smd.dx / 2)) < footprint_xmin) footprint_xmin = (FC.x - (FC.smd.dx / 2));
+									if ((FC.y - (FC.smd.dy / 2)) < footprint_ymin) footprint_ymin = (FC.y - (FC.smd.dy / 2));
+								}
+								else if(FC.smd.angle == 90 || FC.smd.angle == 270)
+								{
+									if ((FC.x + (FC.smd.dy / 2)) > footprint_xmax) footprint_xmax = (FC.x + (FC.smd.dy / 2));
+									if ((FC.y + (FC.smd.dx / 2)) > footprint_ymax) footprint_ymax = (FC.y + (FC.smd.dx / 2));
+									if ((FC.x - (FC.smd.dy / 2)) < footprint_xmin) footprint_xmin = (FC.x - (FC.smd.dy / 2));
+									if ((FC.y - (FC.smd.dx / 2)) < footprint_ymin) footprint_ymin = (FC.y - (FC.smd.dx / 2));
+								}
+								//Non normal SMD angles. One else to rule them all and keep the code that binds them clean. Trig time. 
+								else
+								{
+									//Find half of the diangonal of the rectangle SMD pad. 
+									diangonal_length = sqrt(pow((FC.smd.dx / 2),2)+pow((FC.smd.dy / 2),2));
 
-			}
-			else
+									//Find the angle of the dianonal in relation to the X-Y plane. atan() returns with radians. 
+									diangonal_angle0 = FC.smd.angle - (90 - (atan((u2mil(FC.smd.dx) / 2)/(u2mil(FC.smd.dy) / 2)))*(180/PI));
+									diangonal_angle1 = FC.smd.angle + (atan((u2mil(FC.smd.dy) / 2)/(u2mil(FC.smd.dx) / 2))*(180/PI));
+
+									//printf("length = %5.3f\tangle0 = %5.3f\tangle1 = %5.3f\n", u2mil(int(diangonal_length)), diangonal_angle0, diangonal_angle1);
+
+									diangonal_X0 = abs(diangonal_length * cos(diangonal_angle0*((PI/180))));
+									diangonal_Y0 = abs(diangonal_length * sin(diangonal_angle0*((PI/180))));
+
+									diangonal_X1 = abs(diangonal_length * cos(diangonal_angle1*((PI/180))));
+									diangonal_Y1 = abs(diangonal_length * sin(diangonal_angle1*((PI/180))));
+
+									//printf("X0 = %5.3f\tY0 = %5.3f\tX1 = %5.3f\tY1 = %5.3f\n", u2mil(int(diangonal_X0)), u2mil(int(diangonal_Y0)), u2mil(int(diangonal_X1)), u2mil(int(diangonal_Y1)));	
+
+									if ((FC.x + diangonal_X0) > footprint_xmax) footprint_xmax = (FC.x + diangonal_X0);
+									if ((FC.y + diangonal_Y0) > footprint_ymax) footprint_ymax = (FC.y + diangonal_Y0);
+									if ((FC.x - diangonal_X0) < footprint_xmin) footprint_xmin = (FC.x - diangonal_X0);
+									if ((FC.y - diangonal_Y0) < footprint_ymin) footprint_ymin = (FC.y - diangonal_Y0);			
+
+									if ((FC.x + diangonal_X1) > footprint_xmax) footprint_xmax = (FC.x + diangonal_X1);
+									if ((FC.y + diangonal_Y1) > footprint_ymax) footprint_ymax = (FC.y + diangonal_Y1);
+									if ((FC.x - diangonal_X1) < footprint_xmin) footprint_xmin = (FC.x - diangonal_X1);
+									if ((FC.y - diangonal_Y1) < footprint_ymin) footprint_ymin = (FC.y - diangonal_Y1);											
+								}
+							}
+							//Find Boundry on PTH pads. Does not take in account annular ring. 
+							else
+							{               
+								if ((FC.x + (FC.pad.drill / 2)) > footprint_xmax) footprint_xmax = (FC.x + (FC.pad.drill / 2));
+								if ((FC.y + (FC.pad.drill / 2)) > footprint_ymax) footprint_ymax = (FC.y + (FC.pad.drill / 2));
+								if ((FC.x - (FC.pad.drill / 2)) < footprint_xmin) footprint_xmin = (FC.x - (FC.pad.drill / 2));
+								if ((FC.y - (FC.pad.drill / 2)) < footprint_ymin) footprint_ymin = (FC.y - (FC.pad.drill / 2));
+							}
+						}
+						//Check footprint for polygons and the like. 
+						PAC.polygons(Poly)
+						{
+							Poly.wires(Y)
+							{
+								if (Y.layer == 1 || Y.layer == 16) 
+								{
+									//w2 = Y.width/2;
+									if (Y.x1-w2 < footprint_xmin) footprint_xmin = Y.x1-w2;
+									if (Y.x2-w2 < footprint_xmin) footprint_xmin = Y.x2-w2;
+									if (Y.x1+w2 > footprint_xmax) footprint_xmax = Y.x1+w2;
+									if (Y.x2+w2 > footprint_xmax) footprint_xmax = Y.x2+w2;
+									if (Y.y1-w2 < footprint_ymin) footprint_ymin = Y.y1-w2;
+									if (Y.y2-w2 < footprint_ymin) footprint_ymin = Y.y2-w2;
+									if (Y.y1+w2 > footprint_ymax) footprint_ymax = Y.y1+w2;
+									if (Y.y2+w2 > footprint_ymax) footprint_ymax = Y.y2+w2;
+									
+									if (Y.arc)
+									{
+										if (Y.arc.angle2 > 360)
+										{
+											temp_maxX = Y.arc.xc + Y.arc.radius + w2;
+										}
+										else if (((Y.arc.angle1 <  90) && (Y.arc.angle2 >  90)) || (Y.arc.angle2 > 450))
+										{
+											temp_maxY = Y.arc.yc + Y.arc.radius + w2;
+										}
+										else if (((Y.arc.angle1 < 180) && (Y.arc.angle2 > 180)) || (Y.arc.angle2 > 540))
+										{
+											temp_minX = Y.arc.xc - Y.arc.radius - w2;
+										}
+										else if (((Y.arc.angle1 < 270) && (Y.arc.angle2 > 270)) || (Y.arc.angle2 > 630))
+										{
+											temp_minY = Y.arc.yc - Y.arc.radius - w2;
+										}
+										
+										footprint_xmin = min(footprint_xmin, temp_minX);
+										footprint_xmax = max(footprint_xmax, temp_maxX);
+										footprint_ymin = min(footprint_ymin, temp_minY);
+										footprint_ymax = max(footprint_ymax, temp_maxY);
+									}		
+								}
+							}
+						}
+					}
+				}
+			}	
+			
+			//Check for non centered origin parts!
+			//offset in the X direction
+			if((abs(footprint_xmax) != abs(footprint_xmin)) && (abs(footprint_ymax) == abs(footprint_ymin)))
 			{
-				printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name, Populate_Value, MPN_Value);			
-				//Outputs number of SMT and PTH Pins
-				//printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\t%s\t%s\t%d\t%d\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name, Populate_Value, MPN_Value, smd_cnt, pth_cnt);			
+				if(side == 1)
+				{
+					x_correction = cos(p_angle*(PI/180)) * ((footprint_xmax + footprint_xmin)/2);
+					x_cen = x_offset + x_correction;
+					
+					y_correction = sin(p_angle*(PI/180)) * ((footprint_xmax + footprint_xmin)/2);
+					y_cen = y_offset + y_correction;
+				}
+				else
+				{
+					x_correction = cos(p_angle*(PI/180)) * ((footprint_xmax + footprint_xmin)/2);
+					x_cen = x_offset - x_correction;
+					
+					y_correction = sin(p_angle*(PI/180)) * ((footprint_xmax + footprint_xmin)/2);
+					y_cen = y_offset - y_correction;
+				}
 			}
-        }
-    }
-	
+
+			//offset in the Y direction
+			else if((abs(footprint_xmax) == abs(footprint_xmin)) && abs(footprint_ymax) != abs(footprint_ymin))
+			{
+				x_correction = sin(p_angle*(PI/180)) * ((footprint_ymax + footprint_ymin)/2);
+				x_cen = x_offset - x_correction;
+				
+				y_correction = cos(p_angle*(PI/180)) * ((footprint_ymax + footprint_ymin)/2);
+				y_cen = y_offset + y_correction;			
+			}
+			
+			//offset in the X and Y direction
+			else if((abs(footprint_xmax) != abs(footprint_xmin)) && (abs(footprint_ymax) != abs(footprint_ymin)))
+			{
+				if(side == 1)
+				{
+					x_correction = (cos(p_angle*(PI/180)) * ((footprint_xmax + footprint_xmin)/2)) - (sin(p_angle*(PI/180)) * ((footprint_ymax + footprint_ymin)/2));
+					x_cen = x_offset + x_correction;
+					
+					y_correction = (sin(p_angle*(PI/180)) * ((footprint_xmax + footprint_xmin)/2)) + (cos(p_angle*(PI/180)) * ((footprint_ymax + footprint_ymin)/2));
+					y_cen = y_offset + y_correction;
+				}
+				else
+				{
+					x_correction = (cos(p_angle*(PI/180)) * ((footprint_xmax + footprint_xmin)/2)) + (sin(p_angle*(PI/180)) * ((footprint_ymax + footprint_ymin)/2));
+					x_cen = x_offset - x_correction;
+					
+					y_correction = (sin(p_angle*(PI/180)) * ((footprint_xmax + footprint_xmin)/2)) - (cos(p_angle*(PI/180)) * ((footprint_ymax + footprint_ymin)/2));
+					y_cen = y_offset - y_correction;
+				}
+			}		
+			//Below is for debugging.
+			//printf("F_xmax = %5.2f\tF_xmin = %5.2f\tF_ymax = %5.2f\tF_ymin = %5.2f\tx_offset = %5.2f\ty_offset = %5.2f\n", u2mil(footprint_xmax), u2mil(footprint_xmin), u2mil(footprint_ymax), u2mil(footprint_ymin), u2mil(x_offset), u2mil(y_offset));
+			
+			//Data built time to print. 
+			printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\t%s\t%s\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name, Populate_Value, MPN_Value);			
+			//Outputs number of SMT and PTH Pins
+			//printf("%s\t%5.2f\t%5.2f\t%.0f\t%d\t%d\t%5.2f\t%5.2f\t%s\t%s\t%s\t%s\t%d\t%d\n",E.name, u2mil(x_cen-Board_minX), u2mil(y_cen-Board_minY),p_angle, side, type, u2mil(footprint_xmax - footprint_xmin), u2mil(footprint_ymax - footprint_ymin), E.value, E.package.name, Populate_Value, MPN_Value, smd_cnt, pth_cnt);			
+		}
+	}	
 	    
     //Build Paste Top Files
+	//These are not used anymore but we will keep it around. 
     output(fileName_PASTE)
     {
         //Build File Header
