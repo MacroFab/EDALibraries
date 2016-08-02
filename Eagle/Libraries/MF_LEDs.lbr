@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -67,8 +67,8 @@
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="95" name="Names" color="9" fill="1" visible="yes" active="yes"/>
-<layer number="96" name="Values" color="10" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
@@ -130,7 +130,7 @@
 <vertex x="-1.7" y="-0.75"/>
 <vertex x="-1.5" y="-0.75"/>
 </polygon>
-<text x="-1.7" y="1.1" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="-1.7" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <polygon width="0.127" layer="21">
 <vertex x="-0.15" y="0"/>
 <vertex x="0.15" y="0.3"/>
@@ -151,7 +151,7 @@
 <vertex x="-2.25" y="-0.85"/>
 <vertex x="-2.05" y="-0.85"/>
 </polygon>
-<text x="-2.25" y="1.1" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="-2.25" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <polygon width="0.127" layer="21">
 <vertex x="-0.15" y="0"/>
 <vertex x="0.15" y="0.3"/>
@@ -166,7 +166,7 @@
 <smd name="P$4" x="1.55" y="0.75" dx="0.9" dy="1.5" layer="1" rot="R90"/>
 <wire x1="-1.6" y1="1.4" x2="1.6" y2="1.4" width="0.127" layer="21"/>
 <wire x1="1.6" y1="-1.4" x2="-1.6" y2="-1.4" width="0.127" layer="21"/>
-<text x="-1.6" y="1.7" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="-1.6" y="1.7" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <wire x1="-1.6" y1="-0.15" x2="-1.6" y2="0.1" width="0.127" layer="21"/>
 <wire x1="1.6" y1="-0.15" x2="1.6" y2="0.15" width="0.127" layer="21"/>
 <wire x1="1.6" y1="-1.4" x2="1.6" y2="-1.35" width="0.127" layer="21"/>
@@ -196,7 +196,7 @@
 <wire x1="2.5" y1="-0.78125" x2="2.5" y2="-0.9375" width="0.127" layer="21"/>
 <wire x1="2.5" y1="0.9375" x2="2.5" y2="0.78125" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="1.104853125" width="0.127" layer="21"/>
-<text x="-2.5" y="2.8125" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="-2.5" y="2.8125" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <polygon width="0.127" layer="21">
 <vertex x="-4.3" y="2.196" curve="90"/>
 <vertex x="-4.054" y="1.95" curve="90"/>
@@ -229,6 +229,7 @@
 </polygon>
 <wire x1="2.5" y1="-0.3" x2="1.8" y2="-1" width="0.127" layer="21"/>
 <wire x1="1.5" y1="-1.3" x2="0.3" y2="-2.5" width="0.127" layer="21"/>
+<text x="-2.5" y="3.175" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -255,10 +256,10 @@
 <wire x1="2.286" y1="4.826" x2="1.778" y2="4.826" width="0.254" layer="94"/>
 <wire x1="1.778" y1="4.826" x2="2.286" y2="4.318" width="0.254" layer="94"/>
 <wire x1="2.286" y1="4.318" x2="2.286" y2="4.826" width="0.254" layer="94"/>
-<text x="-5.08" y="-2.54" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
-<text x="-5.08" y="-5.08" size="1.016" layer="96" font="vector">&gt;VALUE</text>
-<pin name="ANODE" x="-5.08" y="0" visible="off" length="middle" direction="pwr"/>
-<pin name="CATHODE" x="5.08" y="0" visible="off" length="middle" direction="pwr" rot="R180"/>
+<text x="-2.54" y="-2.54" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="-2.54" y="-5.08" size="1.016" layer="96" font="vector">&gt;VALUE</text>
+<pin name="ANODE" x="-2.54" y="0" visible="off" length="short" direction="pwr"/>
+<pin name="CATHODE" x="2.54" y="0" visible="off" length="short" direction="pwr" rot="R180"/>
 </symbol>
 <symbol name="LED_RGB_CA">
 <description>&lt;b&gt;Description:&lt;/b&gt; Symbol for RGB LED with Common Anode&lt;br/&gt;</description>
@@ -283,8 +284,8 @@
 <wire x1="2.286" y1="12.446" x2="1.778" y2="12.446" width="0.254" layer="94"/>
 <wire x1="1.778" y1="12.446" x2="2.286" y2="11.938" width="0.254" layer="94"/>
 <wire x1="2.286" y1="11.938" x2="2.286" y2="12.446" width="0.254" layer="94"/>
-<text x="-7.62" y="10.16" size="1.016" layer="95" font="vector">&gt;NAME</text>
-<text x="-7.62" y="-10.16" size="1.016" layer="96" font="vector" align="top-left">&gt;VALUE</text>
+<text x="-5.08" y="-10.16" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="-5.08" y="-12.7" size="1.016" layer="96" font="vector">&gt;VALUE</text>
 <pin name="ANODE" x="-7.62" y="0" visible="off" length="middle" direction="pwr"/>
 <pin name="CATHODE_RED" x="5.08" y="7.62" visible="off" length="middle" direction="pwr" rot="R180"/>
 <pin name="CATHODE_GREEN" x="5.08" y="0" visible="off" length="middle" direction="pwr" rot="R180"/>
@@ -363,8 +364,8 @@
 <wire x1="2.286" y1="12.446" x2="1.778" y2="12.446" width="0.254" layer="94"/>
 <wire x1="1.778" y1="12.446" x2="2.286" y2="11.938" width="0.254" layer="94"/>
 <wire x1="2.286" y1="11.938" x2="2.286" y2="12.446" width="0.254" layer="94"/>
-<text x="-5.08" y="10.16" size="1.016" layer="95" font="vector">&gt;NAME</text>
-<text x="-5.08" y="-10.16" size="1.016" layer="96" font="vector" align="top-left">&gt;VALUE</text>
+<text x="-5.08" y="-10.16" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="-5.08" y="-12.7" size="1.016" layer="96" font="vector">&gt;VALUE</text>
 <pin name="ANODE_GREEN" x="-5.08" y="0" visible="off" length="middle" direction="pwr"/>
 <pin name="CATHODE_RED" x="5.08" y="7.62" visible="off" length="middle" direction="pwr" rot="R180"/>
 <pin name="CATHODE_GREEN" x="5.08" y="0" visible="off" length="middle" direction="pwr" rot="R180"/>
@@ -422,20 +423,20 @@
 </symbol>
 <symbol name="WS2812B">
 <description>&lt;b&gt;Description:&lt;/b&gt; Symbol for the WS2812B LED/Driver IC.&lt;br/&gt;</description>
-<pin name="VDD" x="-7.62" y="2.54" visible="off" length="short" direction="pwr"/>
-<pin name="VSS" x="-7.62" y="-2.54" visible="off" length="short" direction="pwr"/>
-<pin name="DIN" x="7.62" y="2.54" visible="off" length="short" rot="R180"/>
-<pin name="DOUT" x="7.62" y="-2.54" visible="off" length="short" rot="R180"/>
-<wire x1="-5.08" y1="5.08" x2="-5.08" y2="-5.08" width="0.127" layer="94"/>
-<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.127" layer="94"/>
-<wire x1="5.08" y1="-5.08" x2="5.08" y2="5.08" width="0.127" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="-5.08" y2="5.08" width="0.127" layer="94"/>
-<text x="-4.318" y="2.54" size="0.8128" layer="97" font="vector" align="center-left">VDD</text>
-<text x="-4.318" y="-2.54" size="0.8128" layer="97" font="vector" align="center-left">GND</text>
-<text x="4.318" y="2.54" size="0.8128" layer="97" font="vector" rot="R180" align="center-left">D_IN</text>
-<text x="4.318" y="-2.54" size="0.8128" layer="97" font="vector" rot="R180" align="center-left">D_OUT</text>
-<text x="-5.08" y="10.16" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
-<text x="-5.08" y="7.62" size="1.016" layer="96" font="vector">&gt;VALUE</text>
+<pin name="VDD" x="-2.54" y="0" visible="off" length="short" direction="pwr"/>
+<pin name="VSS" x="-2.54" y="-5.08" visible="off" length="short" direction="pwr"/>
+<pin name="DIN" x="12.7" y="0" visible="off" length="short" rot="R180"/>
+<pin name="DOUT" x="12.7" y="-5.08" visible="off" length="short" rot="R180"/>
+<wire x1="0" y1="1.27" x2="0" y2="-6.35" width="0.127" layer="94"/>
+<wire x1="0" y1="-6.35" x2="10.16" y2="-6.35" width="0.127" layer="94"/>
+<wire x1="10.16" y1="-6.35" x2="10.16" y2="1.27" width="0.127" layer="94"/>
+<wire x1="10.16" y1="1.27" x2="0" y2="1.27" width="0.127" layer="94"/>
+<text x="0.762" y="0" size="0.8128" layer="97" font="vector" align="center-left">VDD</text>
+<text x="0.762" y="-5.08" size="0.8128" layer="97" font="vector" align="center-left">GND</text>
+<text x="9.398" y="0" size="0.8128" layer="97" font="vector" rot="R180" align="center-left">D_IN</text>
+<text x="9.398" y="-5.08" size="0.8128" layer="97" font="vector" rot="R180" align="center-left">D_OUT</text>
+<text x="0" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="0" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -446,24 +447,94 @@
 <gate name="G$1" symbol="LED" x="0" y="0"/>
 </gates>
 <devices>
-<device name="_0603" package="LED0603">
+<device name="-0603-RED" package="LED0603">
 <connects>
 <connect gate="G$1" pin="ANODE" pad="ANODE"/>
 <connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFG#" value="N/A" constant="no"/>
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-LED-0603-RED" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-LED-0603-RED" constant="no"/>
+<attribute name="VALUE" value="MF-LED-0603-RED" constant="no"/>
 </technology>
 </technologies>
 </device>
-<device name="_0805" package="LED0805">
+<device name="-0805-RED" package="LED0805">
 <connects>
 <connect gate="G$1" pin="ANODE" pad="ANODE"/>
 <connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-LED-0805-RED" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-LED-0805-RED" constant="no"/>
+<attribute name="VALUE" value="MF-LED-0805-RED" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603-GREEN" package="LED0603">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="ANODE"/>
+<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-LED-0603-GREEN" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-LED-0603-GREEN" constant="no"/>
+<attribute name="VALUE" value="MF-LED-0603-GREEN" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-0805-GREEN" package="LED0805">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="ANODE"/>
+<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-LED-0805-GREEN" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-LED-0805-GREEN" constant="no"/>
+<attribute name="VALUE" value="MF-LED-0805-GREEN" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603" package="LED0603">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="ANODE"/>
+<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-0805" package="LED0805">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="ANODE"/>
+<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -486,7 +557,11 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFG#" value="N/A" constant="no"/>
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-LED-5060-RGB" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-LED-5060-RGB" constant="no"/>
+<attribute name="VALUE" value="MF-LED-5060-RGB" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -508,7 +583,11 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFG#" value="N/A" constant="no"/>
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="CLV1L-FKB-CHMMQDGBB7673673" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="http://www.cree.com/~/media/Files/Cree/LED-Components-and-Modules/HB/Data-Sheets/CLV1L-FKB-1238.pdf" constant="no"/>
+<attribute name="VALUE" value="CLV1L-FKB-CHMMQDGBB7673673" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -530,7 +609,13 @@
 <connect gate="G$1" pin="VSS" pad="P$3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="WS2812B" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" constant="no"/>
+<attribute name="VALUE" value="WS2812B" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>

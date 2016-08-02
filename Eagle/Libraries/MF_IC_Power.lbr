@@ -63,8 +63,8 @@
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 </layers>
@@ -102,18 +102,18 @@
 <vertex x="-4.6" y="2.4" curve="-90"/>
 <vertex x="-4.4" y="2.2" curve="-90"/>
 </polygon>
-<text x="-4" y="3" size="0.8128" layer="21" font="vector" ratio="16">&gt;NAME</text>
+<text x="-4" y="3" size="1.016" layer="21" font="vector" ratio="16">&gt;NAME</text>
 </package>
 <package name="TO-252-3">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard TO-252-3 Package. Also known as DPAK&lt;br/&gt;</description>
 <smd name="PAD" x="0" y="0" dx="6.7" dy="6.7" layer="1"/>
-<smd name="1" x="-2.3" y="-6.65" dx="3" dy="1.6" layer="1" rot="R90"/>
-<smd name="2" x="2.3" y="-6.65" dx="3" dy="1.6" layer="1" rot="R90"/>
-<wire x1="-3.8" y1="3.8" x2="3.8" y2="3.8" width="0.127" layer="21"/>
-<wire x1="3.8" y1="3.8" x2="3.8" y2="-8.6" width="0.127" layer="21"/>
-<wire x1="3.8" y1="-8.6" x2="-3.8" y2="-8.6" width="0.127" layer="21"/>
-<wire x1="-3.8" y1="-8.6" x2="-3.8" y2="3.8" width="0.127" layer="21"/>
-<text x="-3.8" y="4.2" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<smd name="1" x="-6.65" y="2.3" dx="3" dy="1.6" layer="1"/>
+<smd name="2" x="-6.65" y="-2.3" dx="3" dy="1.6" layer="1"/>
+<wire x1="3.8" y1="3.8" x2="3.8" y2="-3.8" width="0.127" layer="21"/>
+<wire x1="3.8" y1="-3.8" x2="-8.6" y2="-3.8" width="0.127" layer="21"/>
+<wire x1="-8.6" y1="-3.8" x2="-8.6" y2="3.8" width="0.127" layer="21"/>
+<wire x1="-8.6" y1="3.8" x2="3.8" y2="3.8" width="0.127" layer="21"/>
+<text x="-8.6" y="4.2" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
 <package name="SOT-223-3">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard SOT-223-3 Package.&lt;br/&gt;</description>
@@ -125,7 +125,7 @@
 <wire x1="3.25" y1="1.75" x2="3.25" y2="-1.75" width="0.127" layer="21"/>
 <wire x1="3.25" y1="-1.75" x2="-3.25" y2="-1.75" width="0.127" layer="21"/>
 <wire x1="-3.25" y1="-1.75" x2="-3.25" y2="1.75" width="0.127" layer="21"/>
-<text x="-3.25" y="4.5" size="1.27" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="-3.25" y="4.5" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
 <package name="SOT-23-5">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard SOT-23-5 Package. &lt;br/&gt;</description>
@@ -150,7 +150,7 @@
 </polygon>
 <wire x1="-0.6" y1="1.6" x2="-0.6" y2="-1.6" width="0.127" layer="21"/>
 <wire x1="0.6" y1="1.6" x2="0.6" y2="-1.6" width="0.127" layer="21"/>
-<text x="-2.2" y="2" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="-2.2" y="2" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <polygon width="0.127" layer="21">
 <vertex x="-2.8" y="1" curve="-90"/>
 <vertex x="-3" y="1.2" curve="-90"/>
@@ -177,20 +177,20 @@
 </symbol>
 <symbol name="VOLTAGE_REGULATOR_EN">
 <description>&lt;b&gt;Description:&lt;/b&gt; Symbol for voltage regulators with an Enable Signal.&lt;br/&gt;</description>
-<pin name="VIN" x="-2.54" y="-2.54" visible="off" length="short"/>
-<pin name="VOUT" x="12.7" y="-2.54" visible="off" length="short" rot="R180"/>
-<pin name="GND/ADJ" x="5.08" y="-10.16" visible="off" length="short" rot="R90"/>
-<text x="0.762" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">VIN</text>
-<text x="9.398" y="-2.54" size="1.016" layer="97" font="vector" rot="R180" align="center-left">VOUT</text>
-<text x="5.08" y="-6.35" size="1.016" layer="97" font="vector" rot="R180" align="center">GND/ADJ</text>
-<wire x1="0" y1="0" x2="0" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-7.62" x2="10.16" y2="0" width="0.254" layer="94"/>
-<wire x1="10.16" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="VIN" x="-2.54" y="0" visible="off" length="short"/>
+<pin name="VOUT" x="12.7" y="0" visible="off" length="short" rot="R180"/>
+<pin name="GND/ADJ" x="5.08" y="-7.62" visible="off" length="short" rot="R90"/>
+<text x="0.762" y="0" size="1.016" layer="97" font="vector" align="center-left">VIN</text>
+<text x="9.398" y="0" size="1.016" layer="97" font="vector" rot="R180" align="center-left">VOUT</text>
+<text x="5.08" y="-3.81" size="1.016" layer="97" font="vector" rot="R180" align="center">GND/ADJ</text>
+<wire x1="0" y1="1.27" x2="0" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="0" y1="-5.08" x2="10.16" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="10.16" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="1.27" x2="0" y2="1.27" width="0.1524" layer="94"/>
 <text x="0" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
 <text x="0" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
-<pin name="EN" x="-2.54" y="-5.08" visible="off" length="short"/>
-<text x="0.762" y="-5.08" size="1.016" layer="97" font="vector" align="center-left">EN</text>
+<pin name="EN" x="-2.54" y="-2.54" visible="off" length="short"/>
+<text x="0.762" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">EN</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -209,7 +209,13 @@
 <connect gate="G$1" pin="VOUT" pad="P$2 P$3 P$6 P$7"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="MC33269D-5.0" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="http://www.onsemi.com/pub_link/Collateral/MC33269-D.PDF" constant="no"/>
+<attribute name="VALUE" value="MC33269D-5.0" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -229,7 +235,13 @@
 <connect gate="G$1" pin="VOUT" pad="PAD"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="LM317MDT-TR" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="http://www.st.com/content/ccc/resource/technical/document/datasheet/8e/b2/ea/56/ad/8c/43/d8/CD00000549.pdf/files/CD00000549.pdf/jcr:content/translations/en.CD00000549.pdf" constant="no"/>
+<attribute name="VALUE" value="LM317MDT-TR" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -249,7 +261,13 @@
 <connect gate="G$1" pin="VOUT" pad="P$1 P$3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="NCP1117LPST33T3G" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="http://www.onsemi.com/pub_link/Collateral/NCP1117LP-D.PDF" constant="no"/>
+<attribute name="VALUE" value="NCP1117LPST33T3G" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="ST50T3G" package="SOT-223-3">
@@ -259,7 +277,13 @@
 <connect gate="G$1" pin="VOUT" pad="P$1 P$3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="NCP1117LPST50T3G" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="http://www.onsemi.com/pub_link/Collateral/NCP1117LP-D.PDF" constant="no"/>
+<attribute name="VALUE" value="NCP1117LPST50T3G" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="STADT3G" package="SOT-223-3">
@@ -269,7 +293,13 @@
 <connect gate="G$1" pin="VOUT" pad="P$1 P$3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="NCP1117LPSTADT3G" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="http://www.onsemi.com/pub_link/Collateral/NCP1117LP-D.PDF" constant="no"/>
+<attribute name="VALUE" value="NCP1117LPSTADT3G" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -290,12 +320,18 @@
 <connect gate="G$1" pin="VOUT" pad="P$5"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="F-REG-SOT235-3.3V-300mA" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-REG-SOT235-3.3V-300mA" constant="no"/>
+<attribute name="VALUE" value="F-REG-SOT235-3.3V-300mA" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="TPS7B69" prefix="U" uservalue="yes">
+<deviceset name="TPS7B69" prefix="U">
 <description>&lt;b&gt;Manufacturer Part #:&lt;/b&gt; TPS7B69&lt;br/&gt;
 &lt;b&gt;Manufacturer: &lt;/b&gt; Texas Instruments&lt;br/&gt;
 &lt;b&gt;Description: &lt;/b&gt; LDO Voltage Regulators&lt;br/&gt;</description>
@@ -303,14 +339,20 @@
 <gate name="G$1" symbol="VOLTAGE_REGULATOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="SOT-23-5">
+<device name="33QDCYRQ1" package="SOT-23-5">
 <connects>
 <connect gate="G$1" pin="GND/ADJ" pad="P$3 P$4"/>
 <connect gate="G$1" pin="VIN" pad="P$1"/>
 <connect gate="G$1" pin="VOUT" pad="P$5"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="TPS7B6933QDCYRQ1" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="http://www.ti.com/lit/ds/symlink/tps7b6933-q1.pdf" constant="no"/>
+<attribute name="VALUE" value="TPS7B6933QDCYRQ1" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>

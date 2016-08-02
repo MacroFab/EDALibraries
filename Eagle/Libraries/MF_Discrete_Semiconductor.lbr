@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -67,8 +67,8 @@
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
@@ -120,7 +120,7 @@
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Diodes in SMA Standard.&lt;br/&gt;</description>
 <smd name="CATHODE" x="-2" y="0" dx="2.5" dy="1.7" layer="1" rot="R180"/>
 <smd name="ANODE" x="2" y="0" dx="2.5" dy="1.7" layer="1" rot="R180"/>
-<text x="-4.2" y="1.89" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="-4.2" y="1.89" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <polygon width="0.127" layer="21">
 <vertex x="-0.35" y="0"/>
 <vertex x="0.35" y="0.5"/>
@@ -141,7 +141,7 @@
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Diodes in SOD-123 Standard.&lt;br/&gt;</description>
 <smd name="CATHODE" x="-1.675" y="0" dx="0.85" dy="1.2" layer="1" rot="R180"/>
 <smd name="ANODE" x="1.675" y="0" dx="0.85" dy="1.2" layer="1" rot="R180"/>
-<text x="-2.8" y="1.09" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<text x="-2.8" y="1.09" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <polygon width="0.127" layer="21">
 <vertex x="-0.35" y="0"/>
 <vertex x="0.15" y="0.3"/>
@@ -160,31 +160,31 @@
 </package>
 <package name="SOT-23-3">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard SOT-23-3 footprint.&lt;br/&gt;</description>
-<smd name="P$1" x="-0.95" y="-1" dx="0.9" dy="0.8" layer="1" rot="R90"/>
-<smd name="P$2" x="0.95" y="-1" dx="0.9" dy="0.8" layer="1" rot="R90"/>
-<smd name="P$3" x="0" y="1" dx="0.9" dy="0.8" layer="1" rot="R90"/>
-<wire x1="-1.6" y1="-1.8" x2="1.6" y2="-1.8" width="0.127" layer="21"/>
-<wire x1="1.6" y1="-1.8" x2="1.6" y2="1.8" width="0.127" layer="21"/>
-<wire x1="1.6" y1="1.8" x2="-1.6" y2="1.8" width="0.127" layer="21"/>
-<wire x1="-1.6" y1="1.8" x2="-1.6" y2="-1.8" width="0.127" layer="21"/>
-<text x="-1.6" y="2.2" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<smd name="P$1" x="-1" y="0.95" dx="0.9" dy="0.8" layer="1"/>
+<smd name="P$2" x="-1" y="-0.95" dx="0.9" dy="0.8" layer="1"/>
+<smd name="P$3" x="1" y="0" dx="0.9" dy="0.8" layer="1"/>
+<wire x1="-1.8" y1="1.6" x2="-1.8" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="-1.6" x2="1.8" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="1.8" y1="-1.6" x2="1.8" y2="1.6" width="0.127" layer="21"/>
+<wire x1="1.8" y1="1.6" x2="-1.8" y2="1.6" width="0.127" layer="21"/>
+<text x="-1.8" y="-2.88" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <polygon width="0.127" layer="21">
-<vertex x="-2.2" y="-1.6" curve="-90"/>
-<vertex x="-2.4" y="-1.4" curve="-90"/>
-<vertex x="-2.2" y="-1.2" curve="-90"/>
-<vertex x="-2" y="-1.4" curve="-90"/>
+<vertex x="-1.6" y="2.2" curve="-90"/>
+<vertex x="-1.4" y="2.4" curve="-90"/>
+<vertex x="-1.2" y="2.2" curve="-90"/>
+<vertex x="-1.4" y="2" curve="-90"/>
 </polygon>
 </package>
 <package name="TO-252-3">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for TO-252-3 Standard.&lt;br/&gt;</description>
-<smd name="PAD" x="0" y="0" dx="6.7" dy="6.7" layer="1"/>
-<smd name="1" x="-2.3" y="-6.65" dx="3" dy="1.6" layer="1" rot="R90"/>
-<smd name="2" x="2.3" y="-6.65" dx="3" dy="1.6" layer="1" rot="R90"/>
-<wire x1="-3.8" y1="3.8" x2="3.8" y2="3.8" width="0.127" layer="21"/>
-<wire x1="3.8" y1="3.8" x2="3.8" y2="-8.6" width="0.127" layer="21"/>
-<wire x1="3.8" y1="-8.6" x2="-3.8" y2="-8.6" width="0.127" layer="21"/>
-<wire x1="-3.8" y1="-8.6" x2="-3.8" y2="3.8" width="0.127" layer="21"/>
-<text x="-3.8" y="4.2" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<smd name="PAD" x="0" y="0" dx="6.7" dy="6.7" layer="1" rot="R270"/>
+<smd name="1" x="-6.65" y="2.3" dx="3" dy="1.6" layer="1"/>
+<smd name="2" x="-6.65" y="-2.3" dx="3" dy="1.6" layer="1"/>
+<wire x1="3.8" y1="3.8" x2="3.8" y2="-3.8" width="0.127" layer="21"/>
+<wire x1="3.8" y1="-3.8" x2="-8.6" y2="-3.8" width="0.127" layer="21"/>
+<wire x1="-8.6" y1="-3.8" x2="-8.6" y2="3.8" width="0.127" layer="21"/>
+<wire x1="-8.6" y1="3.8" x2="3.8" y2="3.8" width="0.127" layer="21"/>
+<text x="-8.6" y="4.2" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -199,10 +199,10 @@
 <vertex x="-0.762" y="1.524"/>
 <vertex x="0.762" y="0"/>
 </polygon>
-<text x="-5.08" y="2.54" size="1.016" layer="95" font="vector">&gt;NAME</text>
-<text x="-5.08" y="-2.54" size="1.016" layer="96" font="vector" align="top-left">&gt;VALUE</text>
-<pin name="ANODE" x="-5.08" y="0" visible="off" length="middle"/>
-<pin name="CATHODE" x="5.08" y="0" visible="off" length="middle" rot="R180"/>
+<text x="-2.54" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="-2.54" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
+<pin name="ANODE" x="-2.54" y="0" visible="off" length="short"/>
+<pin name="CATHODE" x="2.54" y="0" visible="off" length="short" rot="R180"/>
 </symbol>
 <symbol name="NPN_BJT">
 <description>&lt;b&gt;Description:&lt;/b&gt; Symbol for BJT NPN Transistors.&lt;br/&gt;</description>
@@ -227,8 +227,8 @@
 <text x="-5.08" y="0.254" size="1.016" layer="94" font="vector">B</text>
 <text x="2.794" y="3.81" size="1.016" layer="94" font="vector">C</text>
 <text x="2.794" y="-4.826" size="1.016" layer="94" font="vector">E</text>
-<text x="0" y="5.08" size="1.016" layer="95" font="vector" align="bottom-right">&gt;NAME</text>
-<text x="0" y="-5.08" size="1.016" layer="96" font="vector" rot="R180">&gt;VALUE</text>
+<text x="5.08" y="5.08" size="1.016" layer="95" font="vector" rot="R180" align="bottom-right">&gt;NAME</text>
+<text x="5.08" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
 </symbol>
 <symbol name="PNP_BJT">
 <description>&lt;b&gt;Description:&lt;/b&gt; Symbol for BJT PNP Transistors.&lt;br/&gt;</description>
@@ -248,8 +248,8 @@
 <text x="-5.08" y="0.254" size="1.016" layer="94" font="vector">B</text>
 <text x="2.794" y="3.81" size="1.016" layer="94" font="vector">C</text>
 <text x="2.794" y="-4.826" size="1.016" layer="94" font="vector">E</text>
-<text x="0" y="5.08" size="1.016" layer="95" font="vector" align="bottom-right">&gt;NAME</text>
-<text x="0" y="-5.08" size="1.016" layer="96" font="vector" rot="R180">&gt;VALUE</text>
+<text x="5.08" y="5.08" size="1.016" layer="95" font="vector" rot="R180" align="bottom-right">&gt;NAME</text>
+<text x="5.08" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
 <polygon width="0.1524" layer="94">
 <vertex x="0.635" y="-1.27"/>
 <vertex x="1.397" y="-2.159"/>
@@ -265,8 +265,8 @@
 <text x="-5.08" y="0.254" size="1.016" layer="94" font="vector">G</text>
 <text x="2.794" y="3.81" size="1.016" layer="94" font="vector">D</text>
 <text x="2.794" y="-4.826" size="1.016" layer="94" font="vector">S</text>
-<text x="0" y="5.08" size="1.016" layer="95" font="vector" align="bottom-right">&gt;NAME</text>
-<text x="0" y="-5.08" size="1.016" layer="96" font="vector" rot="R180">&gt;VALUE</text>
+<text x="5.08" y="5.08" size="1.016" layer="95" font="vector" rot="R180" align="bottom-right">&gt;NAME</text>
+<text x="5.08" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
 <wire x1="-5.08" y1="0" x2="-1.778" y2="0" width="0.1524" layer="94"/>
 <wire x1="-1.778" y1="0" x2="-1.778" y2="2.54" width="0.1524" layer="94"/>
 <wire x1="-1.778" y1="0" x2="-1.778" y2="-2.54" width="0.1524" layer="94"/>
@@ -305,8 +305,8 @@
 <text x="-5.08" y="0.254" size="1.016" layer="94" font="vector">G</text>
 <text x="2.794" y="3.81" size="1.016" layer="94" font="vector">D</text>
 <text x="2.794" y="-4.826" size="1.016" layer="94" font="vector">S</text>
-<text x="0" y="5.08" size="1.016" layer="95" font="vector" align="bottom-right">&gt;NAME</text>
-<text x="0" y="-5.08" size="1.016" layer="96" font="vector" rot="R180">&gt;VALUE</text>
+<text x="5.08" y="5.08" size="1.016" layer="95" font="vector" rot="R180" align="bottom-right">&gt;NAME</text>
+<text x="5.08" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
 <wire x1="-5.08" y1="0" x2="-1.778" y2="0" width="0.1524" layer="94"/>
 <wire x1="-1.778" y1="0" x2="-1.778" y2="2.54" width="0.1524" layer="94"/>
 <wire x1="-1.778" y1="0" x2="-1.778" y2="-2.54" width="0.1524" layer="94"/>
@@ -338,9 +338,9 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DIODE" prefix="D" uservalue="yes">
+<deviceset name="DIODES" prefix="D">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Discrete_Semiconductor&lt;br/&gt;
-&lt;b&gt;Description:&lt;/b&gt; Device for Single Packaged Diodes. Manufacture part number (MFG#) can be added via Attributes.&lt;br/&gt;</description>
+&lt;b&gt;Description:&lt;/b&gt; Device for Single Packaged Diodes.&lt;br/&gt;</description>
 <gates>
 <gate name="G$1" symbol="DIODE" x="0" y="0"/>
 </gates>
@@ -352,7 +352,18 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFG#" value="N/A" constant="no"/>
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
+</technology>
+<technology name="_B140">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-DIO-SMA-B140" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-DIO-SMA-B140" constant="no"/>
+<attribute name="VALUE" value="MF-DIO-SMA-B140" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -363,7 +374,25 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFG#" value="N/A" constant="no"/>
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
+</technology>
+<technology name="_1N4148">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-DIO-SOD123-1N4148" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-DIO-SOD123-1N4148" constant="no"/>
+<attribute name="VALUE" value="MF-DIO-SOD123-1N4148" constant="no"/>
+</technology>
+<technology name="_BAT42">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-DIO-SOD123-BAT42" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-DIO-SOD123-BAT42" constant="no"/>
+<attribute name="VALUE" value="MF-DIO-SOD123-BAT42" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -384,7 +413,18 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFG#" value="N/A" constant="no"/>
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
+</technology>
+<technology name="MMBT3904">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-DSC-SOT233-MMBT3904" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-DSC-SOT233-MMBT3904" constant="no"/>
+<attribute name="VALUE" value="MF-DSC-SOT233-MMBT3904" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -405,7 +445,18 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFG#" value="N/A" constant="no"/>
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
+</technology>
+<technology name="_MMBT3906">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-DSC-SOT233-MMBT3906" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-DSC-SOT233-MMBT3906" constant="no"/>
+<attribute name="VALUE" value="MF-DSC-SOT233-MMBT3906" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -425,7 +476,20 @@
 <connect gate="G$1" pin="SOURCE" pad="P$2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
+</technology>
+<technology name="_BSS138">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-DSC-SOT233-BSS138" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-DSC-SOT233-BSS138" constant="no"/>
+<attribute name="VALUE" value="MF-DSC-SOT233-BSS138" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="_TO-252-3" package="TO-252-3">
@@ -436,7 +500,11 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFG#" value="N/A" constant="no"/>
+<attribute name="HOUSPART" value="NO" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -457,7 +525,18 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFG#" value="N/A" constant="no"/>
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
+</technology>
+<technology name="_BSS84">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-DSC-SOT233-BSS84" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-DSC-SOT233-BSS84" constant="no"/>
+<attribute name="VALUE" value="MF-DSC-SOT233-BSS84" constant="no"/>
 </technology>
 </technologies>
 </device>
