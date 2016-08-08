@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -2531,7 +2531,7 @@
 <smd name="P$1" x="0" y="0" dx="2.2" dy="2.2" layer="1" roundness="100"/>
 <circle x="0" y="0" radius="1.27" width="0.08" layer="21"/>
 <text x="1.905" y="0.635" size="1.016" layer="25" font="vector" ratio="16" align="center-left">&gt;NAME</text>
-<text x="1.905" y="-0.635" size="1.016" layer="21" font="vector" ratio="16" align="center-left">&gt;LABEL00</text>
+<text x="1.905" y="-0.635" size="1.016" layer="21" font="vector" ratio="16" align="center-left">&gt;LABEL01</text>
 </package>
 <package name="BAT-HLD-001">
 <description>&lt;b&gt;Description:&lt;/b&gt; Package for a CR2032 Battery Holder. Based on Linx Technologies BAT-HLD-001.&lt;br&gt;</description>
@@ -6796,8 +6796,7 @@
 <attribute name="LABEL19" value="" constant="no"/>
 <attribute name="MPN" value="MF-CON-2.54mm-01x19" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="
-URL: https://factory.macrofab.com/part/MF-CON-2.54mm-01x19" constant="no"/>
+<attribute name="URL" value=" URL: https://factory.macrofab.com/part/MF-CON-2.54mm-01x19" constant="no"/>
 <attribute name="VALUE" value="MF-CON-2.54mm-01x19" constant="no"/>
 </technology>
 </technologies>
@@ -6989,8 +6988,7 @@ URL: https://factory.macrofab.com/part/MF-CON-2.54mm-01x19" constant="no"/>
 <attribute name="LABEL22" value="" constant="no"/>
 <attribute name="MPN" value="MF-CON-2.54mm-01x22" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x22
-" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x22 " constant="no"/>
 <attribute name="VALUE" value="MF-CON-2.54mm-01x22" constant="no"/>
 </technology>
 </technologies>
@@ -7200,8 +7198,7 @@ URL: https://factory.macrofab.com/part/MF-CON-2.54mm-01x19" constant="no"/>
 <attribute name="LABEL25" value="" constant="no"/>
 <attribute name="MPN" value="MF-CON-2.54mm-01x25" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x25
-" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x25 " constant="no"/>
 <attribute name="VALUE" value="MF-CON-2.54mm-01x25" constant="no"/>
 </technology>
 </technologies>
@@ -7675,8 +7672,7 @@ URL: https://factory.macrofab.com/part/MF-CON-2.54mm-01x19" constant="no"/>
 <attribute name="LABEL31" value="" constant="no"/>
 <attribute name="MPN" value="MF-CON-2.54mm-01x31" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x31
-" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x31 " constant="no"/>
 <attribute name="VALUE" value="MF-CON-2.54mm-01x31" constant="no"/>
 </technology>
 </technologies>
@@ -8222,8 +8218,7 @@ URL: https://factory.macrofab.com/part/MF-CON-2.54mm-01x19" constant="no"/>
 <attribute name="LABEL37" value="" constant="no"/>
 <attribute name="MPN" value="MF-CON-2.54mm-01x37" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x37
-" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x37 " constant="no"/>
 <attribute name="VALUE" value="MF-CON-2.54mm-01x37" constant="no"/>
 </technology>
 </technologies>
