@@ -1,0 +1,9 @@
+# Script fot set-all-devices-attriubute.ulp
+#
+# These are the stock attributes for MacroFab, INC parts.
+
+ATTRIBUTE HOUSEPART ''
+ATTRIBUTE MPN ''
+ATTRIBUTE POPULATE '1'
+ATTRIBUTE URL ''
+ATTRIBUTE VALUE ''
