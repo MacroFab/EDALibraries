@@ -18,6 +18,7 @@ This project is under the [Creative Commons Attribution-ShareAlike 4.0 Internati
 | DRU | Design Rule Checks to ensure PCB manufacturability. |
 | Example Projects | Eagle example projects and sample layouts. |
 | Libraries | Part libraries for house parts and a few extras. |
+| Scripts | Contains useful scripts. |
 | ULP | Contains useful ULP scripts. |
 
 ***
