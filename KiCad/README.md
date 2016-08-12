@@ -14,8 +14,8 @@ This project is under the [Creative Commons Attribution-ShareAlike 4.0 Internati
 ***
 | Directory | Description |
 |---|---|
-| N/A | N/A | 
-| N/A | N/A |
+| Footprints | Macrofab Footprint Libraries in Kicad format | 
+| Schematics | Macrofab Schematic Symbol Libraries in Kicad format |
 
 
 ***

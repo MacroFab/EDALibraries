@@ -1,0 +1,13 @@
+(module MF_Connectors-POGO_PIN_70-9150 (layer F.Cu) (tedit 57ACED6B)
+  (descr "DESCRIPTION: PACKAGE FOR SMD MOUNT POGO PIN CONNECTORS. BASED ON AVX 70-9150 SERIES POGO PINS.")
+  (tags "DESCRIPTION: PACKAGE FOR SMD MOUNT POGO PIN CONNECTORS. BASED ON AVX 70-9150 SERIES POGO PINS.")
+  (attr smd)
+  (fp_text reference REF** (at 4.445 -1.143) (layer F.SilkS) hide
+    (effects (font (size 1.016 1.016) (thickness 0.1524)))
+  )
+  (fp_text value VAL** (at 4.445 -2.667) (layer F.SilkS) hide
+    (effects (font (size 1.016 1.016) (thickness 0.1524)))
+  )
+  (fp_circle (center 0 0) (end 0 1.27) (layer F.SilkS) (width 0.08))
+  (pad P$1 smd circle (at 0 0) (size 2.2 2.2) (layers F.Cu F.Paste F.Mask))
+)
