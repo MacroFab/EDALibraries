@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -8517,6 +8517,19 @@
 <attribute name="URL" value="http://www.tag-connect.com/TC2030-PKT" constant="no"/>
 <attribute name="VALUE" value="TC2030-PKT" constant="no"/>
 </technology>
+<technology name="_SILABS2TC">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="LABEL01" value="GND" constant="no"/>
+<attribute name="LABEL02" value="VCC" constant="no"/>
+<attribute name="LABEL03" value="C2CK" constant="no"/>
+<attribute name="LABEL04" value="C2D" constant="no"/>
+<attribute name="LABEL05" value="" constant="no"/>
+<attribute name="LABEL06" value="" constant="no"/>
+<attribute name="MPN" value="TC2030-IDC" constant="no"/>
+<attribute name="POPULATE" value="0" constant="no"/>
+<attribute name="URL" value="http://www.tag-connect.com/TC2030-IDC" constant="no"/>
+<attribute name="VALUE" value="TC2030-IDC" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="_TC2030-IDC-NL" package="TC2030-IDC-NL">
@@ -8580,6 +8593,19 @@
 <attribute name="POPULATE" value="0" constant="no"/>
 <attribute name="URL" value="http://www.tag-connect.com/TC2030-PKT-NL" constant="no"/>
 <attribute name="VALUE" value="TC2030-PKT-NL " constant="no"/>
+</technology>
+<technology name="_SILABS2TC">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="LABEL01" value="GND" constant="no"/>
+<attribute name="LABEL02" value="VCC" constant="no"/>
+<attribute name="LABEL03" value="C2CK" constant="no"/>
+<attribute name="LABEL04" value="C2D" constant="no"/>
+<attribute name="LABEL05" value="" constant="no"/>
+<attribute name="LABEL06" value="" constant="no"/>
+<attribute name="MPN" value="TC2030-IDC-NL" constant="no"/>
+<attribute name="POPULATE" value="0" constant="no"/>
+<attribute name="URL" value="http://www.tag-connect.com/TC2030-IDC-NL" constant="no"/>
+<attribute name="VALUE" value="TC2030-IDC-NL" constant="no"/>
 </technology>
 </technologies>
 </device>

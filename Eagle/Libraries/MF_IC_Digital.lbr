@@ -2383,7 +2383,7 @@ EFM8SB10F8G-A-QFN24
 </device>
 </devices>
 </deviceset>
-<deviceset name="EFM8BB10F(2/4/8)G-A-QFN20" uservalue="yes">
+<deviceset name="EFM8BB10F(2/4/8)G-A-QFN20" prefix="U" uservalue="yes">
 <description>&lt;b&gt;Manufacturer Part #:&lt;/b&gt; EFM8BB10F(2/4/8)G-A-QFN20&lt;br/&gt;
 &lt;b&gt;Manufacturer:&lt;/b&gt; Silicon Labs&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; Busy Bee 8-bit Microcontrollers - MCU (2/4/8)kB / (256/512)B RAM 12b ADC &lt;br/&gt;</description>
