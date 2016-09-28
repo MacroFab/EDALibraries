@@ -181,29 +181,6 @@
 <vertex x="-2.946" y="1.45" curve="90"/>
 </polygon>
 </package>
-<package name="LED5060RGB">
-<description>&lt;b&gt;Description:&lt;/b&gt; Footprint for LEDs in 5060 Standard.&lt;br/&gt;</description>
-<smd name="P$1" x="-2.4" y="1.7" dx="1.1" dy="2" layer="1" roundness="100" rot="R90"/>
-<smd name="P$2" x="-2.4" y="0" dx="1.1" dy="2" layer="1" roundness="100" rot="R90"/>
-<smd name="P$3" x="-2.4" y="-1.7" dx="1.1" dy="2" layer="1" roundness="100" rot="R90"/>
-<smd name="P$4" x="2.4" y="-1.7" dx="1.1" dy="2" layer="1" roundness="100" rot="R90"/>
-<smd name="P$5" x="2.4" y="0" dx="1.1" dy="2" layer="1" roundness="100" rot="R90"/>
-<smd name="P$6" x="2.4" y="1.7" dx="1.1" dy="2" layer="1" roundness="100" rot="R90"/>
-<wire x1="-2.5" y1="2.5" x2="2.5" y2="2.5" width="0.127" layer="21"/>
-<wire x1="2.5" y1="-2.5" x2="-2.5" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="-2.5" y1="0.9375" x2="-2.5" y2="0.78125" width="0.127" layer="21"/>
-<wire x1="-2.5" y1="-0.78125" x2="-2.5" y2="-0.9375" width="0.127" layer="21"/>
-<wire x1="2.5" y1="-0.78125" x2="2.5" y2="-0.9375" width="0.127" layer="21"/>
-<wire x1="2.5" y1="0.9375" x2="2.5" y2="0.78125" width="0.127" layer="21"/>
-<circle x="0" y="0" radius="1.104853125" width="0.127" layer="21"/>
-<text x="-2.5" y="2.8125" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
-<polygon width="0.127" layer="21">
-<vertex x="-4.3" y="2.196" curve="90"/>
-<vertex x="-4.054" y="1.95" curve="90"/>
-<vertex x="-3.8" y="2.204" curve="90"/>
-<vertex x="-4.046" y="2.45" curve="90"/>
-</polygon>
-</package>
 <package name="WS2812B">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for the WS2812B LED/Driver IC.&lt;br/&gt;</description>
 <smd name="P$1" x="-2.45" y="1.65" dx="0.9" dy="1.5" layer="1" rot="R90"/>
@@ -539,34 +516,6 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="LED_RGB" prefix="D" uservalue="yes">
-<description>&lt;b&gt;Library:&lt;/b&gt;  MF_LEDs&lt;br/&gt;
-&lt;b&gt;Description:&lt;/b&gt; Device for RGB LED Packages. Manufacture part number (MFG#) can be added via Attributes.&lt;br/&gt;</description>
-<gates>
-<gate name="G$1" symbol="LED_RGB" x="0" y="0"/>
-</gates>
-<devices>
-<device name="_5060" package="LED5060RGB">
-<connects>
-<connect gate="G$1" pin="ANODE_BLUE" pad="P$3"/>
-<connect gate="G$1" pin="ANODE_GREEN" pad="P$1"/>
-<connect gate="G$1" pin="ANODE_RED" pad="P$2"/>
-<connect gate="G$1" pin="CATHODE_BLUE" pad="P$4"/>
-<connect gate="G$1" pin="CATHODE_GREEN" pad="P$6"/>
-<connect gate="G$1" pin="CATHODE_RED" pad="P$5"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="HOUSEPART" value="YES" constant="no"/>
-<attribute name="MPN" value="MF-LED-5060-RGB" constant="no"/>
-<attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="https://factory.macrofab.com/part/MF-LED-5060-RGB" constant="no"/>
-<attribute name="VALUE" value="MF-LED-5060-RGB" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="LED_RGB_CA" prefix="D" uservalue="yes">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_LEDs&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; Device for RGB LED Packages with Common Anodes. Manufacture part number (MFG#) can be added via Attributes.&lt;br/&gt;</description>
@@ -583,11 +532,11 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="HOUSEPART" value="NO" constant="no"/>
-<attribute name="MPN" value="CLV1L-FKB-CHMMQDGBB7673673" constant="no"/>
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="MPN" value="MF-LED-3228-RGB" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="http://www.cree.com/~/media/Files/Cree/LED-Components-and-Modules/HB/Data-Sheets/CLV1L-FKB-1238.pdf" constant="no"/>
-<attribute name="VALUE" value="CLV1L-FKB-CHMMQDGBB7673673" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-LED-3228-RGB" constant="no"/>
+<attribute name="VALUE" value="MF-LED-3228-RGB" constant="no"/>
 </technology>
 </technologies>
 </device>
