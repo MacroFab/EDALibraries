@@ -8530,6 +8530,19 @@
 <attribute name="URL" value="http://www.tag-connect.com/TC2030-IDC" constant="no"/>
 <attribute name="VALUE" value="TC2030-IDC" constant="no"/>
 </technology>
+<technology name="_SWD2TC">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="LABEL01" value="VCC" constant="no"/>
+<attribute name="LABEL02" value="GND" constant="no"/>
+<attribute name="LABEL03" value="SWDIO" constant="no"/>
+<attribute name="LABEL04" value="SWCLK" constant="no"/>
+<attribute name="LABEL05" value="MCU_VDD" constant="no"/>
+<attribute name="LABEL06" value="!RST" constant="no"/>
+<attribute name="MPN" value="TC2030-IDC" constant="no"/>
+<attribute name="POPULATE" value="0" constant="no"/>
+<attribute name="URL" value="http://www.tag-connect.com/TC2030-IDC" constant="no"/>
+<attribute name="VALUE" value="TC2030-IDC" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="_TC2030-IDC-NL" package="TC2030-IDC-NL">
@@ -8602,6 +8615,19 @@
 <attribute name="LABEL04" value="C2D" constant="no"/>
 <attribute name="LABEL05" value="C2CK_PS" constant="no"/>
 <attribute name="LABEL06" value="C2D_PS" constant="no"/>
+<attribute name="MPN" value="TC2030-IDC-NL" constant="no"/>
+<attribute name="POPULATE" value="0" constant="no"/>
+<attribute name="URL" value="http://www.tag-connect.com/TC2030-IDC-NL" constant="no"/>
+<attribute name="VALUE" value="TC2030-IDC-NL" constant="no"/>
+</technology>
+<technology name="_SWD2TC">
+<attribute name="HOUSEPART" value="NO" constant="no"/>
+<attribute name="LABEL01" value="VCC" constant="no"/>
+<attribute name="LABEL02" value="GND" constant="no"/>
+<attribute name="LABEL03" value="SWDIO" constant="no"/>
+<attribute name="LABEL04" value="SWCLK" constant="no"/>
+<attribute name="LABEL05" value="MCU_VDD" constant="no"/>
+<attribute name="LABEL06" value="!RST" constant="no"/>
 <attribute name="MPN" value="TC2030-IDC-NL" constant="no"/>
 <attribute name="POPULATE" value="0" constant="no"/>
 <attribute name="URL" value="http://www.tag-connect.com/TC2030-IDC-NL" constant="no"/>
