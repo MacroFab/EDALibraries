@@ -356,7 +356,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 <technology name="_B140">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -378,7 +377,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 <technology name="_1N4148">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -417,7 +415,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 <technology name="MMBT3904">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -449,7 +446,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 <technology name="_MMBT3906">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -481,7 +477,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 <technology name="_BSS138">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
@@ -504,7 +499,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -529,7 +523,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 <technology name="_BSS84">
 <attribute name="HOUSEPART" value="YES" constant="no"/>
