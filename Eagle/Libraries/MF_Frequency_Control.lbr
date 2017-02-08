@@ -118,10 +118,10 @@
 <packages>
 <package name="5MMX3.2MM">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for 5MM x 3.2MM Crystals.&lt;br/&gt;</description>
-<smd name="P$1" x="-1.1" y="1.85" dx="2" dy="1.2" layer="1" rot="R270"/>
-<smd name="P$2" x="-1.1" y="-1.85" dx="2" dy="1.2" layer="1" rot="R270"/>
-<smd name="P$3" x="1.1" y="-1.85" dx="2" dy="1.2" layer="1" rot="R270"/>
-<smd name="P$4" x="1.1" y="1.85" dx="2" dy="1.2" layer="1" rot="R270"/>
+<smd name="1" x="-1.1" y="1.85" dx="2" dy="1.2" layer="1" rot="R270"/>
+<smd name="2" x="-1.1" y="-1.85" dx="2" dy="1.2" layer="1" rot="R270"/>
+<smd name="3" x="1.1" y="-1.85" dx="2" dy="1.2" layer="1" rot="R270"/>
+<smd name="4" x="1.1" y="1.85" dx="2" dy="1.2" layer="1" rot="R270"/>
 <wire x1="1.6" y1="0.6" x2="1.6" y2="-0.6" width="0.127" layer="21"/>
 <wire x1="0.2" y1="-2.5" x2="-0.2" y2="-2.5" width="0.127" layer="21"/>
 <wire x1="0.2" y1="2.5" x2="-0.2" y2="2.5" width="0.127" layer="21"/>
@@ -130,10 +130,10 @@
 </package>
 <package name="7MMX5MM">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for 7MM x 5MM Crystals.&lt;br/&gt;</description>
-<smd name="P$1" x="-1.27" y="3.15" dx="2.2" dy="1.4" layer="1" rot="R270"/>
-<smd name="P$2" x="1.27" y="3.15" dx="2.2" dy="1.4" layer="1" rot="R270"/>
-<smd name="P$3" x="1.27" y="-3.15" dx="2.2" dy="1.4" layer="1" rot="R270"/>
-<smd name="P$4" x="-1.27" y="-3.05" dx="2.4" dy="1.4" layer="1" rot="R270"/>
+<smd name="1" x="-1.27" y="3.15" dx="2.2" dy="1.4" layer="1" rot="R270"/>
+<smd name="2" x="1.27" y="3.15" dx="2.2" dy="1.4" layer="1" rot="R270"/>
+<smd name="3" x="1.27" y="-3.15" dx="2.2" dy="1.4" layer="1" rot="R270"/>
+<smd name="4" x="-1.27" y="-3.05" dx="2.4" dy="1.4" layer="1" rot="R270"/>
 <wire x1="2.6" y1="3.6" x2="2.6" y2="-3.6" width="0.127" layer="21"/>
 <wire x1="2.6" y1="-3.6" x2="2.2" y2="-3.6" width="0.127" layer="21"/>
 <wire x1="2.6" y1="3.6" x2="2.2" y2="3.6" width="0.127" layer="21"/>
@@ -167,8 +167,8 @@
 </package>
 <package name="ECX-31B_SERIES">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for ECX-31B Series Crystals.&lt;br/&gt;</description>
-<smd name="P$1" x="-1.2" y="0" dx="1.1" dy="1.7" layer="1"/>
-<smd name="P$2" x="1.2" y="0" dx="1.1" dy="1.7" layer="1"/>
+<smd name="1" x="-1.2" y="0" dx="1.1" dy="1.7" layer="1"/>
+<smd name="2" x="1.2" y="0" dx="1.1" dy="1.7" layer="1"/>
 <wire x1="-2" y1="1.1" x2="2" y2="1.1" width="0.127" layer="21"/>
 <wire x1="2" y1="1.1" x2="2" y2="-1.1" width="0.127" layer="21"/>
 <wire x1="2" y1="-1.1" x2="-2" y2="-1.1" width="0.127" layer="21"/>
@@ -235,8 +235,8 @@
 </device>
 <device name="_ECX-31B" package="ECX-31B_SERIES">
 <connects>
-<connect gate="G$1" pin="X0" pad="P$1"/>
-<connect gate="G$1" pin="X1" pad="P$2"/>
+<connect gate="G$1" pin="X0" pad="1"/>
+<connect gate="G$1" pin="X1" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -259,9 +259,9 @@
 <devices>
 <device name="_ABMM" package="7MMX5MM">
 <connects>
-<connect gate="G$1" pin="GND" pad="P$2 P$4"/>
-<connect gate="G$1" pin="X0" pad="P$1"/>
-<connect gate="G$1" pin="X1" pad="P$3"/>
+<connect gate="G$1" pin="GND" pad="2 4"/>
+<connect gate="G$1" pin="X0" pad="1"/>
+<connect gate="G$1" pin="X1" pad="3"/>
 </connects>
 <technologies>
 <technology name="">
@@ -275,9 +275,9 @@
 </device>
 <device name="_ABM3B" package="5MMX3.2MM">
 <connects>
-<connect gate="G$1" pin="GND" pad="P$2 P$4"/>
-<connect gate="G$1" pin="X0" pad="P$1"/>
-<connect gate="G$1" pin="X1" pad="P$3"/>
+<connect gate="G$1" pin="GND" pad="2 4"/>
+<connect gate="G$1" pin="X0" pad="1"/>
+<connect gate="G$1" pin="X1" pad="3"/>
 </connects>
 <technologies>
 <technology name="">

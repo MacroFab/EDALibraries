@@ -72,14 +72,14 @@
 <packages>
 <package name="SOIC8">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard SOIC-8 Package.&lt;br/&gt;</description>
-<smd name="P$1" x="-2.6" y="1.905" dx="2.2" dy="0.6" layer="1"/>
-<smd name="P$2" x="-2.6" y="0.635" dx="2.2" dy="0.6" layer="1"/>
-<smd name="P$3" x="-2.6" y="-0.635" dx="2.2" dy="0.6" layer="1"/>
-<smd name="P$4" x="-2.6" y="-1.905" dx="2.2" dy="0.6" layer="1"/>
-<smd name="P$5" x="2.6" y="-1.905" dx="2.2" dy="0.6" layer="1" rot="R180"/>
-<smd name="P$6" x="2.6" y="-0.635" dx="2.2" dy="0.6" layer="1" rot="R180"/>
-<smd name="P$7" x="2.6" y="0.635" dx="2.2" dy="0.6" layer="1" rot="R180"/>
-<smd name="P$8" x="2.6" y="1.905" dx="2.2" dy="0.6" layer="1" rot="R180"/>
+<smd name="1" x="-2.6" y="1.905" dx="2.2" dy="0.6" layer="1"/>
+<smd name="2" x="-2.6" y="0.635" dx="2.2" dy="0.6" layer="1"/>
+<smd name="3" x="-2.6" y="-0.635" dx="2.2" dy="0.6" layer="1"/>
+<smd name="4" x="-2.6" y="-1.905" dx="2.2" dy="0.6" layer="1"/>
+<smd name="5" x="2.6" y="-1.905" dx="2.2" dy="0.6" layer="1" rot="R180"/>
+<smd name="6" x="2.6" y="-0.635" dx="2.2" dy="0.6" layer="1" rot="R180"/>
+<smd name="7" x="2.6" y="0.635" dx="2.2" dy="0.6" layer="1" rot="R180"/>
+<smd name="8" x="2.6" y="1.905" dx="2.2" dy="0.6" layer="1" rot="R180"/>
 <wire x1="-4" y1="2.6" x2="-1.2" y2="2.6" width="0.127" layer="21"/>
 <wire x1="-1.2" y1="2.6" x2="1.2" y2="2.6" width="0.127" layer="21"/>
 <wire x1="1.2" y1="2.6" x2="4" y2="2.6" width="0.127" layer="21"/>
@@ -117,10 +117,10 @@
 </package>
 <package name="SOT-223-3">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard SOT-223-3 Package.&lt;br/&gt;</description>
-<smd name="P$1" x="3.25" y="0" dx="4" dy="1.5" layer="1" rot="R270"/>
-<smd name="P$2" x="-3.25" y="2.3" dx="1" dy="1.5" layer="1" rot="R270"/>
-<smd name="P$3" x="-3.25" y="0" dx="1" dy="1.5" layer="1" rot="R270"/>
-<smd name="P$4" x="-3.25" y="-2.3" dx="1" dy="1.5" layer="1" rot="R270"/>
+<smd name="1" x="3.25" y="0" dx="4" dy="1.5" layer="1" rot="R270"/>
+<smd name="2" x="-3.25" y="2.3" dx="1" dy="1.5" layer="1" rot="R270"/>
+<smd name="3" x="-3.25" y="0" dx="1" dy="1.5" layer="1" rot="R270"/>
+<smd name="4" x="-3.25" y="-2.3" dx="1" dy="1.5" layer="1" rot="R270"/>
 <wire x1="1.75" y1="3.25" x2="1.75" y2="-3.25" width="0.127" layer="21"/>
 <wire x1="1.75" y1="-3.25" x2="-1.75" y2="-3.25" width="0.127" layer="21"/>
 <wire x1="-1.75" y1="-3.25" x2="-1.75" y2="3.25" width="0.127" layer="21"/>
@@ -129,11 +129,11 @@
 </package>
 <package name="SOT-23-5">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard SOT-23-5 Package. &lt;br/&gt;</description>
-<smd name="P$1" x="-1.35" y="0.95" dx="1.05" dy="0.6" layer="1"/>
-<smd name="P$2" x="-1.35" y="0" dx="1.05" dy="0.6" layer="1"/>
-<smd name="P$3" x="-1.35" y="-0.95" dx="1.05" dy="0.6" layer="1"/>
-<smd name="P$5" x="1.35" y="0.95" dx="1.05" dy="0.6" layer="1"/>
-<smd name="P$4" x="1.35" y="-0.95" dx="1.05" dy="0.6" layer="1"/>
+<smd name="1" x="-1.35" y="0.95" dx="1.05" dy="0.6" layer="1"/>
+<smd name="2" x="-1.35" y="0" dx="1.05" dy="0.6" layer="1"/>
+<smd name="3" x="-1.35" y="-0.95" dx="1.05" dy="0.6" layer="1"/>
+<smd name="5" x="1.35" y="0.95" dx="1.05" dy="0.6" layer="1"/>
+<smd name="4" x="1.35" y="-0.95" dx="1.05" dy="0.6" layer="1"/>
 <wire x1="-2.2" y1="1.6" x2="-0.6" y2="1.6" width="0.127" layer="21"/>
 <wire x1="-0.6" y1="1.6" x2="0.6" y2="1.6" width="0.127" layer="21"/>
 <wire x1="0.6" y1="1.6" x2="2.2" y2="1.6" width="0.127" layer="21"/>
@@ -204,9 +204,9 @@
 <devices>
 <device name="D-5.0" package="SOIC8">
 <connects>
-<connect gate="G$1" pin="GND/ADJ" pad="P$1"/>
-<connect gate="G$1" pin="VIN" pad="P$4"/>
-<connect gate="G$1" pin="VOUT" pad="P$2 P$3 P$6 P$7"/>
+<connect gate="G$1" pin="GND/ADJ" pad="1"/>
+<connect gate="G$1" pin="VIN" pad="4"/>
+<connect gate="G$1" pin="VOUT" pad="2 3 6 7"/>
 </connects>
 <technologies>
 <technology name="">
@@ -256,9 +256,9 @@
 <devices>
 <device name="ST33T3G" package="SOT-223-3">
 <connects>
-<connect gate="G$1" pin="GND/ADJ" pad="P$2"/>
-<connect gate="G$1" pin="VIN" pad="P$4"/>
-<connect gate="G$1" pin="VOUT" pad="P$1 P$3"/>
+<connect gate="G$1" pin="GND/ADJ" pad="2"/>
+<connect gate="G$1" pin="VIN" pad="4"/>
+<connect gate="G$1" pin="VOUT" pad="1 3"/>
 </connects>
 <technologies>
 <technology name="">
@@ -272,9 +272,9 @@
 </device>
 <device name="ST50T3G" package="SOT-223-3">
 <connects>
-<connect gate="G$1" pin="GND/ADJ" pad="P$2"/>
-<connect gate="G$1" pin="VIN" pad="P$4"/>
-<connect gate="G$1" pin="VOUT" pad="P$1 P$3"/>
+<connect gate="G$1" pin="GND/ADJ" pad="2"/>
+<connect gate="G$1" pin="VIN" pad="4"/>
+<connect gate="G$1" pin="VOUT" pad="1 3"/>
 </connects>
 <technologies>
 <technology name="">
@@ -288,9 +288,9 @@
 </device>
 <device name="STADT3G" package="SOT-223-3">
 <connects>
-<connect gate="G$1" pin="GND/ADJ" pad="P$2"/>
-<connect gate="G$1" pin="VIN" pad="P$4"/>
-<connect gate="G$1" pin="VOUT" pad="P$1 P$3"/>
+<connect gate="G$1" pin="GND/ADJ" pad="2"/>
+<connect gate="G$1" pin="VIN" pad="4"/>
+<connect gate="G$1" pin="VOUT" pad="1 3"/>
 </connects>
 <technologies>
 <technology name="">
@@ -314,10 +314,10 @@
 <devices>
 <device name="33PDBVR" package="SOT-23-5">
 <connects>
-<connect gate="G$1" pin="EN" pad="P$3"/>
-<connect gate="G$1" pin="GND/ADJ" pad="P$2"/>
-<connect gate="G$1" pin="VIN" pad="P$1"/>
-<connect gate="G$1" pin="VOUT" pad="P$5"/>
+<connect gate="G$1" pin="EN" pad="3"/>
+<connect gate="G$1" pin="GND/ADJ" pad="2"/>
+<connect gate="G$1" pin="VIN" pad="1"/>
+<connect gate="G$1" pin="VOUT" pad="5"/>
 </connects>
 <technologies>
 <technology name="">
@@ -341,9 +341,9 @@
 <devices>
 <device name="33QDCYRQ1" package="SOT-23-5">
 <connects>
-<connect gate="G$1" pin="GND/ADJ" pad="P$3 P$4"/>
-<connect gate="G$1" pin="VIN" pad="P$1"/>
-<connect gate="G$1" pin="VOUT" pad="P$5"/>
+<connect gate="G$1" pin="GND/ADJ" pad="3 4"/>
+<connect gate="G$1" pin="VIN" pad="1"/>
+<connect gate="G$1" pin="VOUT" pad="5"/>
 </connects>
 <technologies>
 <technology name="">

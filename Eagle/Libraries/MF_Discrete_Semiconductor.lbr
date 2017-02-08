@@ -160,9 +160,9 @@
 </package>
 <package name="SOT-23-3">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard SOT-23-3 footprint.&lt;br/&gt;</description>
-<smd name="P$1" x="-1" y="0.95" dx="0.9" dy="0.8" layer="1"/>
-<smd name="P$2" x="-1" y="-0.95" dx="0.9" dy="0.8" layer="1"/>
-<smd name="P$3" x="1" y="0" dx="0.9" dy="0.8" layer="1"/>
+<smd name="1" x="-1" y="0.95" dx="0.9" dy="0.8" layer="1"/>
+<smd name="2" x="-1" y="-0.95" dx="0.9" dy="0.8" layer="1"/>
+<smd name="3" x="1" y="0" dx="0.9" dy="0.8" layer="1"/>
 <wire x1="-1.8" y1="1.6" x2="-1.8" y2="-1.6" width="0.127" layer="21"/>
 <wire x1="-1.8" y1="-1.6" x2="1.8" y2="-1.6" width="0.127" layer="21"/>
 <wire x1="1.8" y1="-1.6" x2="1.8" y2="1.6" width="0.127" layer="21"/>
@@ -407,9 +407,9 @@
 <devices>
 <device name="_SOT-23-3" package="SOT-23-3">
 <connects>
-<connect gate="G$1" pin="BASE" pad="P$1"/>
-<connect gate="G$1" pin="COLLECTOR" pad="P$3"/>
-<connect gate="G$1" pin="EMITTER" pad="P$2"/>
+<connect gate="G$1" pin="BASE" pad="1"/>
+<connect gate="G$1" pin="COLLECTOR" pad="3"/>
+<connect gate="G$1" pin="EMITTER" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -439,9 +439,9 @@
 <devices>
 <device name="_SOT-23-3" package="SOT-23-3">
 <connects>
-<connect gate="G$1" pin="BASE" pad="P$1"/>
-<connect gate="G$1" pin="COLLECTOR" pad="P$3"/>
-<connect gate="G$1" pin="EMITTER" pad="P$2"/>
+<connect gate="G$1" pin="BASE" pad="1"/>
+<connect gate="G$1" pin="COLLECTOR" pad="3"/>
+<connect gate="G$1" pin="EMITTER" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -471,9 +471,9 @@
 <devices>
 <device name="_SOT-23-3" package="SOT-23-3">
 <connects>
-<connect gate="G$1" pin="DRAIN" pad="P$3"/>
-<connect gate="G$1" pin="GATE" pad="P$1"/>
-<connect gate="G$1" pin="SOURCE" pad="P$2"/>
+<connect gate="G$1" pin="DRAIN" pad="3"/>
+<connect gate="G$1" pin="GATE" pad="1"/>
+<connect gate="G$1" pin="SOURCE" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -519,9 +519,9 @@
 <devices>
 <device name="_SOT-23-3" package="SOT-23-3">
 <connects>
-<connect gate="G$1" pin="DRAIN" pad="P$3"/>
-<connect gate="G$1" pin="GATE" pad="P$1"/>
-<connect gate="G$1" pin="SOURCE" pad="P$2"/>
+<connect gate="G$1" pin="DRAIN" pad="3"/>
+<connect gate="G$1" pin="GATE" pad="1"/>
+<connect gate="G$1" pin="SOURCE" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
