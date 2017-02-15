@@ -1,0 +1,83 @@
+#usage "<b>Create Text from Pin names in Symbol Editor. This is for Connectors to add Labels.<p>"
+        "<author>Author: Parker Dillmann</author>"
+
+
+string check_for_quotes(string s)
+{
+	int l = strlen(s);
+	if (s[l-1] == '\'')
+	{
+		s+="'";
+	}
+	return s;
+}
+		
+		
+if (library)
+{
+	if (symbol) 
+	symbol(S) 
+	{
+		string h;
+		string cmd;
+
+		sprintf(h, "Change Layer 97;\n");
+		cmd += h;
+		sprintf(h, "Change Font Vector;\n");
+		cmd += h;
+		sprintf(h, "Change Ratio 8;\n");
+		cmd += h;
+		sprintf(h, "Change Align center-left;\n");
+		cmd += h;
+		sprintf(h, "Change Size 0.04;\n");
+		cmd += h;
+
+		S.pins(P) 
+		{
+			int angle;
+			real Xoff;
+			real Yoff;
+			
+			if(P.angle == 0)
+			{
+				angle = 0;
+				Xoff = -0.15;
+				Yoff = 0;
+			}
+			else if(P.angle == 180)
+			{
+				angle = 180;
+				Xoff = 0.15;
+				Yoff = 0;
+			}
+			else if(P.angle == 270)
+			{
+				angle = 270;
+				Xoff = 0;
+				Yoff = 0.15;
+			}
+			else if(P.angle == 90)
+			{
+				angle = 90;
+				Xoff = 0;
+				Yoff = -0.15;
+			}
+			else
+			{
+				dlgMessageBox("Weird angle that cant exist?", "OK");
+				exit(0);
+			}
+			sprintf(h, "Change Visible off (%f %f);\n", (u2mil(P.x)/1000), (u2mil(P.y)/1000));
+			cmd += h;
+			sprintf(h, "TEXT '%s' R%d (%f %f);\n", check_for_quotes(P.name), angle, (u2mil(P.x)/1000) - Xoff, (u2mil(P.y)/1000) - Yoff);
+			cmd += h;
+			sprintf(h, "TEXT '>LABEL%s' R%d (%f %f);\n", check_for_quotes(P.name), angle, (u2mil(P.x)/1000) - (Xoff*2), (u2mil(P.y)/1000) - Yoff);
+			cmd += h;
+		}
+		
+		exit(cmd);
+	}
+	else dlgMessageBox("Start this ULP in a Symbol-Editor", "OK");
+}
+else dlgMessageBox("Start this ULP in Library (Symbol)", "OK");
+

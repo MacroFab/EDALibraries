@@ -1,0 +1,41 @@
+#usage "<b>Create Attributes from Text in Symbols<p>"
+        "<author>Author: Parker Dillmann</author>"
+
+
+string check_for_quotes(string s)
+{
+	int l = strlen(s);
+	if (s[l-1] == '\'')
+	{
+		s+="'";
+	}
+	return s;
+}
+		
+deviceset(S)
+{
+	S.devices(D)
+	{
+		D.gates(G)
+		{
+			string h;
+			string cmd;
+			G.symbol.texts(T) 
+			{
+				string temp;
+				temp = T.value;
+				if(temp[0] == '>')
+				{
+					temp = strsub(T.value,1,strlen(T.value)-1);
+					if((strstr(temp,"NAME") == -1) & (strstr(temp,"VALUE") == -1))
+					{
+						sprintf(h, "ATTRIBUTE %s '';\n",temp);
+						cmd += h;
+					}
+				}
+			}
+			exit(cmd);
+		}
+	}
+}
+
