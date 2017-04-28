@@ -72,22 +72,22 @@
 <packages>
 <package name="16026-16X2">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard footprint for EastRising ERM1602-6 series display.&lt;br/&gt;</description>
-<pad name="P$1" x="8" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$2" x="10.54" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$3" x="13.08" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$4" x="15.62" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$5" x="18.16" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$6" x="20.7" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$7" x="23.24" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$8" x="25.78" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$9" x="28.32" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$10" x="30.86" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$11" x="33.4" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$12" x="35.94" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$13" x="38.48" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$14" x="41.02" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$15" x="43.56" y="-2.3" drill="1" shape="offset" rot="R90"/>
-<pad name="P$16" x="46.1" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="1" x="8" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="2" x="10.54" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="3" x="13.08" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="4" x="15.62" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="5" x="18.16" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="6" x="20.7" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="7" x="23.24" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="8" x="25.78" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="9" x="28.32" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="10" x="30.86" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="11" x="33.4" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="12" x="35.94" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="13" x="38.48" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="14" x="41.02" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="15" x="43.56" y="-2.3" drill="1" shape="offset" rot="R90"/>
+<pad name="16" x="46.1" y="-2.3" drill="1" shape="offset" rot="R90"/>
 <wire x1="0" y1="0" x2="80" y2="0" width="0.127" layer="21"/>
 <wire x1="0" y1="0" x2="0" y2="-36" width="0.127" layer="21"/>
 <wire x1="0" y1="-36" x2="80" y2="-36" width="0.127" layer="21"/>
@@ -175,22 +175,22 @@ ERM1602-6_SERIES</text>
 <devices>
 <device name="_16026_16X2_BYG_5V" package="16026-16X2">
 <connects>
-<connect gate="G$1" pin="CONTRAST" pad="P$3"/>
-<connect gate="G$1" pin="DB0" pad="P$7"/>
-<connect gate="G$1" pin="DB1" pad="P$8"/>
-<connect gate="G$1" pin="DB2" pad="P$9"/>
-<connect gate="G$1" pin="DB3" pad="P$10"/>
-<connect gate="G$1" pin="DB4" pad="P$11"/>
-<connect gate="G$1" pin="DB5" pad="P$12"/>
-<connect gate="G$1" pin="DB6" pad="P$13"/>
-<connect gate="G$1" pin="DB7" pad="P$14"/>
-<connect gate="G$1" pin="E" pad="P$6"/>
-<connect gate="G$1" pin="LED_A" pad="P$15"/>
-<connect gate="G$1" pin="LED_C" pad="P$16"/>
-<connect gate="G$1" pin="R/W" pad="P$5"/>
-<connect gate="G$1" pin="RS" pad="P$4"/>
-<connect gate="G$1" pin="VDD" pad="P$2"/>
-<connect gate="G$1" pin="VSS" pad="P$1"/>
+<connect gate="G$1" pin="CONTRAST" pad="3"/>
+<connect gate="G$1" pin="DB0" pad="7"/>
+<connect gate="G$1" pin="DB1" pad="8"/>
+<connect gate="G$1" pin="DB2" pad="9"/>
+<connect gate="G$1" pin="DB3" pad="10"/>
+<connect gate="G$1" pin="DB4" pad="11"/>
+<connect gate="G$1" pin="DB5" pad="12"/>
+<connect gate="G$1" pin="DB6" pad="13"/>
+<connect gate="G$1" pin="DB7" pad="14"/>
+<connect gate="G$1" pin="E" pad="6"/>
+<connect gate="G$1" pin="LED_A" pad="15"/>
+<connect gate="G$1" pin="LED_C" pad="16"/>
+<connect gate="G$1" pin="R/W" pad="5"/>
+<connect gate="G$1" pin="RS" pad="4"/>
+<connect gate="G$1" pin="VDD" pad="2"/>
+<connect gate="G$1" pin="VSS" pad="1"/>
 </connects>
 <technologies>
 <technology name="">

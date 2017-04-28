@@ -72,8 +72,8 @@
 <packages>
 <package name="R0402">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0402 Package for Resistors&lt;br/&gt;</description>
-<smd name="P$1" x="-0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
-<smd name="P$2" x="0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<smd name="1" x="-0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<smd name="2" x="0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
 <wire x1="-1.1" y1="0.55" x2="-1.1" y2="-0.55" width="0.127" layer="21"/>
 <wire x1="-1.1" y1="-0.55" x2="1.1" y2="-0.55" width="0.127" layer="21"/>
 <wire x1="1.1" y1="-0.55" x2="1.1" y2="0.55" width="0.127" layer="21"/>
@@ -82,8 +82,8 @@
 </package>
 <package name="R0603">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Resistors&lt;br/&gt;</description>
-<smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
-<smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
+<smd name="1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
+<smd name="2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
 <wire x1="-1.4" y1="0.7" x2="-1.4" y2="-0.7" width="0.127" layer="21"/>
 <wire x1="-1.4" y1="-0.7" x2="1.4" y2="-0.7" width="0.127" layer="21"/>
 <wire x1="1.4" y1="-0.7" x2="1.4" y2="0.7" width="0.127" layer="21"/>
@@ -92,8 +92,8 @@
 </package>
 <package name="R0805">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0805 Package for Resistors&lt;br/&gt;</description>
-<smd name="P$1" x="-0.95" y="0" dx="0.7" dy="1.3" layer="1" rot="R180"/>
-<smd name="P$2" x="0.95" y="0" dx="0.7" dy="1.3" layer="1" rot="R180"/>
+<smd name="1" x="-0.95" y="0" dx="0.7" dy="1.3" layer="1" rot="R180"/>
+<smd name="2" x="0.95" y="0" dx="0.7" dy="1.3" layer="1" rot="R180"/>
 <wire x1="-1.8" y1="0.9" x2="-1.8" y2="-0.9" width="0.127" layer="21"/>
 <wire x1="-1.8" y1="-0.9" x2="1.8" y2="-0.9" width="0.127" layer="21"/>
 <wire x1="1.8" y1="-0.9" x2="1.8" y2="0.9" width="0.127" layer="21"/>
@@ -102,8 +102,8 @@
 </package>
 <package name="R1206">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1206 Package for Resistors&lt;br/&gt;</description>
-<smd name="P$1" x="-1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
-<smd name="P$2" x="1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
+<smd name="1" x="-1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
+<smd name="2" x="1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
 <wire x1="-2.2" y1="1.1" x2="-2.2" y2="-1.1" width="0.127" layer="21"/>
 <wire x1="-2.2" y1="-1.1" x2="2.2" y2="-1.1" width="0.127" layer="21"/>
 <wire x1="2.2" y1="-1.1" x2="2.2" y2="1.1" width="0.127" layer="21"/>
@@ -112,8 +112,8 @@
 </package>
 <package name="C0402">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0402 Package for Capacitors&lt;br/&gt;</description>
-<smd name="P$1" x="-0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
-<smd name="P$2" x="0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<smd name="1" x="-0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<smd name="2" x="0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
 <wire x1="-1.1" y1="0.55" x2="-1.1" y2="-0.55" width="0.127" layer="21"/>
 <wire x1="-1.1" y1="-0.55" x2="1.1" y2="-0.55" width="0.127" layer="21"/>
 <wire x1="1.1" y1="-0.55" x2="1.1" y2="0.55" width="0.127" layer="21"/>
@@ -122,8 +122,8 @@
 </package>
 <package name="C0603">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Capacitors&lt;br/&gt;</description>
-<smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
-<smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
+<smd name="1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
+<smd name="2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
 <wire x1="-1.4" y1="0.7" x2="-1.4" y2="-0.7" width="0.127" layer="21"/>
 <wire x1="-1.4" y1="-0.7" x2="1.4" y2="-0.7" width="0.127" layer="21"/>
 <wire x1="1.4" y1="-0.7" x2="1.4" y2="0.7" width="0.127" layer="21"/>
@@ -132,8 +132,8 @@
 </package>
 <package name="C0805">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0805 Package for Capacitors&lt;br/&gt;</description>
-<smd name="P$1" x="-0.95" y="0" dx="0.7" dy="1.3" layer="1" rot="R180"/>
-<smd name="P$2" x="0.95" y="0" dx="0.7" dy="1.3" layer="1" rot="R180"/>
+<smd name="1" x="-0.95" y="0" dx="0.7" dy="1.3" layer="1" rot="R180"/>
+<smd name="2" x="0.95" y="0" dx="0.7" dy="1.3" layer="1" rot="R180"/>
 <wire x1="-1.8" y1="0.9" x2="-1.8" y2="-0.9" width="0.127" layer="21"/>
 <wire x1="-1.8" y1="-0.9" x2="1.8" y2="-0.9" width="0.127" layer="21"/>
 <wire x1="1.8" y1="-0.9" x2="1.8" y2="0.9" width="0.127" layer="21"/>
@@ -142,8 +142,8 @@
 </package>
 <package name="C1206">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1206 Package for Capacitors&lt;br/&gt;</description>
-<smd name="P$1" x="-1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
-<smd name="P$2" x="1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
+<smd name="1" x="-1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
+<smd name="2" x="1.45" y="0" dx="0.9" dy="1.6" layer="1" rot="R180"/>
 <wire x1="-2.2" y1="1.1" x2="-2.2" y2="-1.1" width="0.127" layer="21"/>
 <wire x1="-2.2" y1="-1.1" x2="2.2" y2="-1.1" width="0.127" layer="21"/>
 <wire x1="2.2" y1="-1.1" x2="2.2" y2="1.1" width="0.127" layer="21"/>
@@ -152,8 +152,8 @@
 </package>
 <package name="R1210">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Resistors&lt;br/&gt;</description>
-<smd name="P$1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
-<smd name="P$2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
+<smd name="1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
+<smd name="2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
 <wire x1="-2.2" y1="1.6" x2="-2.2" y2="-1.6" width="0.127" layer="21"/>
 <wire x1="-2.2" y1="-1.6" x2="2.2" y2="-1.6" width="0.127" layer="21"/>
 <wire x1="2.2" y1="-1.6" x2="2.2" y2="1.6" width="0.127" layer="21"/>
@@ -162,8 +162,8 @@
 </package>
 <package name="C1210">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Capacitors&lt;br/&gt;</description>
-<smd name="P$1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
-<smd name="P$2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
+<smd name="1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
+<smd name="2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
 <wire x1="-2.2" y1="1.6" x2="-2.2" y2="-1.575" width="0.127" layer="21"/>
 <wire x1="-2.2" y1="-1.575" x2="2.2" y2="-1.575" width="0.127" layer="21"/>
 <wire x1="2.2" y1="-1.575" x2="2.2" y2="1.6" width="0.127" layer="21"/>
@@ -172,8 +172,8 @@
 </package>
 <package name="CP4MM">
 <description>&lt;b&gt;Description:&lt;/b&gt; 4MM Round Package for Electrolytic Capacitors. Based on Panasonic Electrolytic Capacitors.&lt;br&gt;</description>
-<smd name="P$2" x="0" y="1.75" dx="2.5" dy="1.6" layer="1" rot="R90"/>
-<smd name="P$1" x="0" y="-1.75" dx="2.5" dy="1.6" layer="1" rot="R90"/>
+<smd name="2" x="0" y="1.75" dx="2.5" dy="1.6" layer="1" rot="R90"/>
+<smd name="1" x="0" y="-1.75" dx="2.5" dy="1.6" layer="1" rot="R90"/>
 <wire x1="-1.2" y1="2.2" x2="-2.2" y2="2.2" width="0.127" layer="21"/>
 <wire x1="-2.2" y1="2.2" x2="-2.2" y2="-1.56360625" width="0.127" layer="21"/>
 <wire x1="-2.2" y1="-1.56360625" x2="-1.56360625" y2="-2.2" width="0.127" layer="21"/>
@@ -188,8 +188,8 @@
 </package>
 <package name="CP6.3MM">
 <description>&lt;b&gt;Description:&lt;/b&gt; 6.3MM Round Package for Electrolytic Capacitors. Based on Panasonic Electrolytic Capacitors.&lt;br&gt;</description>
-<smd name="P$1" x="0" y="-2.7" dx="3.2" dy="1.6" layer="1" rot="R90"/>
-<smd name="P$2" x="0" y="2.7" dx="3.2" dy="1.6" layer="1" rot="R90"/>
+<smd name="1" x="0" y="-2.7" dx="3.2" dy="1.6" layer="1" rot="R90"/>
+<smd name="2" x="0" y="2.7" dx="3.2" dy="1.6" layer="1" rot="R90"/>
 <wire x1="1.1" y1="3.3" x2="3.3" y2="3.3" width="0.127" layer="21"/>
 <wire x1="3.3" y1="3.3" x2="3.3" y2="-2.3" width="0.127" layer="21"/>
 <wire x1="3.3" y1="-2.3" x2="2.3" y2="-3.3" width="0.127" layer="21"/>
@@ -204,8 +204,8 @@
 </package>
 <package name="CP8MM">
 <description>&lt;b&gt;Description:&lt;/b&gt; 8MM Round Package for Electrolytic Capacitors. Based on Panasonic Electrolytic Capacitors.&lt;br&gt;</description>
-<smd name="P$1" x="0" y="-3.1" dx="4" dy="1.6" layer="1" rot="R90"/>
-<smd name="P$2" x="0" y="3.1" dx="4" dy="1.6" layer="1" rot="R90"/>
+<smd name="1" x="0" y="-3.1" dx="4" dy="1.6" layer="1" rot="R90"/>
+<smd name="2" x="0" y="3.1" dx="4" dy="1.6" layer="1" rot="R90"/>
 <wire x1="-1.5" y1="4.15" x2="-4.15" y2="4.15" width="0.127" layer="21"/>
 <wire x1="-4.15" y1="4.15" x2="-4.15" y2="-2.88" width="0.127" layer="21"/>
 <wire x1="-4.15" y1="-2.88" x2="-2.88" y2="-4.15" width="0.127" layer="21"/>
@@ -221,8 +221,8 @@
 <package name="CP10MM">
 <description>&lt;b&gt;Description:&lt;/b&gt; 10MM Round Package for Electrolytic Capacitors. Based on Panasonic Electrolytic Capacitors.
 &lt;br/&gt;</description>
-<smd name="P$1" x="0" y="-4.35" dx="4.1" dy="2" layer="1" rot="R90"/>
-<smd name="P$2" x="0" y="4.35" dx="4.1" dy="2" layer="1" rot="R90"/>
+<smd name="1" x="0" y="-4.35" dx="4.1" dy="2" layer="1" rot="R90"/>
+<smd name="2" x="0" y="4.35" dx="4.1" dy="2" layer="1" rot="R90"/>
 <text x="-5.15" y="7.5" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <wire x1="-1.5" y1="5.15" x2="-5.15" y2="5.15" width="0.127" layer="21"/>
 <wire x1="-5.15" y1="5.15" x2="-5.15" y2="-3.15" width="0.127" layer="21"/>
@@ -237,8 +237,8 @@
 </package>
 <package name="CP12.5MM">
 <description>&lt;b&gt;Description:&lt;/b&gt; 12.5MM Round Package for Electrolytic Capacitors. Based on Panasonic Electrolytic Capacitors.&lt;br&gt;</description>
-<smd name="P$1" x="0" y="-4.85" dx="5.7" dy="2" layer="1" rot="R90"/>
-<smd name="P$2" x="0" y="4.85" dx="5.7" dy="2" layer="1" rot="R90"/>
+<smd name="1" x="0" y="-4.85" dx="5.7" dy="2" layer="1" rot="R90"/>
+<smd name="2" x="0" y="4.85" dx="5.7" dy="2" layer="1" rot="R90"/>
 <wire x1="-1.75" y1="6.75" x2="-6.75" y2="6.75" width="0.127" layer="21"/>
 <wire x1="-6.75" y1="6.75" x2="-6.75" y2="-4.25" width="0.127" layer="21"/>
 <wire x1="-6.75" y1="-4.25" x2="-4.25" y2="-6.75" width="0.127" layer="21"/>
@@ -253,8 +253,8 @@
 </package>
 <package name="L0603">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Inductors&lt;br/&gt;</description>
-<smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
-<smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
+<smd name="1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
+<smd name="2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
 <wire x1="-1.4" y1="0.7" x2="-1.4" y2="-0.7" width="0.127" layer="21"/>
 <wire x1="-1.4" y1="-0.7" x2="1.4" y2="-0.7" width="0.127" layer="21"/>
 <wire x1="1.4" y1="-0.7" x2="1.4" y2="0.7" width="0.127" layer="21"/>
@@ -263,8 +263,8 @@
 </package>
 <package name="L0402">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0402 Package for Inductors&lt;br/&gt;</description>
-<smd name="P$1" x="-0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
-<smd name="P$2" x="0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<smd name="1" x="-0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<smd name="2" x="0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
 <wire x1="-1.1" y1="0.55" x2="-1.1" y2="-0.55" width="0.127" layer="21"/>
 <wire x1="-1.1" y1="-0.55" x2="1.1" y2="-0.55" width="0.127" layer="21"/>
 <wire x1="1.1" y1="-0.55" x2="1.1" y2="0.55" width="0.127" layer="21"/>
@@ -273,8 +273,8 @@
 </package>
 <package name="L1210">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Inductors&lt;br/&gt;</description>
-<smd name="P$1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
-<smd name="P$2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
+<smd name="1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
+<smd name="2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
 <wire x1="-2.2" y1="1.6" x2="-2.2" y2="-1.575" width="0.127" layer="21"/>
 <wire x1="-2.2" y1="-1.575" x2="2.2" y2="-1.575" width="0.127" layer="21"/>
 <wire x1="2.2" y1="-1.575" x2="2.2" y2="1.6" width="0.127" layer="21"/>
@@ -283,14 +283,14 @@
 </package>
 <package name="RA1206">
 <description>&lt;b&gt;Description:&lt;/b&gt; Quad Resistor Array Package. Based on Bourns CAY16 series array resistors.&lt;br/&gt;</description>
-<smd name="P$1" x="-1.2" y="-0.85" dx="0.42" dy="0.9" layer="1"/>
-<smd name="P$2" x="-0.4" y="-0.85" dx="0.42" dy="0.9" layer="1"/>
-<smd name="P$3" x="0.4" y="-0.85" dx="0.42" dy="0.9" layer="1"/>
-<smd name="P$4" x="1.2" y="-0.85" dx="0.42" dy="0.9" layer="1"/>
-<smd name="P$5" x="1.2" y="0.85" dx="0.42" dy="0.9" layer="1"/>
-<smd name="P$6" x="0.4" y="0.85" dx="0.42" dy="0.9" layer="1"/>
-<smd name="P$7" x="-0.4" y="0.85" dx="0.42" dy="0.9" layer="1"/>
-<smd name="P$8" x="-1.2" y="0.85" dx="0.42" dy="0.9" layer="1"/>
+<smd name="1" x="-1.2" y="-0.85" dx="0.42" dy="0.9" layer="1"/>
+<smd name="2" x="-0.4" y="-0.85" dx="0.42" dy="0.9" layer="1"/>
+<smd name="3" x="0.4" y="-0.85" dx="0.42" dy="0.9" layer="1"/>
+<smd name="4" x="1.2" y="-0.85" dx="0.42" dy="0.9" layer="1"/>
+<smd name="5" x="1.2" y="0.85" dx="0.42" dy="0.9" layer="1"/>
+<smd name="6" x="0.4" y="0.85" dx="0.42" dy="0.9" layer="1"/>
+<smd name="7" x="-0.4" y="0.85" dx="0.42" dy="0.9" layer="1"/>
+<smd name="8" x="-1.2" y="0.85" dx="0.42" dy="0.9" layer="1"/>
 <wire x1="-1.68" y1="1.68" x2="1.68" y2="1.68" width="0.127" layer="21"/>
 <wire x1="1.68" y1="1.68" x2="1.68" y2="0" width="0.127" layer="21"/>
 <wire x1="1.68" y1="0" x2="1.68" y2="-1.68" width="0.127" layer="21"/>
@@ -301,9 +301,9 @@
 </package>
 <package name="TC33">
 <description>&lt;b&gt;Description:&lt;/b&gt; TC33 Poteniometer Package. Based on Bourns TC33 series SMD Trimpot Potentiometers.&lt;br/&gt;</description>
-<smd name="P$2" x="1.45" y="0" dx="1.6" dy="1.5" layer="1" rot="R270"/>
-<smd name="P$1" x="-1.8" y="1" dx="1.2" dy="1.2" layer="1" rot="R270"/>
-<smd name="P$3" x="-1.8" y="-1" dx="1.2" dy="1.2" layer="1" rot="R270"/>
+<smd name="2" x="1.45" y="0" dx="1.6" dy="1.5" layer="1" rot="R270"/>
+<smd name="1" x="-1.8" y="1" dx="1.2" dy="1.2" layer="1" rot="R270"/>
+<smd name="3" x="-1.8" y="-1" dx="1.2" dy="1.2" layer="1" rot="R270"/>
 <wire x1="-1" y1="1.5" x2="1.496" y2="1.5" width="0.127" layer="21"/>
 <wire x1="1.496" y1="1.5" x2="1.75" y2="1.246" width="0.127" layer="21" curve="-90"/>
 <wire x1="1.75" y1="1.246" x2="1.75" y2="1" width="0.127" layer="21"/>
@@ -320,8 +320,8 @@
 <symbol name="RESISTOR">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; Symbol for Resistors&lt;br/&gt;</description>
-<pin name="P$1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
-<pin name="P$2" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 <wire x1="0" y1="2.54" x2="1.016" y2="2.159" width="0.1524" layer="94"/>
 <wire x1="1.016" y1="2.159" x2="-1.016" y2="1.524" width="0.1524" layer="94"/>
 <wire x1="-1.016" y1="1.524" x2="1.016" y2="0.889" width="0.1524" layer="94"/>
@@ -337,8 +337,8 @@
 <symbol name="CAPACITOR_NP">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; Symbol for Non-Polarized Capacitors&lt;br/&gt;</description>
-<pin name="P$1" x="0" y="2.54" visible="off" length="point" direction="pas" swaplevel="1" rot="R270"/>
-<pin name="P$2" x="0" y="-2.54" visible="off" length="point" direction="pas" swaplevel="1" rot="R90"/>
+<pin name="1" x="0" y="2.54" visible="off" length="point" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="point" direction="pas" swaplevel="1" rot="R90"/>
 <text x="2.54" y="1.524" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
 <text x="2.54" y="-1.524" size="1.016" layer="96" font="vector">&gt;VALUE</text>
 <wire x1="0" y1="2.54" x2="0" y2="1.016" width="0.1524" layer="94"/>
@@ -349,8 +349,8 @@
 <symbol name="CAPACITOR_P">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; Symbol for Polarized Capacitors&lt;br/&gt;</description>
-<pin name="P$1" x="0" y="2.54" visible="off" length="point" direction="pas" swaplevel="1" rot="R270"/>
-<pin name="P$2" x="0" y="-2.54" visible="off" length="point" direction="pas" swaplevel="1" rot="R90"/>
+<pin name="1" x="0" y="2.54" visible="off" length="point" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="point" direction="pas" swaplevel="1" rot="R90"/>
 <wire x1="0" y1="2.54" x2="0" y2="0.762" width="0.1524" layer="94"/>
 <wire x1="0" y1="-2.54" x2="0" y2="-0.508" width="0.1524" layer="94"/>
 <wire x1="-2.286" y1="-1.524" x2="2.286" y2="-1.524" width="0.1524" layer="94" curve="-100"/>
@@ -364,8 +364,8 @@
 <symbol name="INDUCTOR">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; Symbol for Inductors&lt;br/&gt;</description>
-<pin name="P$1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<pin name="P$2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <text x="-5.08" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
 <text x="-5.08" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
 <wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94" curve="-180"/>
@@ -376,8 +376,8 @@
 <symbol name="RESISTOR_QUAD_ARRAY">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; Symbol for Quad Resistor Array&lt;br/&gt;</description>
-<pin name="P$1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<pin name="P$2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.1524" layer="94"/>
 <wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.1524" layer="94"/>
 <wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.1524" layer="94"/>
@@ -393,8 +393,8 @@
 <symbol name="POTENTIOMETER">
 <description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
 &lt;b&gt;Description:&lt;/b&gt; Symbol for Potentiometers&lt;br/&gt;</description>
-<pin name="P$1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<pin name="P$3" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="3" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.1524" layer="94"/>
 <wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.1524" layer="94"/>
 <wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.1524" layer="94"/>
@@ -406,7 +406,7 @@
 <wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.1524" layer="94"/>
 <text x="2.54" y="5.08" size="1.016" layer="95" font="vector" rot="MR180">&gt;NAME</text>
 <text x="2.54" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
-<pin name="P$2" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <wire x1="0" y1="2.54" x2="0" y2="1.016" width="0.127" layer="94"/>
 <polygon width="0.127" layer="94">
 <vertex x="0" y="1.016"/>
@@ -426,8 +426,8 @@
 <devices>
 <device name="_0402" package="R0402">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -436,7 +436,6 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -444,8 +443,8 @@
 </device>
 <device name="_0603" package="R0603">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -454,7 +453,6 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -462,8 +460,8 @@
 </device>
 <device name="_0805" package="R0805">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -472,7 +470,6 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -480,8 +477,8 @@
 </device>
 <device name="_1206" package="R1206">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -490,7 +487,6 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -498,8 +494,8 @@
 </device>
 <device name="_1210" package="R1210">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -508,7 +504,6 @@
 <attribute name="POPULATE" value="" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -525,8 +520,8 @@
 <devices>
 <device name="_0402" package="C0402">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -536,15 +531,14 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
 <device name="_0603" package="C0603">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -554,15 +548,14 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
 <device name="_0805" package="C0805">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -572,15 +565,14 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
 <device name="_1206" package="C1206">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -590,15 +582,14 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
 <device name="_1210" package="C1210">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -608,7 +599,6 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -624,8 +614,8 @@
 <devices>
 <device name="_4MM" package="CP4MM">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -634,15 +624,14 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
 <device name="_6.3MM" package="CP6.3MM">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -651,15 +640,14 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOTLAGE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
 <device name="_8MM" package="CP8MM">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -668,15 +656,14 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
 <device name="_10MM" package="CP10MM">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -685,15 +672,14 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
 <device name="_12.5MM" package="CP12.5MM">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -702,7 +688,6 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -718,8 +703,8 @@
 <devices>
 <device name="_0402" package="L0402">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -727,14 +712,13 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
 <device name="_0603" package="L0603">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -742,14 +726,13 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
 <device name="_1210" package="L1210">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -757,7 +740,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -775,14 +757,14 @@
 <devices>
 <device name="_A1206" package="RA1206">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$8"/>
-<connect gate="G$2" pin="P$1" pad="P$2"/>
-<connect gate="G$2" pin="P$2" pad="P$7"/>
-<connect gate="G$3" pin="P$1" pad="P$3"/>
-<connect gate="G$3" pin="P$2" pad="P$6"/>
-<connect gate="G$4" pin="P$1" pad="P$4"/>
-<connect gate="G$4" pin="P$2" pad="P$5"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="8"/>
+<connect gate="G$2" pin="1" pad="2"/>
+<connect gate="G$2" pin="2" pad="7"/>
+<connect gate="G$3" pin="1" pad="3"/>
+<connect gate="G$3" pin="2" pad="6"/>
+<connect gate="G$4" pin="1" pad="4"/>
+<connect gate="G$4" pin="2" pad="5"/>
 </connects>
 <technologies>
 <technology name="">
@@ -791,7 +773,6 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -818,9 +799,9 @@
 <devices>
 <device name="_TC33" package="TC33">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
-<connect gate="G$1" pin="P$3" pad="P$3"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name="">
@@ -829,7 +810,6 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>

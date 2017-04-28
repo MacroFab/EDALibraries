@@ -160,10 +160,10 @@
 </package>
 <package name="PLCC4">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for LEDs in PLCC4 Standard.&lt;br/&gt;</description>
-<smd name="P$1" x="-1.55" y="0.75" dx="0.9" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$2" x="-1.55" y="-0.75" dx="0.9" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$3" x="1.55" y="-0.75" dx="0.9" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$4" x="1.55" y="0.75" dx="0.9" dy="1.5" layer="1" rot="R90"/>
+<smd name="1" x="-1.55" y="0.75" dx="0.9" dy="1.5" layer="1" rot="R90"/>
+<smd name="2" x="-1.55" y="-0.75" dx="0.9" dy="1.5" layer="1" rot="R90"/>
+<smd name="3" x="1.55" y="-0.75" dx="0.9" dy="1.5" layer="1" rot="R90"/>
+<smd name="4" x="1.55" y="0.75" dx="0.9" dy="1.5" layer="1" rot="R90"/>
 <wire x1="-1.6" y1="1.4" x2="1.6" y2="1.4" width="0.127" layer="21"/>
 <wire x1="1.6" y1="-1.4" x2="-1.6" y2="-1.4" width="0.127" layer="21"/>
 <text x="-1.6" y="1.7" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
@@ -183,10 +183,10 @@
 </package>
 <package name="WS2812B">
 <description>&lt;b&gt;Description:&lt;/b&gt; Footprint for the WS2812B LED/Driver IC.&lt;br/&gt;</description>
-<smd name="P$1" x="-2.45" y="1.65" dx="0.9" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$2" x="-2.45" y="-1.65" dx="0.9" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$3" x="2.45" y="-1.65" dx="0.9" dy="1.5" layer="1" rot="R90"/>
-<smd name="P$4" x="2.45" y="1.65" dx="0.9" dy="1.5" layer="1" rot="R90"/>
+<smd name="1" x="-2.45" y="1.65" dx="0.9" dy="1.5" layer="1" rot="R90"/>
+<smd name="2" x="-2.45" y="-1.65" dx="0.9" dy="1.5" layer="1" rot="R90"/>
+<smd name="3" x="2.45" y="-1.65" dx="0.9" dy="1.5" layer="1" rot="R90"/>
+<smd name="4" x="2.45" y="1.65" dx="0.9" dy="1.5" layer="1" rot="R90"/>
 <wire x1="-2.5" y1="2.5" x2="2.5" y2="2.5" width="0.127" layer="21"/>
 <wire x1="2.5" y1="2.5" x2="2.5" y2="2.3" width="0.127" layer="21"/>
 <wire x1="2.5" y1="1" x2="2.5" y2="-0.3" width="0.127" layer="21"/>
@@ -495,7 +495,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -510,7 +509,6 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -525,10 +523,10 @@
 <devices>
 <device name="_PLCC4" package="PLCC4">
 <connects>
-<connect gate="G$1" pin="ANODE" pad="P$1"/>
-<connect gate="G$1" pin="CATHODE_BLUE" pad="P$4"/>
-<connect gate="G$1" pin="CATHODE_GREEN" pad="P$3"/>
-<connect gate="G$1" pin="CATHODE_RED" pad="P$2"/>
+<connect gate="G$1" pin="ANODE" pad="1"/>
+<connect gate="G$1" pin="CATHODE_BLUE" pad="4"/>
+<connect gate="G$1" pin="CATHODE_GREEN" pad="3"/>
+<connect gate="G$1" pin="CATHODE_RED" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -552,10 +550,10 @@
 <devices>
 <device name="" package="WS2812B">
 <connects>
-<connect gate="G$1" pin="DIN" pad="P$4"/>
-<connect gate="G$1" pin="DOUT" pad="P$2"/>
-<connect gate="G$1" pin="VDD" pad="P$1"/>
-<connect gate="G$1" pin="VSS" pad="P$3"/>
+<connect gate="G$1" pin="DIN" pad="4"/>
+<connect gate="G$1" pin="DOUT" pad="2"/>
+<connect gate="G$1" pin="VDD" pad="1"/>
+<connect gate="G$1" pin="VSS" pad="3"/>
 </connects>
 <technologies>
 <technology name="">
