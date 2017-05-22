@@ -18,6 +18,6 @@
   (fp_line (start 4.24942 6.74878) (end 1.74752 6.74878) (layer F.SilkS) (width 0.127))
   (fp_line (start 3.99796 3.49758) (end 3.99796 5.4991) (layer F.SilkS) (width 0.127))
   (fp_line (start 4.99872 4.49834) (end 2.99974 4.49834) (layer F.SilkS) (width 0.127))
-  (pad P$1 smd rect (at 0 4.84886 90) (size 5.69976 1.99898) (layers F.Cu F.Paste F.Mask))
-  (pad P$2 smd rect (at 0 -4.84886 90) (size 5.69976 1.99898) (layers F.Cu F.Paste F.Mask))
+  (pad 1 smd rect (at 0 4.84886 90) (size 5.69976 1.99898) (layers F.Cu F.Paste F.Mask))
+  (pad 2 smd rect (at 0 -4.84886 90) (size 5.69976 1.99898) (layers F.Cu F.Paste F.Mask))
 )
