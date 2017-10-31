@@ -11,6 +11,6 @@ The MacroFab style guide for making footprints can be found on the [Part_Style_G
 ***
 **License Information**
 
-This project is under the [Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE.md). These files are provided with no warranty and should be used at your own risk. 
+This project is under the [Creative Commons Attribution 4.0 International License](LICENSE.md). These files are provided with no warranty and should be used at your own risk. 
 
 ***

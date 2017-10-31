@@ -10,7 +10,7 @@ Please see the Eagle documentation at the [knowledge base](https://macrofab.com/
 ***
 **License Information**
 
-This project is under the [Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE.md). These files are provided with no warranty and should be used at your own risk. 
+This project is under the [Creative Commons Attribution 4.0 International License](LICENSE.md). These files are provided with no warranty and should be used at your own risk. 
 
 ***
 | Directory | Description |
