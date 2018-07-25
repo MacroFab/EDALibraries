@@ -170,12 +170,12 @@ if (board) board(B) {
 
 			real p_angle = 0;
 			
-			string footprint = "";
+			string footprintname = "a";
 
 			string MPN_Value = "";
 			string Populate_Value = "1";
 			
-			footprint = E.package.name;
+			footprintname = E.package.name;
 			
 			//First find the all the meta data. 
 			E.package.contacts(C) 
@@ -252,7 +252,7 @@ if (board) board(B) {
 				L.packages(PAC)
 				{
 					//Match element footprint to libary footprint
-					if(footprint == PAC.name)
+					if(footprintname == PAC.name)
 					{
 						//Calculate the size of the footprint.
 						PAC.contacts(FC)
