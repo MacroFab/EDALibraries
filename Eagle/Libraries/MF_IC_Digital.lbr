@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="9.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -1587,9 +1588,9 @@
 <pin name="P0.1" x="17.78" y="-2.54" visible="off" length="short" rot="R180"/>
 <pin name="!RST!/C2CK" x="-2.54" y="-10.16" visible="off" length="short"/>
 <pin name="P0.2" x="17.78" y="-5.08" visible="off" length="short" rot="R180"/>
-<pin name="C2D/P2.7" x="17.78" y="-43.18" visible="off" length="short" rot="R180"/>
-<pin name="P1.6" x="17.78" y="-35.56" visible="off" length="short" rot="R180"/>
-<pin name="P1.5" x="17.78" y="-33.02" visible="off" length="short" rot="R180"/>
+<pin name="C2D/P2.0" x="17.78" y="-43.18" visible="off" length="short" rot="R180"/>
+<pin name="P1.5" x="17.78" y="-35.56" visible="off" length="short" rot="R180"/>
+<pin name="P1.4" x="17.78" y="-33.02" visible="off" length="short" rot="R180"/>
 <pin name="P0.3" x="17.78" y="-7.62" visible="off" length="short" rot="R180"/>
 <pin name="P0.4" x="17.78" y="-10.16" visible="off" length="short" rot="R180"/>
 <pin name="P0.5" x="17.78" y="-12.7" visible="off" length="short" rot="R180"/>
@@ -1599,9 +1600,9 @@
 <pin name="P1.1" x="17.78" y="-25.4" visible="off" length="short" rot="R180"/>
 <pin name="P1.2" x="17.78" y="-27.94" visible="off" length="short" rot="R180"/>
 <pin name="P1.3" x="17.78" y="-30.48" visible="off" length="short" rot="R180"/>
-<pin name="P1.7" x="17.78" y="-38.1" visible="off" length="short" rot="R180"/>
+<pin name="P1.6" x="17.78" y="-38.1" visible="off" length="short" rot="R180"/>
 <text x="1.27" y="-10.16" size="1.016" layer="97" font="vector" align="center-left">!RST!/C2CK</text>
-<text x="13.97" y="-43.18" size="1.016" layer="97" font="vector" rot="R180" align="center-left">C2D/P2.7</text>
+<text x="13.97" y="-43.18" size="1.016" layer="97" font="vector" rot="R180" align="center-left">C2D/P2.0</text>
 <text x="1.27" y="-43.18" size="1.016" layer="97" font="vector" align="center-left">GND</text>
 <text x="13.97" y="0" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P0.0</text>
 <text x="13.97" y="-2.54" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P0.1</text>
@@ -1615,9 +1616,9 @@
 <text x="13.97" y="-25.4" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P1.1</text>
 <text x="13.97" y="-27.94" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P1.2</text>
 <text x="13.97" y="-30.48" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P1.3</text>
-<text x="13.97" y="-38.1" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P1.7</text>
-<text x="13.97" y="-33.02" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P1.5</text>
-<text x="13.97" y="-35.56" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P1.6</text>
+<text x="13.97" y="-38.1" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P1.6</text>
+<text x="13.97" y="-33.02" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P1.4</text>
+<text x="13.97" y="-35.56" size="1.016" layer="97" font="vector" rot="R180" align="center-left">P1.5</text>
 <text x="1.27" y="0" size="1.016" layer="97" font="vector" align="center-left">VDD</text>
 <wire x1="0" y1="1.27" x2="15.24" y2="1.27" width="0.127" layer="94"/>
 <wire x1="15.24" y1="1.27" x2="15.24" y2="-44.45" width="0.127" layer="94"/>
@@ -2377,7 +2378,6 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-busy-bee/Pages/efm8-busy-bee.aspx" constant="no"/>
-
 </technology>
 </technologies>
 </device>
@@ -2394,7 +2394,7 @@ EFM8SB10F8G-A-QFN24
 <device name="" package="EFM8BB10F(2/4/8)G-A-QFN20">
 <connects>
 <connect gate="G$1" pin="!RST!/C2CK" pad="P$5"/>
-<connect gate="G$1" pin="C2D/P2.7" pad="P$6"/>
+<connect gate="G$1" pin="C2D/P2.0" pad="P$6"/>
 <connect gate="G$1" pin="GND" pad="P$3 P$12 PAD"/>
 <connect gate="G$1" pin="P0.0" pad="P$2"/>
 <connect gate="G$1" pin="P0.1" pad="P$1"/>
@@ -2408,9 +2408,9 @@ EFM8SB10F8G-A-QFN24
 <connect gate="G$1" pin="P1.1" pad="P$13"/>
 <connect gate="G$1" pin="P1.2" pad="P$11"/>
 <connect gate="G$1" pin="P1.3" pad="P$10"/>
-<connect gate="G$1" pin="P1.5" pad="P$8"/>
-<connect gate="G$1" pin="P1.6" pad="P$7"/>
-<connect gate="G$1" pin="P1.7" pad="P$9"/>
+<connect gate="G$1" pin="P1.4" pad="P$8"/>
+<connect gate="G$1" pin="P1.5" pad="P$7"/>
+<connect gate="G$1" pin="P1.6" pad="P$9"/>
 <connect gate="G$1" pin="VDD" pad="P$4"/>
 </connects>
 <technologies>
@@ -2419,7 +2419,6 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-busy-bee/Pages/efm8-busy-bee.aspx" constant="no"/>
-
 </technology>
 </technologies>
 </device>
@@ -2458,7 +2457,6 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-busy-bee/Pages/efm8-busy-bee.aspx" constant="no"/>
-
 </technology>
 </technologies>
 </device>
@@ -2500,7 +2498,6 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee/pages/efm8-sleepy-bee.aspx" constant="no"/>
-
 </technology>
 </technologies>
 </device>
@@ -2539,7 +2536,6 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee/pages/efm8-sleepy-bee.aspx" constant="no"/>
-
 </technology>
 </technologies>
 </device>
@@ -2582,7 +2578,6 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee/pages/efm8-sleepy-bee.aspx" constant="no"/>
-
 </technology>
 </technologies>
 </device>
@@ -2627,7 +2622,6 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee/pages/efm8-sleepy-bee.aspx" constant="no"/>
-
 </technology>
 </technologies>
 </device>
