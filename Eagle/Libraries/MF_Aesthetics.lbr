@@ -642,7 +642,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="0" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -653,7 +653,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="0" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -675,7 +675,7 @@
 <attribute name="POPULATE" value="0" constant="no"/>
 <attribute name="REVNUM" value="REV: N/A" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -695,7 +695,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="0" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -715,7 +715,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="0" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>

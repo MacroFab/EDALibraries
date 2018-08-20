@@ -2377,7 +2377,7 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-busy-bee/Pages/efm8-busy-bee.aspx" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -2419,7 +2419,7 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-busy-bee/Pages/efm8-busy-bee.aspx" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -2458,7 +2458,7 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-busy-bee/Pages/efm8-busy-bee.aspx" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -2500,7 +2500,7 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee/pages/efm8-sleepy-bee.aspx" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -2539,7 +2539,7 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee/pages/efm8-sleepy-bee.aspx" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -2582,7 +2582,7 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee/pages/efm8-sleepy-bee.aspx" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -2627,7 +2627,7 @@ EFM8SB10F8G-A-QFN24
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee/pages/efm8-sleepy-bee.aspx" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>

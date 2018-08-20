@@ -495,7 +495,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -510,7 +510,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>

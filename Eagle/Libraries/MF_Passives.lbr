@@ -436,7 +436,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -454,7 +454,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -472,7 +472,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -490,7 +490,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -508,7 +508,7 @@
 <attribute name="POPULATE" value="" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -536,7 +536,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -554,7 +554,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -572,7 +572,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -590,7 +590,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -608,7 +608,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -634,7 +634,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -651,7 +651,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOTLAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -668,7 +668,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -685,7 +685,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -702,7 +702,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 </technology>
 </technologies>
@@ -727,7 +727,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -742,7 +742,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -757,7 +757,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -791,7 +791,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>
@@ -829,7 +829,7 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 <attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 <attribute name="VOLTAGE" value="" constant="no"/>
 <attribute name="WATTAGE" value="" constant="no"/>
 </technology>

@@ -5829,7 +5829,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.4uconnector.com/online/object/4udrawing/20236.pdf" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -5897,7 +5897,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.4uconnector.com/online/object/4udrawing/13366.pdf" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
@@ -8655,7 +8655,7 @@
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="http://www.avx.com/products/connectors/board-to-board/pogo-pin-single-contact-70-9150/f" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
+
 </technology>
 </technologies>
 </device>
