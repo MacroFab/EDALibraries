@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.4.2">
 <designblock>
 <description>USB Type-C to FT230X USB UART Bridge. Includes test points, LED indicators, and 3.3V LDO.</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
-<attribute name="BOARDSIZE" value="557 x 595 mil"/>
+<attribute name="BOARDSIZE" value="551 x 594 mil"/>
 <attribute name="LAYERS" value="2: 1, 16"/>
 </attributes>
 <drawings>
@@ -1727,7 +1727,7 @@ http://www.mouser.com/ProductDetail/NXP-Semiconductors/IP4234CZ6125/?qs=sGAEpiMZ
 <element name="L2" library="MF_Passives" package="L0603" value="MI0603K300R-10" x="12.827" y="3.683" smashed="yes" rot="R270">
 <attribute name="HOUSEPART" value="" x="-36.703" y="26.543" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="MI0603K300R-10" x="-36.703" y="26.543" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="12.1255" y="5.2275" size="1.016" layer="25" font="vector" ratio="16"/>
+<attribute name="NAME" x="12.1255" y="1.0365" size="1.016" layer="25" font="vector" ratio="16"/>
 <attribute name="POPULATE" value="1" x="-36.703" y="26.543" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="-36.703" y="26.543" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
@@ -1738,7 +1738,7 @@ http://www.mouser.com/ProductDetail/NXP-Semiconductors/IP4234CZ6125/?qs=sGAEpiMZ
 <element name="R2" library="MF_Passives" package="R0603" value="5.1K" x="11.43" y="3.683" smashed="yes" rot="R270">
 <attribute name="HOUSEPART" value="" x="11.43" y="3.683" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="ERJ-3EKF5101V" x="11.43" y="3.683" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="12.53" y="5.083" size="1.016" layer="25" font="vector" ratio="16" rot="R270"/>
+<attribute name="NAME" x="10.665" y="5.291" size="1.016" layer="25" font="vector" ratio="16"/>
 <attribute name="POPULATE" value="1" x="11.43" y="3.683" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="" x="11.43" y="3.683" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="URL" value="" x="11.43" y="3.683" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1784,13 +1784,6 @@ http://www.mouser.com/ProductDetail/NXP-Semiconductors/IP4234CZ6125/?qs=sGAEpiMZ
 <contactref element="R2" pad="P$2"/>
 <wire x1="11.43" y1="2.933" x2="11.43" y2="2.286" width="0.1524" layer="1"/>
 <via x="11.43" y="2.286" extent="1-16" drill="0.254"/>
-<wire x1="8.5025" y1="3.7465" x2="10.3025" y2="6.604" width="0" layer="19" extent="1-1"/>
-<wire x1="10.033" y1="2.933" x2="8.5025" y2="3.7465" width="0" layer="19" extent="1-1"/>
-<wire x1="11.43" y1="2.933" x2="10.033" y2="2.933" width="0" layer="19" extent="1-1"/>
-<wire x1="12.827" y1="2.933" x2="11.43" y2="2.933" width="0" layer="19" extent="1-1"/>
-<wire x1="4.3025" y1="6.604" x2="7.3025" y2="3.7465" width="0" layer="19" extent="1-1"/>
-<wire x1="3.048" y1="5.08" x2="4.3025" y2="6.604" width="0" layer="19" extent="1-1"/>
-<wire x1="1.524" y1="5.08" x2="3.048" y2="5.08" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="D+">
 <contactref element="J1" pad="A6"/>
@@ -1848,12 +1841,14 @@ http://www.mouser.com/ProductDetail/NXP-Semiconductors/IP4234CZ6125/?qs=sGAEpiMZ
 <contactref element="J1" pad="S_T4"/>
 <contactref element="J1" pad="S_T1"/>
 <contactref element="L2" pad="P$1"/>
-<wire x1="11.6205" y1="7.62" x2="11.6205" y2="5.6395" width="0.254" layer="1"/>
-<wire x1="12.827" y1="4.433" x2="11.6205" y2="5.6395" width="0.254" layer="1"/>
 <wire x1="11.6205" y1="7.62" x2="11.6225" y2="7.62" width="0.254" layer="1"/>
+<wire x1="11.6225" y1="7.62" x2="11.6225" y2="6.4115" width="0.254" layer="1"/>
+<wire x1="11.6225" y1="6.4115" x2="12.192" y2="5.842" width="0.254" layer="1"/>
+<wire x1="12.192" y1="5.842" x2="12.827" y2="5.207" width="0.254" layer="1"/>
+<wire x1="12.827" y1="5.207" x2="12.827" y2="4.433" width="0.254" layer="1"/>
 <wire x1="11.6225" y1="7.62" x2="11.6225" y2="12.98" width="0" layer="19" extent="1-1"/>
-<wire x1="2.9825" y1="7.62" x2="11.6205" y2="5.6395" width="0" layer="19" extent="1-1"/>
-<wire x1="2.9825" y1="12.98" x2="2.9825" y2="7.62" width="0" layer="19" extent="1-1"/>
+<wire x1="2.9825" y1="12.98" x2="11.6225" y2="12.98" width="0" layer="19" extent="1-1"/>
+<wire x1="2.9825" y1="7.62" x2="2.9825" y2="12.98" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CC1">
 <contactref element="J1" pad="A5"/>
@@ -1929,6 +1924,67 @@ http://www.mouser.com/ProductDetail/NXP-Semiconductors/IP4234CZ6125/?qs=sGAEpiMZ
 <mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
+<errors>
+<approved hash="21,19,e469e66be66be469"/>
+<approved hash="21,19,ac09ae0bae0bac09"/>
+<approved hash="21,19,e469e66be66be469"/>
+<approved hash="4,1,21802188deaedea6"/>
+<approved hash="4,1,cb6c2f7ba1b050b8"/>
+<approved hash="4,1,2b1228edd7cbd434"/>
+<approved hash="4,1,ac5be66e243f6c88"/>
+<approved hash="4,1,2f1c2ce0d3c6d03a"/>
+<approved hash="4,1,266baf81a67d3c40"/>
+<approved hash="4,1,bd74509913943645"/>
+<approved hash="4,1,149af559ef0bff59"/>
+<approved hash="4,1,27a061848639c661"/>
+<approved hash="4,1,47a3e648d26550e2"/>
+<approved hash="4,1,c61bf1ec14d8ea82"/>
+<approved hash="4,1,72d6a77403f825cf"/>
+<approved hash="4,1,a0a91028e16040af"/>
+<approved hash="4,1,cd66772afee044b7"/>
+<approved hash="4,1,5c6e76620432acbf"/>
+<approved hash="4,1,6f126ceff3c9f034"/>
+<approved hash="4,1,d65d1f8d26737c77"/>
+<approved hash="4,1,258e2585daa3daa8"/>
+<approved hash="4,1,8047228dbc11fd92"/>
+<approved hash="4,1,3476621922f4752d"/>
+<approved hash="4,1,74dec805ae5ae505"/>
+<approved hash="4,1,44f59807ee48253f"/>
+<approved hash="4,1,258e2586faa0faa8"/>
+<approved hash="4,1,506ff280fc025da5"/>
+<approved hash="4,1,618e6187fea1fea8"/>
+<approved hash="4,1,3b5a9f7721be108f"/>
+<approved hash="4,1,9082402aa1728095"/>
+<approved hash="4,1,c443f21502f9b51a"/>
+<approved hash="4,1,1d4ea727bef3e480"/>
+<approved hash="4,1,8a1c91fff7a3352d"/>
+<approved hash="4,1,b38c05470594e88f"/>
+<approved hash="4,16,74dec805ae5ae505"/>
+<approved hash="4,16,2b1228eef7c8f434"/>
+<approved hash="4,16,9082402aa1728095"/>
+<approved hash="4,16,c443f21502f9b51a"/>
+<approved hash="4,16,1d4ea727bef3e480"/>
+<approved hash="4,16,21802188deaedea6"/>
+<approved hash="4,16,cb6c2f7ba1b050b8"/>
+<approved hash="4,16,2b1228edd7cbd434"/>
+<approved hash="4,16,ac5be66e243f6c88"/>
+<approved hash="4,16,2f1c2ce0d3c6d03a"/>
+<approved hash="4,16,266baf81a67d3c40"/>
+<approved hash="4,16,a0a91028e16040af"/>
+<approved hash="4,16,cd66772afee044b7"/>
+<approved hash="4,16,5c6e76620432acbf"/>
+<approved hash="4,16,6f126ceff3c9f034"/>
+<approved hash="4,16,d65d1f8d26737c77"/>
+<approved hash="4,16,258e2585daa3daa8"/>
+<approved hash="4,16,8047228dbc11fd92"/>
+<approved hash="4,16,3476621922f4752d"/>
+<approved hash="4,16,44f59807ee48253f"/>
+<approved hash="4,16,258e2586faa0faa8"/>
+<approved hash="4,16,506ff280fc025da5"/>
+<approved hash="4,16,618e6187fea1fea8"/>
+<approved hash="4,16,3b5a9f7721be108f"/>
+<approved hash="4,1,2b1228eef7c8f434"/>
+</errors>
 </board>
 </drawing>
 </drawings>
