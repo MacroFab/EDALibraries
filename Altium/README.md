@@ -2,9 +2,9 @@
 ***
 **Altium Libraries and documentation.**
 
-This directory contains the files needed to generate manufacturing data from Altium 15 and up for MacroFab, INC.
+This directory contains the files needed to generate manufacturing data from Altium 21 and up for MacroFab, INC.
 
-Please see the altium documentation at the [knowledge base](DERPHERP) on MacroFab, INC. for more information. 
+Please see the altium documentation at the [knowledge base](https://help.macrofab.com/knowledge/how-do-i-use-altium-with-macrofab) on MacroFab, INC. for more information. 
 
 ***
 **License Information**
