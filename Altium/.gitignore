@@ -1,0 +1,31 @@
+### Altium ###
+# Previews Folders
+**/__Previews/
+
+# History Folders
+**/History/*
+
+# Project Logs
+Project Logs*/*
+
+# Project Outputs
+Project Outputs*/*
+
+# Auto-conversion notices
+*.PcbDoc.htm
+
+# Access lock file for dbLib sources
+**/*.ldb
+
+#Project Structure Documents
+*.PrjPcbStructure
+
+#NanoCAD Backups
+*.bak
+*.dwg.original
+
+# MCAD CoDesigner Files
+*-EDM/
+
+# Microsoft Temp Files
+~$*
