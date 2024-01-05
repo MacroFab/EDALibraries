@@ -5,7 +5,7 @@
 
 This directory contains the files needed to generate manufacturing data from Eagle V6.0 and up for MacroFab, INC.
 
-Please see the Eagle documentation at the [knowledge base](https://macrofab.com/help/creating-managing-ordering-pcbs/creating-pcb-projects-eagle/) on MacroFab, INC. for more information. 
+Please see the Eagle documentation at the [knowledge base](https://help.macrofab.com/knowledge/how-to-use-eagle-with-macrofab) on MacroFab, INC. for more information. 
 
 ***
 **License Information**
